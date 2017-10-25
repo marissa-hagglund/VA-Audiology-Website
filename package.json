@@ -1,17 +1,13 @@
 {
-  "name": "angular-starter",
-  "version": "6.0.0",
-  "description": "An Angular Webpack Starter kit featuring Angular (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "name": "VA-Audiology-Website",
+  "version": "1.0.0",
+  "description": "This is a responsive website for the VA on audiology",
   "keywords": [
-    "angular",
-    "angular2",
     "angular4",
     "webpack",
     "typescript"
   ],
-  "author": "Patrick Stapleton <patrick@angularclass.com>",
-  "homepage": "https://github.com/AngularClass/angular-starter",
-  "license": "MIT",
+  "author": "Rose City Scripters",
   "scripts": {
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run build:aot:prod",
