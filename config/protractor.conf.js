@@ -1,7 +1,3 @@
-/**
- * @author: @AngularClass
- */
-
 require('ts-node/register');
 var helpers = require('./helpers');
 
@@ -41,14 +37,6 @@ exports.config = {
   onPrepare: function() {
     browser.ignoreSynchronization = true;
   },
-
-  /**
-   * Angular 2 configuration
-   *
-   * useAllAngular2AppRoots: tells Protractor to wait for any angular2 apps on the page instead of just the one matching
-   * `rootEl`
-   */
-   useAllAngular2AppRoots: true,
 
    SELENIUM_PROMISE_MANAGER: false,
 };

@@ -1,6 +1,3 @@
-/**
- * Angular 2
- */
 import {
   enableDebugTools,
   disableDebugTools

@@ -1,7 +1,3 @@
-/**
- * @author: @AngularClass
- */
-
 const webpack = require('webpack');
 const helpers = require('./helpers');
 
@@ -31,7 +27,7 @@ const ngcWebpack = require('ngc-webpack');
 const HMR = helpers.hasProcessFlag('hot');
 const AOT = process.env.BUILD_AOT || helpers.hasNpmFlag('aot');
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
+  title: 'VA Website!',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer(),
   HMR: HMR,
@@ -208,7 +204,7 @@ module.exports = function (options) {
     plugins: [
       // Remove all locale files in moment with the IgnorePlugin if you don't need them
       // new IgnorePlugin(/^\.\/locale$/, /moment$/),
-      
+
       // Use for DLLs
       // new AssetsPlugin({
       //   path: helpers.root('dist'),
