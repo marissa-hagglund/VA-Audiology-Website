@@ -1,11 +1,6 @@
 {
   "name": "VA-Audiology-Website",
   "description": "This is a responsive website for the VA on audiology",
-  "keywords": [
-    "angular4",
-    "webpack",
-    "typescript"
-  ],
   "author": "Rose City Scripters",
   "scripts": {
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
@@ -81,24 +76,37 @@
     "@angular/router": "~4.4.4",
     "@angularclass/hmr": "~2.1.3",
     "@angularclass/hmr-loader": "^3.0.4",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.3",
+    "angular2-text-mask": "^8.0.4",
+    "bootstrap": "^3.3.7",
+    "bootstrap-loader": "^2.2.0",
+    "bootstrap-sass": "^3.3.7",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
+    "jquery": "^3.2.1",
     "intl": "^1.2.5",
     "reflect-metadata": "^0.1.10",
+    "resolve-url-loader": "^2.1.0",
     "rxjs": "^5.4.3",
+    "underscore": "^1.8.3",
     "web-animations-js": "^2.3.1",
     "zone.js": "~0.8.18"
+
   },
   "devDependencies": {
+    "@angular/cli": "^1.2.1",
     "@angular/compiler-cli": "~4.4.4",
     "@compodoc/compodoc": "^1.0.0-beta.15",
     "@types/hammerjs": "^2.0.34",
     "@types/jasmine": "2.5.45",
+    "@types/jasminewd2": "~2.0.2",
     "@types/node": "^7.0.39",
     "@types/source-map": "^0.5.0",
     "@types/uglify-js": "^2.6.28",
+    "@types/underscore": "^1.7.33",
     "@types/webpack": "^2.2.16",
     "add-asset-html-webpack-plugin": "^1.0.2",
     "angular2-template-loader": "^0.6.2",
@@ -137,6 +145,10 @@
     "protractor": "^5.1.1",
     "raw-loader": "0.5.1",
     "rimraf": "~2.6.1",
+    "rollup": "^0.49.2",
+    "rollup-plugin-commonjs": "^8.2.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
     "sass-loader": "^6.0.3",
     "script-ext-html-webpack-plugin": "^1.8.5",
     "source-map-loader": "^0.2.1",
@@ -155,7 +167,9 @@
     "webpack-dev-middleware": "^1.10.1",
     "webpack-dev-server": "~2.7.1",
     "webpack-dll-bundles-plugin": "^1.0.0-beta.5",
-    "webpack-merge": "~4.1.0"
+    "webpack-merge": "~4.1.0",
+    "webpack-war-plugin": "^1.0.0-beta.3"
+
   },
   "engines": {
     "node": ">= 4.2.1",
