@@ -65,3 +65,5 @@
  *.css.shim.ts
  *.ngsummary.json
  *.shim.ngstyle.ts
+.awcache/
+node_modules/
