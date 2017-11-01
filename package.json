@@ -2,6 +2,7 @@
   "name": "VA-Audiology-Website",
   "description": "This is a responsive website for the VA on audiology",
   "author": "Rose City Scripters",
+  "license": "MIT",
   "scripts": {
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run build:aot:prod",
