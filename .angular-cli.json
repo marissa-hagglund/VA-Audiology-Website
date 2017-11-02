@@ -14,7 +14,7 @@
       ],
       "index": "index.html",
       "main": "main.ts",
-      "polyfills": "polyfills.ts",
+      "polyfills": "polyfills.browser.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
@@ -28,10 +28,6 @@
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
       ],
       "environmentSource": "environments/environment.ts",
-      /*"environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }*/
     }
   ],
   "e2e": {
