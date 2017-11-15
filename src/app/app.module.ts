@@ -1,5 +1,5 @@
 import { LogoComponent } from './logo/logo';
-import { PatientCheckInComponent } from './patient-check-in/patient-check-in.component';
+import { CheckInComponent } from './check-in/check-in.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -55,7 +55,7 @@ type StoreType = {
     HomeComponent,
     NoContentComponent,
     LogoComponent,
-    PatientCheckInComponent,
+    CheckInComponent,
   ],
   /**
    * Import Angular's modules.
