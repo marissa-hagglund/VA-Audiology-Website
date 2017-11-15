@@ -1,8 +1,16 @@
+
+
 html, body{
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif
-}
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  font-family: 'Roboto';font-size: 22px;
+  background: url(/assets/images/background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
 
 a.active {
-  background-color: gray;
+  background-color: #004273;
 }

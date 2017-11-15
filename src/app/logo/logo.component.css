@@ -1,0 +1,12 @@
+
+/* LogoComponent's private CSS styles */
+img.logo {
+  width: 150px;
+  padding: 10px;
+}
+
+img.logo:hover
+{
+  opacity: 0.5;
+  cursor: pointer;
+}

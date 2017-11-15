@@ -1,0 +1,43 @@
+
+input {
+  position: absolute;
+  top: 43%;
+  left: 21%;
+  width: 58%;
+  height: 22px;
+  border: 0;
+  outline: 0;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 20px;
+  background: transparent;
+  border-bottom: 1px solid #93b9dd;
+}
+
+input::placeholder {
+  color: rgb(160, 159, 159);
+}
+
+
+.button-login {
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  height: 50px;
+  width: 60%;
+  background-color: #004273;
+  font-family: 'Roboto';
+  font-size: 22px;
+  color: white;
+  border: 1px solid#93b9dd;
+  border-radius: 2px;
+}
+@media screen and (max-width: 580px){
+  .button-login {
+    font-size: 18px;
+  }
+}
+.button-login:hover {
+  background-color: #005690;
+  cursor: pointer;
+}
