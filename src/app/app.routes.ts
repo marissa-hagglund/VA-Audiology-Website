@@ -1,3 +1,5 @@
+// tslint:disable-next-line:max-line-length
+import { AudiologistNavigationComponent } from './audiologist-navigation/audiologist-navigation.component';
 import { CheckInComponent } from './check-in/check-in.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { Routes } from '@angular/router';
@@ -11,5 +13,6 @@ export const ROUTES: Routes = [
   { path: 'home',  component: HomeComponent },
   { path: 'login', component: CheckInComponent},
   { path: 'appointments', component: AppointmentsComponent},
+  { path: 'audio-nav', component: AudiologistNavigationComponent},
   { path: '**',    component: NoContentComponent },
 ];

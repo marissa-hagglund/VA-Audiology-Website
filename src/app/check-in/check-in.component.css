@@ -4,12 +4,12 @@ input {
   top: 43%;
   left: 21%;
   width: 58%;
-  height: 22px;
+  height: 30px;
   border: 0;
   outline: 0;
   color: white;
   font-family: 'Roboto';
-  font-size: 20px;
+  font-size: 30px;
   background: transparent;
   border-bottom: 1px solid #93b9dd;
 }
@@ -23,18 +23,18 @@ input::placeholder {
   position: absolute;
   top: 55%;
   left: 20%;
-  height: 50px;
+  height: 80px;
   width: 60%;
   background-color: #004273;
   font-family: 'Roboto';
-  font-size: 22px;
+  font-size: 30px;
   color: white;
-  border: 1px solid#93b9dd;
-  border-radius: 2px;
+  border: 2px solid#93b9dd;
+  border-radius: 4px;
 }
 @media screen and (max-width: 580px){
   .button-login {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 .button-login:hover {

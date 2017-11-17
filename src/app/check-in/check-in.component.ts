@@ -10,10 +10,12 @@ import { Router } from '@angular/router';
 
 export class CheckInComponent {
    public patientId: string = '';
-   constructor(private router: Router) {}
+   constructor(private router: Router) {};
+
    public onClick(form: NgForm) {
       if (this.patientId.length === 4) {
           console.log('Audiologist log in ' + this.patientId);
+          this.router.navigateByUrl('/audio-nav');
       } else if (this.patientId.length === 6) {
         this.router.navigateByUrl('/appointments');
         console.log('log in with ' + this.patientId);

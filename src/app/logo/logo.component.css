@@ -1,8 +1,9 @@
 
 /* LogoComponent's private CSS styles */
 img.logo {
-  width: 150px;
-  padding: 10px;
+  width: 250px;
+  padding: 15px;
+  padding-top: 25px;
 }
 
 img.logo:hover
