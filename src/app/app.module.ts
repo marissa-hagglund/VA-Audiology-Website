@@ -1,5 +1,7 @@
 import { LogoComponent } from './logo/logo';
 import { CheckInComponent } from './check-in/check-in.component';
+// tslint:disable-next-line:max-line-length
+import { AudiologistNavigationComponent } from './audiologist-navigation/audiologist-navigation.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -56,6 +58,7 @@ type StoreType = {
     NoContentComponent,
     LogoComponent,
     CheckInComponent,
+    AudiologistNavigationComponent,
   ],
   /**
    * Import Angular's modules.

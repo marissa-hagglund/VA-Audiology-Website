@@ -1,0 +1,59 @@
+<body class="bg">
+  <div class="wrapper">
+
+          <nav id="sidebar" class="{{active ? 'bg active' : 'bg'}}">
+              <logo></logo>
+
+              <!-- Sidebar Links -->
+              <ul class="list-unstyled components">
+                  <li><input type="text" src="/assets/images/search_icon.png" placeholder="search here"></li>
+                  <li><button class="search-button">Search</button></li>
+                  <li><label class="tests">TESTS</label></li>
+                  <li><button class="audiogram-button">Audiogram</button></li>
+                  <li><button class="otoscopy-button">Otoscopy</button></li>
+                  <li><button class="tymps-button">TYMPS</button></li>
+                  <li><label class="summary">SUMMARY</label></li>
+                  <li><button class="summary-button">Summary</button></li>
+              </ul>
+          </nav>
+
+          <div class="{{active ? 'handle active' : 'handle'}}">
+              <button class="collapse-button" (click)="onClick()" type="button">
+              </button>
+            </div>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<body  class="bg">
+    <logo></logo>
+    <input type="text" src="/assets/images/search_icon.png" placeholder="search here">
+    <button class="search-button">Search</button>
+    <label class="tests">TESTS</label>
+    <div class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    <button class="audiogram-button">Audiogram</button>
+    <button class="otoscopy-button">Otoscopy</button>
+    <button class="tymps-button">TYMPS</button>
+    <label class="summary">SUMMARY</label>
+    <button class="summary-button">Summary</button>
+</body>
+-->
