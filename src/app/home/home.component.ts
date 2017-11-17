@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import {
   Component,
   OnInit
@@ -16,7 +17,7 @@ import { AppState } from '../app.service';
 export class HomeComponent implements OnInit {
   public localState = { value: '' };
   constructor(
-    public appState: AppState,
+    public appState: AppState, private router: Router
   ) {}
 
   public ngOnInit() {
@@ -29,5 +30,10 @@ export class HomeComponent implements OnInit {
   public submitState(value: string) {
     this.appState.set('value', value);
     this.localState.value = '';
+  }
+
+  public patientOnClick() {
+    this.router.navigateByUrl('/login');
+    console.log('patient button to log in');
   }
 }

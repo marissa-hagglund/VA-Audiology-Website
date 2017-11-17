@@ -1,8 +1,30 @@
+
+
+
 html, body{
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif
-}
+  /*font-family: Arial, Helvetica, sans-serif;*/
+
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+
+  font-family: 'Roboto';font-size: 22px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background: url(/assets/images/background.png) no-repeat center center fixed;
+  background-size: cover;
+ }
+
+ div {
+   background: url(/assets/images/background.png) no-repeat center center fixed;
+ }
+
+ h1 {
+   background-color: transparent;
+ }
 
 a.active {
-  background-color: gray;
+  background-color: #004273;
 }

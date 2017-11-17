@@ -16,7 +16,7 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <main>
       <router-outlet></router-outlet>
     </main>
