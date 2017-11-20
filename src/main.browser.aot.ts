@@ -2,7 +2,7 @@
  * Angular bootstrapping
  */
 import { platformBrowser } from '@angular/platform-browser';
-import { decorateModuleRef } from './app/environment';
+import { decorateModuleRef } from './environments/environment';
 /**
  * App Module
  * our top level module that holds all of our components.
