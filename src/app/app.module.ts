@@ -34,6 +34,7 @@ import { HomeComponent } from './home';
 import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -59,6 +60,7 @@ type StoreType = {
     LogoComponent,
     CheckInComponent,
     AudiologistNavigationComponent,
+    ThankYouComponent,
   ],
   /**
    * Import Angular's modules.
