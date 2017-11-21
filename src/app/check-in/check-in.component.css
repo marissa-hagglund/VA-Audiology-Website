@@ -1,15 +1,43 @@
+.flex-container {
+  /*vertical-align: middle;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The logo section of the page */
+.header {
+  text-align: left;
+  flex: 1.2;
+  order: 1;
+}
+
+/* The bottom section of the page, no actual content are inside.
+  It is used for horizontal alignment */
+.footer {
+  flex: 1.2;
+  order: 3;
+}
+
+/* The two buttons are inside of this section */
+.div-buttons {
+  flex: 0.6;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  margin: 0% 20% 0 20%;
+  justify-content: center;
+  text-align: center;
+
+}
 
 input {
-  position: absolute;
-  top: 43%;
-  left: 21%;
-  width: 58%;
-  height: 30px;
   border: 0;
   outline: 0;
   color: white;
   font-family: 'Roboto';
-  font-size: 30px;
+  font-size: 2em;
   background: transparent;
   border-bottom: 1px solid #93b9dd;
 }
@@ -19,25 +47,42 @@ input::placeholder {
 }
 
 
-.button-login {
-  position: absolute;
-  top: 55%;
-  left: 20%;
-  height: 80px;
-  width: 60%;
+button {
+  height: 60%;
   background-color: #004273;
+  font-size: 2em;
   font-family: 'Roboto';
-  font-size: 30px;
   color: white;
-  border: 2px solid#93b9dd;
-  border-radius: 4px;
+  border: 2px solid #93b9dd;
+  border-radius: 8px;
 }
-@media screen and (max-width: 580px){
-  .button-login {
-    font-size: 20px;
+@media all and (max-width: 650px ), (max-height: 540px){
+  button {
+    font-size: 1em;
+  }
+  input {
+    font-size: 1em;
   }
 }
-.button-login:hover {
+@media all and (min-height: 1350px) and (min-width: 1024px) {
+  button {
+    font-size: 3em;
+  }
+  input {
+    font-size: 3em;
+  }
+}
+@media all and (max-height: 400px) {
+  button {
+    font-size: 0.7em;
+    height: 100%;
+  }
+  input {
+    font-size: 0.6em;
+  }
+}
+
+button:hover {
   background-color: #005690;
   cursor: pointer;
 }

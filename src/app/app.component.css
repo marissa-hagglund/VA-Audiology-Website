@@ -8,7 +8,7 @@ html, body{
   margin: 0px;
   padding: 0px;
   border: 0px;
-
+  min-height: 150px;
 
   font-family: 'Roboto';font-size: 22px;
   -webkit-background-size: cover;

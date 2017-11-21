@@ -11,6 +11,12 @@ img.logo {
     width: 35%;
   }
 }
+@media all and (max-height: 420px) and (min-width: 700px){
+  img.logo {
+    width: 20%;
+  }
+}
+
 
 img.logo:hover
 {
