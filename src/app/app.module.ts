@@ -25,7 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /*
  * Platform and Environment providers/directives/pipes
  */
-import { ENV_PROVIDERS } from './environment';
+import { ENV_PROVIDERS } from '../environments/environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
 import { AppComponent } from './app.component';
@@ -35,6 +35,7 @@ import { HomeComponent } from './home';
 import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -59,11 +60,9 @@ type StoreType = {
     NoContentComponent,
     LogoComponent,
     CheckInComponent,
-<<<<<<< HEAD
     AppointmentsComponent,
-=======
     AudiologistNavigationComponent,
->>>>>>> fc89117cfa12a83915910f1d71de7130ea7e3927
+    ThankYouComponent,
   ],
   /**
    * Import Angular's modules.

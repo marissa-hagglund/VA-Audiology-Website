@@ -9,7 +9,6 @@
       "outDir": "dist",
       "assets": [
         "assets"
-
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -26,7 +25,7 @@
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
       ],
-      "environmentSource": "environments/environment.ts",
+      "environmentSource": "environments/environment.ts"
     }
   ],
   "e2e": {
