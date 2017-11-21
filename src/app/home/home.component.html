@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-  <body>
-    <logo></logo>
-    <button (click)="patientOnClick()" class="button-patient" type="button">Patient Check In</button>
-    <button (click)="patientOnClick()" class="button-audiologist" type="button">Audiologist Log In</button>
-  </body>
-</html>
+
+<!--
+    <h1>
+      <logo></logo>
+    </h1>
+    <div class="">
+      <div class="flex-container">
+        <button (click)="patientOnClick()" type="button">Patient Check In</button>
+      </div>
+      <div class="flex-container">
+        <button (click)="patientOnClick()" type="button">Audiologist Log In</button>
+      </div>
+    </div>
+  -->
+    <h1>
+        <logo></logo>
+    </h1>
+    <div class="wrapper">
+      <div class="main">
+        <button (click)="patientOnClick()" type="button">Patient Check In</button>
+        <button (click)="patientOnClick()" type="button">Audiologist Log In</button>
+      </div>
+    </div>
