@@ -4,10 +4,11 @@
 html, body{
   height: 100%;
   /*font-family: Arial, Helvetica, sans-serif;*/
-
+  width: 100%;
   margin: 0px;
   padding: 0px;
   border: 0px;
+
 
   font-family: 'Roboto';font-size: 22px;
   -webkit-background-size: cover;
@@ -17,6 +18,17 @@ html, body{
   background-size: cover;
  }
 
+main {
+  height: 100%;
+  width: 100%;
+}
+
+ home {
+   display: flex;
+   text-align: center;
+   height: 100%;
+   width: 100%;
+ }
 
 
  h1 {
