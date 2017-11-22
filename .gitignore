@@ -58,6 +58,7 @@
 
  # IDE
  .idea/
+ .idea/libraries
  *.swp
 
  # Angular
