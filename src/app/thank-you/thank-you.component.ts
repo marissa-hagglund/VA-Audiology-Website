@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-thank-you',
+  selector: 'thank-you',
   templateUrl: './thank-you.component.html',
   styleUrls: ['./thank-you.component.css']
 })
+
 export class ThankYouComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {};
 
-  ngOnInit() {
+  public ngOnInit() {
+    console.log('thank you page component')
+  }
+
+  OnClick(){
+    this.router.navigateByUrl('/home');
   }
 
 }
