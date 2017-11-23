@@ -17,6 +17,7 @@ export class CheckInComponent {
           console.log('Audiologist log in ' + this.patientId);
           this.router.navigateByUrl('/audio-nav');
       } else if (this.patientId.length === 6) {
+        this.router.navigateByUrl('/appointments');
         console.log('log in with ' + this.patientId);
       } else {
         console.log('failed log in ' + this.patientId);
