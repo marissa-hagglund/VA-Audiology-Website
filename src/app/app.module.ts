@@ -1,5 +1,6 @@
 import { LogoComponent } from './logo/logo';
 import { CheckInComponent } from './check-in/check-in.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
 // tslint:disable-next-line:max-line-length
 import { AudiologistNavigationComponent } from './audiologist-navigation/audiologist-navigation.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -59,6 +60,7 @@ type StoreType = {
     NoContentComponent,
     LogoComponent,
     CheckInComponent,
+    AppointmentsComponent,
     AudiologistNavigationComponent,
     ThankYouComponent,
   ],
