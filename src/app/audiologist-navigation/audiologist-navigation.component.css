@@ -1,71 +1,117 @@
+@font-face {
+  font-family: lableFont;
+  src: url("/assets/fonts/robotocondensed-bold.ttf");
+  font-weight: bold;
+}
 
-
-nav.bg {
-  margin: 0px;
-  position:fixed;
-  top: 0;
-  left: 0;
+.flex-container {
+  width: 100%;
   height: 100%;
-  background: #005690 !important;
+  display: flex;
+
 }
 
-body.bg {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  min-height: 1000px;
-  background: white;
+:host /deep/ .logo {
+  margin-top: 2%;
+  width: 70%;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.sidebar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  flex-shrink: 1;
+  text-align: center;
+  order: 1;
+  background-color:#005690;
+  flex-direction: column;
 }
 
+.content {
+  flex: 3;
+  order: 2;
+  background-color: white;
 
-input::placeholder {
-  color: rgb(160, 159, 159);
 }
 
-.backgroundColor {
-  background-color: #004273;
+.div-button {
+  flex: 4;
+  order: 3;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
+.header {
+  justify-content: center;
+  text-align: left;
+  flex: 1;
+  order: 1;
+}
+
+.search {
+  display: flex;
+  padding: 1% 1% 1% 1%;
+  margin-top: 20%;
+  justify-content: center;
+  text-align: center;
+  order: 2;
+  flex: 0.8;
+}
+
+.footer{
+  flex: 2;
+  order: 4;
+}
 
 input {
-  position: absolute;
-  top: 16%;
-  left: 0%;
-  width: 70%;
-  height: 40px;
+  flex: 1;
+  height: 50%;
+  margin: 0 2% 2% 0;
   box-sizing: border-box;
+  padding-left: 30%;
   border: 2px solid white;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 0.6em;
   font-style: italic;
-
   background: url('/assets/images/search_bar_bg.png');
   background-position: left;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-color: white;
-  padding-left: 17%;
+
+}
+
+button {
+  text-align: left;
+  background-color: #004273;
+  font-family: 'Roboto';
+  color: white;
+  border-radius: 4px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 1px;
+  margin: 2% 0% 2% 0%;
+}
+
+.search-input {
+  flex: 1;
+  order: 1;
+  height: 50%;
+  /* margin: 0 auto; */
+
 }
 
 .search-button {
-  position: absolute;
-  top: 16%;
-  left: 72%;
-  height: 40px;
-  width: 25%;
-  background-color: #004273;
-  font-family: 'Roboto';
-  font-size: 16px;
-  color: white;
-  border: 2px solid#93b9dd;
+  flex: 1;
+  order: 2;
+  margin: 0 auto;
+  height: 50%;
+  text-align: center;
+  font-size: 0.7em;
   border-radius: 4px;
+  border: 2px solid#93b9dd;
 }
 
 .search-button:hover {
@@ -74,105 +120,74 @@ input {
 }
 
 label {
-  display: inline-block;
-  vertical-align: middle;
   background-color: #b1bac0;
   color: #004273;
   font-family: lableFont;
-  font-size: 16px;
-  padding-left: 3%;
-  padding-top: 10px;
-  padding-bottom: 0;
-  height: 30px;
-  width: 97%;
-  left: 0%;
+  font-size: 0.8em;
+  text-align: left;
+  justify-content: center;
+  padding-left: 10%;
   border-radius: 2px;
+}
+input::placeholder {
+  color: rgb(160, 159, 159);
+}
+
+.backgroundColor {
+  background-color: #004273;
 }
 
 label.tests {
-  position: absolute;
-  top: 23.5%;
-  left: 0%;
+  width: 100%;
+  order: 1
 }
 
 label.summary {
-  position: absolute;
-  top: 60%;
-  left: 0%;
-}
-
-@font-face {
-  font-family: lableFont;
-  src: url("/assets/fonts/robotocondensed-bold.ttf");
-  font-weight: bold;
+  order: 5;
 }
 
 .audiogram-button {
-  position: absolute;
-  top: 29%;
-  left: 0%;
-  width:100%;
-  text-align: left;
-  font-size: 45px;
-  color: white;
-  font-family: Roboto;
+  flex:0.6;
+  order:2;
+  padding: 2% 0 2% 10%;
+  width: 100%;
+  font-size: 1.2em;
+  justify-content: top;
   background-image: url(/assets/images/bar_unpressed.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 6px 6px 9px 20px;
-  border: 0;
-  border-radius: 1px;
+
 }
 
 .otoscopy-button {
-  position: absolute;
-  top: 39%;
-  left: 0%;
-  width:100%;
-  text-align: left;
-  font-size: 45px;
-  color: white;
-  font-family: Roboto;
+  flex:0.6;
+  order:3;
+  padding: 2% 0 2% 10%;
+  width: 100%;
+  font-size: 1.2em;
+  justify-content: top;
   background-image: url(/assets/images/bar_unpressed.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 6px 4px 9px 20px;
-  border: 0;
-  border-radius: 1px;
+
 }
 
 .tymps-button {
-  position: absolute;
-  top: 49.2%;
-  left: 0%;
-  width:100%;
-  text-align: left;
-  font-size: 45px;
-  color: white;
-  font-family: Roboto;
+  flex:0.6;
+  order:4;
+  padding: 2% 0 2% 10%;
+
+  width: 100%;
+  font-size: 1.2em;
+  justify-content: top;
   background-image: url(/assets/images/bar_unpressed.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 6px 4px 9px 20px;
-  border: 0;
-  border-radius: 1px;
 }
 
 .summary-button {
-  position: absolute;
-  top: 65.5%;
-  left: 0%;
-  width:100%;
-  text-align: left;
-  font-size: 45px;
-  color: white;
-  font-family: Roboto;
+  flex:0.6;
+  order:5;
+  padding: 2% 0 2% 10%;
+  width: 100%;
+  font-size: 1.2em;
+  justify-content: top;
   background-image: url(/assets/images/bar_unpressed.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 6px 4px 9px 20px;
-  border: 0;
-  border-radius: 1px;
+
 }
 
 .audiogram-button:hover, .otoscopy-button:hover, .tymps-button:hover, .summary-button:hover {
@@ -182,6 +197,18 @@ label.summary {
   cursor: pointer;
 }
 
+.collapse-button {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
+  background-color: white;
+  background-image: url(/assets/images/nav_icon.png);
+  border: none;
+}
+
+/*
 .wrapper {
   display: flex;
   align-items: stretch;
@@ -189,8 +216,7 @@ label.summary {
 }
 #sidebar {
   position: absolute;
-  min-width: 300px;
-  max-width: 300px;
+  max-width: 301px;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
@@ -205,15 +231,7 @@ div#content {
   left: 300px;
 }
 
-.collapse-button {
-  top: 20px;
-  width: 30px;
-  height: 30px;
-  background-size: 100% 100%;
-  background-color: white;
-  background-image: url(/assets/images/nav_icon.png);
-  border: none;
-}
+
 
 .handle {
   position: absolute;
@@ -228,4 +246,113 @@ div#content {
   height: 30px;
   top: 20px;
 
+} */
+
+/* @media all and (orientation:portrait) {
+   Styles for Portrait screen
+} */
+
+
+
+@media all and (orientation:landscape) {
+  .sidebar {
+    flex: 1;
+  }
+  .content {
+    flex: 2;
+  }
+  input, .search-button {
+    font-size: 0.6em;
+    height: 80%;
+  }
+
+  button, .audiogram-button, .otoscopy-button, .tymps-button,.summary-button {
+    font-size: 0.7em;
+    margin: 1% 0 1% 0;
+  }
+  .header, .footer {
+    flex: 1;
+  }
+
+  .search {
+    margin-top: 0;
+  }
+  .div-button {
+    flex: 7;
+  }
+
 }
+
+
+@media all and (min-width:1024px ) and (min-height: 760px){
+  .content {
+    flex: 3;
+  }
+  .sidebar {
+    justify-content: flex-start;
+  }
+
+  .audiogram-button, .otoscopy-button,.tymps-button,.summary-button {
+    font-size: 1.6em;
+  }
+  .search-input {
+    font-size: 1.2em;
+  }
+  .search-button {
+    font-size: 1.2em;
+  }
+  .footer {
+    flex: 1.5;
+  }
+  .header {
+    flex: 0.9;
+  }
+
+}
+
+
+
+/*
+@media all and (max-width: 400px) and (max-height: 700px) {
+  .content {
+    flex: 3;
+  }
+}
+
+
+@media (max-width: 680px ), (max-height: 550px){
+  .sidebar {
+    flex: 1;
+  }
+  .content {
+    flex: 5;
+  }
+  input, .search-button {
+    font-size: 0.5em;
+    height: 80%;
+  }
+
+  button, .audiogram-button, .otoscopy-button, .tymps-button,.summary-button {
+    font-size: 0.7em;
+    margin: 1% 0 1% 0;
+  }
+  .header, .footer {
+    flex: 1;
+  }
+
+  .search {
+    margin-top: 0;
+  }
+  .div-button {
+    flex: 7;
+  }
+
+
+}
+*/
+
+
+
+
+
+

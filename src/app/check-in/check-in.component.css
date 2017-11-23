@@ -1,3 +1,10 @@
+
+:host /deep/ .logo {
+  margin-top: 2%;
+  width: 45%;
+}
+
+
 .flex-container {
   /*vertical-align: middle;*/
   width: 100%;
@@ -56,7 +63,20 @@ button {
   border: 2px solid #93b9dd;
   border-radius: 8px;
 }
-@media all and (max-width: 650px ), (max-height: 540px){
+
+@media all and (orientation:landscape) {
+  :host /deep/ .logo {
+    width: 35%;
+    transition: linear;
+  }
+}
+
+
+@media all and (orientation:landscape) and (max-width: 650px ){
+  :host /deep/ .logo {
+    width: 35%;
+    transition: linear;
+  }
   button {
     font-size: 1em;
   }
@@ -64,6 +84,20 @@ button {
     font-size: 1em;
   }
 }
+
+@media all and (max-height: 700px) and (min-height: 410px) {
+  :host /deep/ .logo {
+    width: 50%;
+    transition: linear;
+  }
+  button {
+    font-size: 1em;
+  }
+  input {
+    font-size: 1em;
+  }
+}
+
 @media all and (min-height: 1350px) and (min-width: 1024px) {
   button {
     font-size: 3em;

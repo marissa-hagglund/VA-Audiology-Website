@@ -34,6 +34,10 @@
 
 }
 
+:host /deep/ .logo {
+  margin-top: 2%;
+  width: 50%;
+}
 
 
 button {
@@ -45,16 +49,52 @@ button {
   border: 2px solid #93b9dd;
   border-radius: 8px;
 }
-@media all and (max-width: 650px ){
+
+@media all and (orientation:landscape) {
+  :host /deep/ .logo {
+    width: 35%;
+    transition: linear;
+  }
   button {
-    font-size: 0.9em;
+    height: 85%;
   }
 }
-@media all and (max-height: 420px) {
+@media all and (max-width:610px) {
   button {
     font-size: 0.9em;
+    height: 80%;
   }
 }
+
+@media all and (orientation:landscape) and (max-width: 650px ){
+  button {
+    font-size: 0.95em;
+  }
+}
+
+@media all and (max-height: 700px) and (min-height: 410px) {
+  :host /deep/ .logo {
+    width: 50%;
+    transition: linear;
+  }
+  button {
+    font-size: 0.95em;
+  }
+}
+
+@media all and (min-height: 1350px) and (min-width: 1024px) {
+  button {
+    font-size: 3em;
+  }
+}
+@media all and (max-height: 400px) {
+  button {
+    font-size: 0.7em;
+    height: 80%;
+  }
+}
+
+
 button:hover {
   background-color: #005690;
   cursor: pointer;

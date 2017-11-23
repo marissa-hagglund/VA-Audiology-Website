@@ -1,23 +1,31 @@
 <body class="bg">
-  <div class="wrapper">
+  <div class="flex-container">
 
-          <nav id="sidebar" class="{{active ? 'bg active' : 'bg'}}">
+          <!-- <nav id="sidebar" class="{{active ? 'bg active' : 'bg'}}"> -->
+          <nav class="sidebar">
+            <div class="header">
               <logo></logo>
+            </div>
 
+            <div class="search">
+              <input type="text" src="/assets/images/search_icon.png" placeholder="search here">
+              <button class="search-button">Search</button>
+            </div>
               <!-- Sidebar Links -->
-              <ul class="list-unstyled components">
-                  <li><input type="text" src="/assets/images/search_icon.png" placeholder="search here"></li>
-                  <li><button class="search-button">Search</button></li>
-                  <li><label class="tests">TESTS</label></li>
-                  <li><button class="audiogram-button">Audiogram</button></li>
-                  <li><button class="otoscopy-button">Otoscopy</button></li>
-                  <li><button class="tymps-button">TYMPS</button></li>
-                  <li><label class="summary">SUMMARY</label></li>
-                  <li><button class="summary-button">Summary</button></li>
-              </ul>
+            <!-- <u class="list-unstyled components"> -->
+            <div class="div-button">
+              <label class="tests">TESTS</label>
+              <button class="audiogram-button">Audiogram</button>
+              <button class="otoscopy-button">Otoscopy</button>
+              <button class="tymps-button">Tympanometry</button>
+              <label class="summary">SUMMARY</label>
+              <button class="summary-button">Summary</button>
+            </div>
+            <div class="footer"></div>
           </nav>
 
-          <div class="{{active ? 'handle active' : 'handle'}}">
+          <!-- <div class="{{active ? 'handle active' : 'handle'}}"> -->
+          <div class="content">
               <button class="collapse-button" (click)="onClick()" type="button">
               </button>
             </div>
