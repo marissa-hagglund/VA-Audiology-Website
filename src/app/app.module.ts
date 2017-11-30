@@ -36,6 +36,15 @@ import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { TestingJoeComponent } from './testing-joe/testing-joe.component';
+import { CustomResourceStringsComponent } from './common/custom-resource-strings.component';
+import { TsScreenerComponent } from './ts-screener/ts-screener.component';
+import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
+import { ThsComponent } from './ths/ths.component';
+import { ThsQuestionComponent } from './ths/ths-question/ths-question.component';
+import { TfiComponent } from './tfi/tfi.component';
+import { TfiQuestionComponent } from './tfi/tfi-question/tfi-question.component';
+import { SummaryComponent } from './summary/summary.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -63,6 +72,15 @@ type StoreType = {
     AppointmentsComponent,
     AudiologistNavigationComponent,
     ThankYouComponent,
+    TestingJoeComponent,
+    CustomResourceStringsComponent,
+    TsScreenerComponent,
+    TsScreenerQuestionComponent,
+    ThsComponent,
+    ThsQuestionComponent,
+    TfiComponent,
+    TfiQuestionComponent,
+    SummaryComponent,
   ],
   /**
    * Import Angular's modules.
