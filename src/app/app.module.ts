@@ -36,7 +36,6 @@ import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
 import { ThankYouComponent } from './thank-you/thank-you.component';
-import { TestingJoeComponent } from './testing-joe/testing-joe.component';
 import { CustomResourceStringsComponent } from './common/custom-resource-strings.component';
 import { TsScreenerComponent } from './ts-screener/ts-screener.component';
 import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
@@ -72,7 +71,6 @@ type StoreType = {
     AppointmentsComponent,
     AudiologistNavigationComponent,
     ThankYouComponent,
-    TestingJoeComponent,
     CustomResourceStringsComponent,
     TsScreenerComponent,
     TsScreenerQuestionComponent,
