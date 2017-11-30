@@ -1,8 +1,8 @@
-// tslint:disable-next-line:max-line-length
 import { LogoComponent } from './logo/logo';
 import { CheckInComponent } from './check-in/check-in.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
+// tslint:disable-next-line:max-line-length
 import { AudiologistNavigationComponent } from './audiologist-navigation/audiologist-navigation.component';
-import { ThankYouComponent } from './thank-you/thank-you.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -35,6 +35,7 @@ import { HomeComponent } from './home';
 import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -59,6 +60,7 @@ type StoreType = {
     NoContentComponent,
     LogoComponent,
     CheckInComponent,
+    AppointmentsComponent,
     AudiologistNavigationComponent,
     ThankYouComponent,
   ],
