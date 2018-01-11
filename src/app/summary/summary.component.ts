@@ -9,7 +9,7 @@ export class SummaryComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
 }

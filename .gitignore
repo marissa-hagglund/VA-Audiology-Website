@@ -68,3 +68,4 @@
  *.shim.ngstyle.ts
 .awcache/
 node_modules/
+coverage/

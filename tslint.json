@@ -17,6 +17,7 @@
     "invoke-injectable": true,
     "no-access-missing-member": true,
     "no-attribute-parameter-decorator": true,
+    "no-empty": false,
     "no-forward-ref": true,
     "no-input-rename": true,
     "no-output-rename": true,
@@ -36,7 +37,7 @@
     ],
     "max-line-length": [
       true,
-      100
+      200
     ],
     "no-string-literal": false,
     "no-use-before-declare": true,

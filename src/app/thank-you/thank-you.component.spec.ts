@@ -1,6 +1,20 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed, async, inject, fakeAsync, tick, ComponentFixture } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MockBackend } from '@angular/http/testing';
+import {
+  HttpModule,
+  BaseRequestOptions,
+  Response,
+  ResponseOptions,
+  Http
+} from '@angular/http';
+import { BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { ThankYouComponent } from './thank-you.component';
+import { LogoComponent } from '../logo/logo.component';
 
 describe('ThankYouComponent', () => {
   let component: ThankYouComponent;
@@ -8,16 +22,22 @@ describe('ThankYouComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ThankYouComponent ]
+      imports: [
+        RouterTestingModule,
+        HttpModule
+      ],
+      schemas: [NO_ERRORS_SCHEMA],
+      declarations: [ ThankYouComponent ],
+      providers: [
+          LogoComponent,
+      ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ThankYouComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
