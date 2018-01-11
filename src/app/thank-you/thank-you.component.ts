@@ -10,7 +10,7 @@ import { LogoComponent } from '../logo/logo.component';
 
 export class ThankYouComponent implements OnInit {
 
-  private title = 'Thank you for your cooperation!';
+  public title = 'Thank you for your cooperation!';
 
   constructor(private router: Router) {};
 
@@ -18,11 +18,11 @@ export class ThankYouComponent implements OnInit {
     console.log('thank you page component');
   }
 
-  private OnClickVideoLink() {
+  public OnClickVideoLink() {
     this.router.navigateByUrl('/home');
   }
 
-  private OnClickInfoLink() {
+  public OnClickInfoLink() {
     this.router.navigateByUrl('/home');
   }
 
