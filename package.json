@@ -1,5 +1,6 @@
 {
   "name": "VA-Audiology-Website",
+  "repository": "https://github.com/marissa-hagglund/VA-Audiology-Website/",
   "description": "This is a responsive website for the VA on audiology",
   "author": "Rose City Scripters",
   "license": "MIT",
@@ -96,19 +97,17 @@
     "reflect-metadata": "^0.1.10",
     "resolve-url-loader": "^2.1.0",
     "rxjs": "^5.4.3",
+    "source-map": "^0.6.1",
     "underscore": "^1.8.3",
     "web-animations-js": "^2.3.1",
     "zone.js": "~0.8.18"
   },
   "devDependencies": {
-    "@angular/cli": "^1.2.1",
-    "@angular/compiler-cli": "~4.4.4",
     "@compodoc/compodoc": "^1.0.0-beta.15",
     "@types/hammerjs": "^2.0.34",
     "@types/jasmine": "2.5.45",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "^7.0.39",
-    "@types/source-map": "^0.5.0",
     "@types/uglify-js": "^2.6.28",
     "@types/underscore": "^1.7.33",
     "@types/webpack": "^2.2.16",
