@@ -58,6 +58,7 @@
 
  # IDE
  .idea/
+ .idea/libraries
  *.swp
 
  # Angular
@@ -67,3 +68,4 @@
  *.shim.ngstyle.ts
 .awcache/
 node_modules/
+coverage/
