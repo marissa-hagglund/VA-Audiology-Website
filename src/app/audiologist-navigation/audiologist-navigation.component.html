@@ -1,34 +1,36 @@
 <body class="bg">
   <div class="flex-container">
-
+          <input id="slide-sidebar" type="checkbox" role="button" />
+              <label for="slide-sidebar"><span>close</span></label>
           <!-- <nav id="sidebar" class="{{active ? 'bg active' : 'bg'}}"> -->
+          <!-- <nav class="sidebar"> -->
           <nav class="sidebar">
-            <div class="header">
+            <span class="header">
               <logo></logo>
-            </div>
+            </span>
 
-            <div class="search">
-              <input type="text" src="/assets/images/search_icon.png" placeholder="search here">
+            <span class="search">
+              <input  class="search-input" type="text" src="/assets/images/search_icon.png" placeholder="search here">
               <button class="search-button">Search</button>
-            </div>
+            </span>
               <!-- Sidebar Links -->
             <!-- <u class="list-unstyled components"> -->
-            <div class="div-button">
-              <label class="tests">TESTS</label>
+            <span class="div-button">
+              <!-- <label class="tests">TESTS</label> -->
               <button class="audiogram-button">Audiogram</button>
               <button class="otoscopy-button">Otoscopy</button>
               <button class="tymps-button">Tympanometry</button>
-              <label class="summary">SUMMARY</label>
+              <!-- <label class="summary">SUMMARY</label> -->
               <button class="summary-button">Summary</button>
-            </div>
-            <div class="footer"></div>
+            </span>
+            <span class="footer"></span>
           </nav>
 
           <!-- <div class="{{active ? 'handle active' : 'handle'}}"> -->
           <div class="content">
-              <button class="collapse-button" (click)="onClick()" type="button">
-              </button>
-            </div>
+              <!-- <button class="collapse-button" (click)="onClick()" type="button"> -->
+              <!-- </button> -->
+          </div>
   </div>
 </body>
 

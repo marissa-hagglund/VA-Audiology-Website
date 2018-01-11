@@ -9,12 +9,14 @@ import { NgForm } from '@angular/forms';
 })
 
 export class AudiologistNavigationComponent {
-    public active: boolean = true;
+    public active: boolean = false;
     public onClick() {
-      if (this.active) {
-          this.active = false;
+      if (!this.active) {
+          this.active = true;
+          console.log('is active');
       } else {
-        this.active = true;
+        this.active = false;
+        console.log('is active');
       }
     }
 }

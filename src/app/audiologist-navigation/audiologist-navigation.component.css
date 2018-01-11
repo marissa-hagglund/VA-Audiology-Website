@@ -4,10 +4,14 @@
   font-weight: bold;
 }
 
+div {
+  background-color: white;
+}
+
 .flex-container {
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; */
 
 }
 
@@ -17,22 +21,93 @@
 }
 
 .sidebar {
-  flex: 1;
+  /* flex: 1 1 30%;
   display: flex;
   justify-content: flex-start;
-  flex-shrink: 1;
   text-align: center;
   order: 1;
   background-color:#005690;
   flex-direction: column;
+  transition: all 0.5s ease-in-out; */
+
+  background-color:#005690;
+  width: 33%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar.active {
+  transform: translateX(-19em);
+  /* flex:0; */
+  transition: all 0.5s ease-in-out;
+
 }
 
 .content {
-  flex: 3;
+  /* flex: 1 1 70%;
   order: 2;
   background-color: white;
+  transition-delay: 0.5s; */
 
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 36%;
+  right: 0;
+  bottom: 0;
+  -moz-transition: left 0.5s ease;
+  transition: left 0.5s ease;
 }
+
+/* I added this*/
+
+
+input[type=checkbox] {
+ display: none;
+}
+
+input:checked ~ .content {
+  left: 0;
+}
+
+input:checked ~ label {
+  left: 2%;
+}
+
+label {
+  z-index: 2;
+  position: absolute;
+  top: 2%;
+  left: 36%;
+  font-size: 0.7em;
+  -moz-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+}
+
+
+/* done added */
+
+.content.active {
+  /* transform: translateX(-16em);
+  align-items: stretch;
+  flex: 3 1 100%; */
+
+
+
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition-delay: 0.5s;
+
+
+
+  /* flex-grow: 2; */
+  /* transition: all .3s ease .15s; */
+}
+
 
 .div-button {
   flex: 4;
@@ -99,8 +174,7 @@ button {
   flex: 1;
   order: 1;
   height: 50%;
-  /* margin: 0 auto; */
-
+  width:50%;
 }
 
 .search-button {
@@ -112,6 +186,7 @@ button {
   font-size: 0.7em;
   border-radius: 4px;
   border: 2px solid#93b9dd;
+  padding: 0;
 }
 
 .search-button:hover {
@@ -119,7 +194,7 @@ button {
   cursor: pointer;
 }
 
-label {
+/* label {
   background-color: #b1bac0;
   color: #004273;
   font-family: lableFont;
@@ -128,9 +203,10 @@ label {
   justify-content: center;
   padding-left: 10%;
   border-radius: 2px;
-}
+} */
 input::placeholder {
   color: rgb(160, 159, 159);
+  font-size: 0.7em;
 }
 
 .backgroundColor {
@@ -172,7 +248,6 @@ label.summary {
   flex:0.6;
   order:4;
   padding: 2% 0 2% 10%;
-
   width: 100%;
   font-size: 1.2em;
   justify-content: top;
@@ -204,9 +279,15 @@ label.summary {
   height: 30px;
   background-size: 100% 100%;
   background-color: white;
+
   background-image: url(/assets/images/nav_icon.png);
   border: none;
+  /* transition: all 0.5s ease-in-out; */
+
 }
+
+
+
 
 /*
 .wrapper {
@@ -255,15 +336,22 @@ div#content {
 
 
 @media all and (orientation:landscape) {
-  .sidebar {
-    flex: 1;
+  /* .sidebar {
+    flex: 1 1 30%;
   }
   .content {
-    flex: 2;
-  }
-  input, .search-button {
+    flex: 1 1 70%;
+  } */
+  .search-input {
     font-size: 0.6em;
-    height: 80%;
+    height: 100%;
+    width: 50%;
+  }
+
+  .search-button {
+    /* font-size: 1em; */
+    height: 100%;
+    width: 45%;
   }
 
   button, .audiogram-button, .otoscopy-button, .tymps-button,.summary-button {
@@ -285,12 +373,12 @@ div#content {
 
 
 @media all and (min-width:1024px ) and (min-height: 760px){
-  .content {
-    flex: 3;
+  /* .content {
+    flex: 1 1 70%;
   }
   .sidebar {
     justify-content: flex-start;
-  }
+  } */
 
   .audiogram-button, .otoscopy-button,.tymps-button,.summary-button {
     font-size: 1.6em;
