@@ -9,7 +9,7 @@ export class TsScreenerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
 }

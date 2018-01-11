@@ -12,13 +12,7 @@ describe('Home', () => {
 
   it('should have a title', async () => {
     let subject = await browser.getTitle();
-    let result  = 'VA Website';
-    expect(subject).toEqual(result);
-  });
-
-  it('should have `your content here` x-large', async () => {
-    let subject = await element(by.css('[x-large]')).getText();
-    let result  = 'Your Content Here';
+    let result  = 'VA Website!';
     expect(subject).toEqual(result);
   });
 

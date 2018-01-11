@@ -1,4 +1,4 @@
-import { LogoComponent } from './logo/logo';
+import { LogoComponent } from './logo/logo.component';
 import { CheckInComponent } from './check-in/check-in.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 // tslint:disable-next-line:max-line-length

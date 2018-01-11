@@ -1,23 +1,23 @@
+import { TestBed, async, inject, fakeAsync, tick, ComponentFixture } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MockBackend } from '@angular/http/testing';
 import {
-  inject,
-  async,
-  TestBed,
-  ComponentFixture
-} from '@angular/core/testing';
-import { Component } from '@angular/core';
-import {
+  HttpModule,
   BaseRequestOptions,
-  ConnectionBackend,
+  Response,
+  ResponseOptions,
   Http
 } from '@angular/http';
-import { MockBackend } from '@angular/http/testing';
+import { BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 import { AppState } from '../app.service';
 import { HomeComponent } from './home.component';
 
 describe(`Home`, () => {
-  let comp: HomeComponent;
+  let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
   /**
@@ -25,6 +25,10 @@ describe(`Home`, () => {
    */
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule,
+        HttpModule
+      ],
       declarations: [HomeComponent],
       schemas: [NO_ERRORS_SCHEMA],
       providers: [
@@ -32,9 +36,7 @@ describe(`Home`, () => {
         MockBackend,
         {
           provide: Http,
-          useFactory: (backend: ConnectionBackend, defaultOptions: BaseRequestOptions) => {
-            return new Http(backend, defaultOptions);
-          },
+          useFactory: (backend, options) => new Http(backend, options),
           deps: [MockBackend, BaseRequestOptions]
         },
         AppState,
@@ -44,31 +46,18 @@ describe(`Home`, () => {
      * Compile template and css.
      */
     .compileComponents();
-  }));
 
-  /**
-   * Synchronous beforeEach.
-   */
-  beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
-    comp = fixture.componentInstance;
+    component = fixture.componentInstance;
 
     /**
      * Trigger initial data binding.
      */
     fixture.detectChanges();
-  });
+  }));
 
-  it('should have default data', () => {
-    expect(comp.localState).toEqual({ value: '' });
-  });
-
-  it('should log ngOnInit', () => {
-    spyOn(console, 'log');
-    expect(console.log).not.toHaveBeenCalled();
-
-    comp.ngOnInit();
-    expect(console.log).toHaveBeenCalled();
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 
 });

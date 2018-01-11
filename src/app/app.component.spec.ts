@@ -12,7 +12,7 @@ import {
 import { AppComponent } from './app.component';
 import { AppState } from './app.service';
 
-describe(`App`, () => {
+describe(`App Component`, () => {
   let comp: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
@@ -30,37 +30,5 @@ describe(`App`, () => {
      */
     .compileComponents();
   }));
-
-  /**
-   * Synchronous beforeEach
-   */
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
-    comp    = fixture.componentInstance;
-
-    /**
-     * Trigger initial data binding
-     */
-    fixture.detectChanges();
-  });
-
-  it(`should be readly initialized`, () => {
-    expect(fixture).toBeDefined();
-    expect(comp).toBeDefined();
-  });
-
-  it(`should be @AngularClass`, () => {
-    expect(comp.url).toEqual('https://twitter.com/AngularClass');
-    expect(comp.angularclassLogo).toEqual('assets/img/angularclass-avatar.png');
-    expect(comp.name).toEqual('Angular 2 Webpack Starter');
-  });
-
-  it('should log ngOnInit', () => {
-    spyOn(console, 'log');
-    expect(console.log).not.toHaveBeenCalled();
-
-    comp.ngOnInit();
-    expect(console.log).toHaveBeenCalled();
-  });
 
 });

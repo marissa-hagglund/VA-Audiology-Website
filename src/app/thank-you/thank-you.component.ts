@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LogoComponent } from '../logo/logo.component';
 
 @Component({
   selector: 'thank-you',
@@ -9,19 +10,19 @@ import { Router } from '@angular/router';
 
 export class ThankYouComponent implements OnInit {
 
-  title = 'Thank you for your cooperation!';
+  public title = 'Thank you for your cooperation!';
 
   constructor(private router: Router) {};
 
   public ngOnInit() {
-    console.log('thank you page component')
+    console.log('thank you page component');
   }
 
-  OnClickVideoLink(){
+  public OnClickVideoLink() {
     this.router.navigateByUrl('/home');
   }
 
-  OnClickInfoLink(){
+  public OnClickInfoLink() {
     this.router.navigateByUrl('/home');
   }
 
