@@ -17,6 +17,9 @@ addons:
     packages:
       - google-chrome-stable
 
+seleniumAddress:
+  - 'http://127.0.0.1:4444/wd/hub'
+
 node_js:
   - "8.9.0"
 
