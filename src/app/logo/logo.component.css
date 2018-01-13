@@ -18,7 +18,21 @@ img.logo {
     width: 50%;
   }
 } */
+@media all and (max-height: 400px) {
+  .logo {
+    margin-top: 2%;
+    width: 60%;
+    margin-left: -80px;
+  }
+}
 
+@media all and (max-height: 600px) and (min-height: 410px) {
+  .logo {
+    margin-top: 2%;
+    width: 60%;
+    margin-left: -80px;
+  }
+}
 
 img.logo:hover
 {

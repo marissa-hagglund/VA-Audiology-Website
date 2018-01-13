@@ -4,10 +4,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'logo',
   template: `
-      <div class="row">
-        <div class="col-md-4">
-           <img  (click)="onClick()" class="logo" [src]="imgLink" />
-        </div>
+      <div>
+        <img  (click)="onClick()" class="logo" [src]="imgLink" />
       </div>
   `,
   styleUrls: ['./logo.component.css']
