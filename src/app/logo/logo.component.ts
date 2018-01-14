@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   selector: 'logo',
   template: `
       <div>
-        <img  (click)="onClick()" class="logo" [src]="imgLink" />
+        <img  (click)="onClick()" class="logo" [src]="imgLink" alt="Logo"/>
       </div>
   `,
   styleUrls: ['./logo.component.css']
