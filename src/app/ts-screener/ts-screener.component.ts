@@ -31,7 +31,7 @@ export class TsScreenerComponent {
               private router: Router) {};
 
   moveStateBackward(): void {
-    let prevState:number = this.stateMachine.moveStateBackward();
+    let prevState: number = this.stateMachine.moveStateBackward();
 
     if (prevState) {
       this.currentState = prevState;

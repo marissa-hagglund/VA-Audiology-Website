@@ -4,7 +4,6 @@ import {TsScreenerAnswerStrings} from "../common/custom-resource-strings";
 
 @Injectable()
 export class TsScreenerStateflowService {
-  private history: number[] = [0];
   private answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings;
 
   constructor(private dataService: TsScreenerDataService) {};
