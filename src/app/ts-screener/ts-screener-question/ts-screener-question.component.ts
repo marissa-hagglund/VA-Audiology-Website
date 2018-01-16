@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from '@angular/core';
-import {TsScreenerDataService} from "../../services/ts-screener-data.service";
+import { TsScreenerDataService } from '../../services/ts-screener-data.service';
 
 @Component({
   selector: 'screener-question',
