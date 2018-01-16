@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TsScreenerAnswerStrings, TsScreenerQuestionStrings } from '../common/custom-resource-strings';
 import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
+import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,10 +23,10 @@ import { Router } from '@angular/router';
 })
 
 export class TsScreenerComponent {
-  protected currentState: number = 1;
+  public currentState: number = 1;
 
-  protected questionStrings: TsScreenerQuestionStrings = new TsScreenerQuestionStrings();
-  protected answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings();
+  public questionStrings: TsScreenerQuestionStrings = new TsScreenerQuestionStrings();
+  public answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings();
 
   constructor(private stateMachine: TsScreenerStateflowService,
               private router: Router) {};
