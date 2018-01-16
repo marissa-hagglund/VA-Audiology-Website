@@ -1,11 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { TsScreenerStateflowService } from './ts-screener-stateflow.service';
+import { TsScreenerDataService } from './ts-screener-data.service';
 
 describe('TsScreenerStateflowService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [TsScreenerStateflowService]
+      providers: [TsScreenerStateflowService, TsScreenerDataService]
     });
   });
 
