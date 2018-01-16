@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TsScreenerComponent } from './ts-screener.component';
+import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
+import { TsScreenerDataService } from '../services/ts-screener-data.service';
 
 describe('TsScreenerComponent', () => {
   let component: TsScreenerComponent;
@@ -8,7 +10,11 @@ describe('TsScreenerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TsScreenerComponent ]
+      declarations: [ TsScreenerComponent ],
+      providers: [
+        TsScreenerStateflowService,
+        TsScreenerDataService
+      ]
     })
     .compileComponents();
   }));

@@ -2,8 +2,7 @@ import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from 
 
 @Component({
   selector: 'screener-question',
-  styleUrls: ['../ts-screener.component.css',
-    '../../../../node_modules/bootstrap/dist/css/bootstrap.css'],
+  styleUrls: ['../ts-screener.component.css'],
   template: `
     <div class="row">
       <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap">{{statement}}</div>
