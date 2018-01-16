@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {TsScreenerAnswerStrings, TsScreenerQuestionStrings} from "../common/custom-resource-strings";
-import {TsScreenerStateflowService} from "../services/ts-screener-stateflow.service";
-import {Router} from "@angular/router";
+import { TsScreenerAnswerStrings, TsScreenerQuestionStrings } from '../common/custom-resource-strings';
+import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'screener',
@@ -22,15 +22,15 @@ import {Router} from "@angular/router";
 })
 
 export class TsScreenerComponent {
-  private currentState: number = 1;
+  protected currentState: number = 1;
 
-  questionStrings: TsScreenerQuestionStrings = new TsScreenerQuestionStrings;
-  answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings;
+  protected questionStrings: TsScreenerQuestionStrings = new TsScreenerQuestionStrings();
+  protected answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings();
 
   constructor(private stateMachine: TsScreenerStateflowService,
               private router: Router) {};
 
-  moveStateBackward(): void {
+  public moveStateBackward(): void {
     let prevState: number = this.stateMachine.moveStateBackward();
 
     if (prevState) {
@@ -38,7 +38,7 @@ export class TsScreenerComponent {
     }
   }
 
-  moveStateForward(choice: string): void {
+  public moveStateForward(choice: string): void {
     console.log(choice);
     if (!choice) {
       return;
@@ -48,9 +48,8 @@ export class TsScreenerComponent {
 
     this.currentState = nextState;
 
-    if (this.currentState == 7) {
+    if (this.currentState === 7) {
       this.router.navigateByUrl('/thank-you');
     }
   }
 }
-

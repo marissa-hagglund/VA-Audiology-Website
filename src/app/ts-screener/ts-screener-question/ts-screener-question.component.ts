@@ -1,4 +1,4 @@
-import {Component, Input, Output, EventEmitter, ViewChild, ContentChild} from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from '@angular/core';
 
 @Component({
   selector: 'screener-question',
@@ -35,17 +35,17 @@ import {Component, Input, Output, EventEmitter, ViewChild, ContentChild} from '@
 })
 
 export class TsScreenerQuestionComponent {
-  @Input() statement: string = "During the PAST YEAR";
-  @Input() question: string = "";
-  @Input() showThirdRadioButton: boolean = false;
-  @Input() radio1: string = 'YES';
-  @Input() radio2: string = 'NO';
-  @Input() radio3: string = null;
+  @Input() protected statement: string = 'During the PAST YEAR';
+  @Input() protected question: string = '';
+  @Input() protected showThirdRadioButton: boolean = false;
+  @Input() protected radio1: string = 'YES';
+  @Input() protected radio2: string = 'NO';
+  @Input() protected radio3: string = null;
 
-  @Output() onClickedBack: EventEmitter<string> = new EventEmitter<string>();
-  @Output() onClickedNext: EventEmitter<string> = new EventEmitter<string>();
+  @Output() protected onClickedBack: EventEmitter<string> = new EventEmitter<string>();
+  @Output() protected onClickedNext: EventEmitter<string> = new EventEmitter<string>();
 
-  selectedValue: string = '';
+  protected selectedValue: string = '';
 
   constructor() {};
 }

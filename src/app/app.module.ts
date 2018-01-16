@@ -42,9 +42,9 @@ import { ThsQuestionComponent } from './ths/ths-question/ths-question.component'
 import { TfiComponent } from './tfi/tfi.component';
 import { TfiQuestionComponent } from './tfi/tfi-question/tfi-question.component';
 import { SummaryComponent } from './summary/summary.component';
-import {TsScreenerStateflowService} from "./services/ts-screener-stateflow.service";
-import {TsScreenerDataService} from "./services/ts-screener-data.service";
-import {TsScreenerQuestionComponent} from "./ts-screener/ts-screener-question/ts-screener-question.component";
+import { TsScreenerStateflowService } from './services/ts-screener-stateflow.service';
+import { TsScreenerDataService } from './services/ts-screener-data.service';
+import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
 
 // Application wide providers
 const APP_PROVIDERS = [

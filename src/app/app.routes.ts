@@ -8,7 +8,7 @@ import { NoContentComponent } from './no-content';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 
 import { DataResolver } from './app.resolver';
-import {TsScreenerComponent} from "./ts-screener/ts-screener.component";
+import { TsScreenerComponent } from './ts-screener/ts-screener.component';
 
 export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
