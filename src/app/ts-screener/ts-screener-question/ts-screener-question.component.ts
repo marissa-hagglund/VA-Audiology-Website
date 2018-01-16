@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from '@angular/core';
+import {TsScreenerDataService} from "../../services/ts-screener-data.service";
 
 @Component({
   selector: 'screener-question',
@@ -15,7 +16,7 @@ import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from 
     <div class="col-sm-4 col-sm-offset-4 questionFont" style="padding-left: 14%">
       <div class="form-check">
         <label class="form-check-label">
-          <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio1}}">
+          <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio1}}" [checked]="selectedValue === 'YES'">
           {{radio1}} <br>
           <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio2}}">
           {{radio2}} <br>
@@ -34,17 +35,17 @@ import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from 
 })
 
 export class TsScreenerQuestionComponent {
-  @Input() protected statement: string = 'During the PAST YEAR';
-  @Input() protected question: string = '';
-  @Input() protected showThirdRadioButton: boolean = false;
-  @Input() protected radio1: string = 'YES';
-  @Input() protected radio2: string = 'NO';
-  @Input() protected radio3: string = null;
+  @Input() public statement: string = 'During the PAST YEAR';
+  @Input() public question: string = '';
+  @Input() public showThirdRadioButton: boolean = false;
+  @Input() public radio1: string = 'YES';
+  @Input() public radio2: string = 'NO';
+  @Input() public radio3: string = null;
 
-  @Output() protected onClickedBack: EventEmitter<string> = new EventEmitter<string>();
-  @Output() protected onClickedNext: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
 
-  protected selectedValue: string = '';
+  public selectedValue: string = '';
 
-  constructor() {};
+  constructor(private dataService: TsScreenerDataService) {};
 }

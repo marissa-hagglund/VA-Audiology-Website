@@ -23,10 +23,10 @@ import { Router } from '@angular/router';
 })
 
 export class TsScreenerComponent {
-  protected currentState: number = 1;
+  public currentState: number = 1;
 
-  protected questionStrings: TsScreenerQuestionStrings = new TsScreenerQuestionStrings();
-  protected answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings();
+  public questionStrings: TsScreenerQuestionStrings = new TsScreenerQuestionStrings();
+  public answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings();
 
   constructor(private stateMachine: TsScreenerStateflowService,
               private router: Router) {};
