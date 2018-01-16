@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TsScreenerAnswerStrings, TsScreenerQuestionStrings } from '../common/custom-resource-strings';
 import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
+import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
 import { Router } from '@angular/router';
 
 @Component({
