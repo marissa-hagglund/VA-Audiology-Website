@@ -16,6 +16,7 @@ import {
 } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRadioModule } from '@angular/material/radio';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -82,6 +83,9 @@ type StoreType = {
     SummaryComponent,
     TsScreenerQuestionComponent
   ],
+  exports: [
+    MatRadioModule
+  ],
   /**
    * Import Angular's modules.
    */
@@ -90,6 +94,7 @@ type StoreType = {
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    MatRadioModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules

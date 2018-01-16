@@ -20,7 +20,7 @@ import { Router } from "@angular/router";
   <ths-question *ngIf="currentState === 9" [question]="questionStrings.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <p *ngIf="currentState === 9" style="text-align: center;">{{questionStrings.note}}</p>
   <ths-question *ngIf="currentState === 10" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  `
+`
 })
 export class ThsComponent {
   public currentState: number = 1;

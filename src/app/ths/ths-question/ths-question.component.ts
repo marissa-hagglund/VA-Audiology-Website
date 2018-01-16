@@ -32,6 +32,10 @@ import { ThsAnswerStrings } from "../../common/custom-resource-strings";
         <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>
     </div>
+    <mat-radio-group>
+    <mat-radio-button value="1">Option 1</mat-radio-button>
+    <mat-radio-button value="2">Option 2</mat-radio-button>
+  </mat-radio-group>
     `
 })
 
