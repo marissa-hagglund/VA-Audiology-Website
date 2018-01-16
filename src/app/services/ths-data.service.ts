@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ThsDataService {
-  private history: Array<number> = [1];
-  private dataRecord: Array<{state, choice}> = [];
+  public history: number[] = [1];
+  public dataRecord: Array<{state, choice}> = [];
 
   constructor() { }
 
-  public saveData(state: number, choice: string): void {
-    this.dataRecord.push({ state: this.history[this.history.length-1], choice: choice });
+  public saveData(state: number, selection: string): void {
+    this.dataRecord.push({state: this.history[this.history.length - 1], choice: selection});
     this.history.push(state);
     console.log(this.history);
     console.log(this.dataRecord);

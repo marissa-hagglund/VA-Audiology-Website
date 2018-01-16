@@ -25,12 +25,12 @@ import { Router } from '@angular/router';
 export class ThsComponent {
   public currentState: number = 1;
 
-  questionStrings: ThsQuestionStrings = new ThsQuestionStrings;
+  public questionStrings: ThsQuestionStrings = new ThsQuestionStrings();
 
   constructor(private stateMachine: ThsStateflowService,
               private router: Router) { };
 
-  moveStateBackward(): void {
+  public moveStateBackward(): void {
     let prevState: number = this.stateMachine.moveStateBackward();
 
     if (prevState) {
@@ -38,7 +38,7 @@ export class ThsComponent {
     }
   }
 
-  moveStateForward(choice: string): void {
+  public moveStateForward(choice: string): void {
     console.log(choice);
     if (!choice) {
       return;

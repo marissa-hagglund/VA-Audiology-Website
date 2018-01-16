@@ -1,5 +1,5 @@
-import {Component, Input, Output, EventEmitter, ViewChild, ContentChild} from '@angular/core';
-import { ThsAnswerStrings } from "../../common/custom-resource-strings";
+import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from '@angular/core';
+import { ThsAnswerStrings } from '../../common/custom-resource-strings';
 
 @Component({
   selector: 'ths-question',
@@ -40,19 +40,19 @@ import { ThsAnswerStrings } from "../../common/custom-resource-strings";
 })
 
 export class ThsQuestionComponent {
-  answerStrings: ThsAnswerStrings = new ThsAnswerStrings;
+  public answerStrings: ThsAnswerStrings = new ThsAnswerStrings();
 
-  @Input() question: string = "";
-  @Input() radio1: string = this.answerStrings.NO;
-  @Input() radio2: string = this.answerStrings.SMALL_YES;
-  @Input() radio3: string = this.answerStrings.MODERATE_YES;
-  @Input() radio4: string = this.answerStrings.BIG_YES;
-  @Input() radio5: string = this.answerStrings.VERY_BIG_YES;
+  @Input() public question: string = '';
+  @Input() public radio1: string = this.answerStrings.NO;
+  @Input() public radio2: string = this.answerStrings.SMALL_YES;
+  @Input() public radio3: string = this.answerStrings.MODERATE_YES;
+  @Input() public radio4: string = this.answerStrings.BIG_YES;
+  @Input() public radio5: string = this.answerStrings.VERY_BIG_YES;
 
-  @Output() onClickedBack: EventEmitter<string> = new EventEmitter<string>();
-  @Output() onClickedNext: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
 
-  selectedValue: string = '';
+  public selectedValue: string = '';
 
   constructor() {};
 }

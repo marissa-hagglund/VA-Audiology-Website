@@ -5,9 +5,9 @@ import { ThsAnswerStrings } from '../common/custom-resource-strings';
 @Injectable()
 export class ThsStateflowService {
   private history: number[] = [0];
-  private answerStrings: ThsAnswerStrings = new ThsAnswerStrings;
+  private answerStrings: ThsAnswerStrings = new ThsAnswerStrings();
 
-  constructor (private dataService: ThsDataService) { };
+  constructor(private dataService: ThsDataService) { };
 
   public moveStateForward(state: number, choice: string): number {
     if (state === 9) {
