@@ -8,14 +8,14 @@ export class ThsDataService {
   constructor() { }
 
   public saveData(state: number, choice: string): void {
-    this.dataRecord.push({state: this.history[this.history.length-1], choice: choice});
+    this.dataRecord.push({ state: this.history[this.history.length-1], choice: choice });
     this.history.push(state);
     console.log(this.history);
     console.log(this.dataRecord);
   }
 
   public moveStateBackward(): number {
-    if(this.history.length <= 1) {
+    if (this.history.length <= 1) {
       return null;
     }
 
@@ -25,6 +25,6 @@ export class ThsDataService {
     console.log(this.history);
     console.log(this.dataRecord);
 
-    return this.history[this.history.length-1];
+    return this.history[this.history.length - 1];
   }
 }

@@ -8,8 +8,8 @@ import { NoContentComponent } from './no-content';
 import { ThankYouComponent } from './thank-you/thank-you.component';
 
 import { DataResolver } from './app.resolver';
-import {TsScreenerComponent} from "./ts-screener/ts-screener.component";
-import {ThsComponent} from "./ths/ths.component";
+import { TsScreenerComponent } from './ts-screener/ts-screener.component';
+import { ThsComponent } from './ths/ths.component';
 
 export const ROUTES: Routes = [
   { path: '',      redirectTo: 'home', pathMatch: 'full' },

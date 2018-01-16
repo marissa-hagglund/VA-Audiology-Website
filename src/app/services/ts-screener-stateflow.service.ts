@@ -1,18 +1,17 @@
-import {Injectable} from "@angular/core";
-import {TsScreenerDataService} from "./ts-screener-data.service";
-import {TsScreenerAnswerStrings} from "../common/custom-resource-strings";
+import { Injectable } from '@angular/core';
+import { TsScreenerDataService } from './ts-screener-data.service';
+import { TsScreenerAnswerStrings } from '../common/custom-resource-strings';
 
 @Injectable()
 export class TsScreenerStateflowService {
-  private history: number[] = [0];
-  private answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings;
+  private answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings();
 
   constructor(private dataService: TsScreenerDataService) {};
 
   public moveStateForward(state: number, choice: string): number {
-    switch(state) {
+    switch (state) {
       case 1:
-        if(choice == this.answerStrings.YES) {
+        if (choice === this.answerStrings.YES) {
           this.dataService.saveData(2, choice);
           return 2;
         } else {
@@ -23,7 +22,7 @@ export class TsScreenerStateflowService {
         this.dataService.saveData(3, choice);
         return 3;
       case 3:
-        if(choice == this.answerStrings.SOMETIMES_OCCASIONALLY) {
+        if (choice === this.answerStrings.SOMETIMES_OCCASIONALLY) {
           this.dataService.saveData(4, choice);
           return 4;
         } else {
@@ -31,10 +30,10 @@ export class TsScreenerStateflowService {
           return 7;
         }
       case 4:
-        if(choice == this.answerStrings.YES_SOMETIMES) {
+        if (choice === this.answerStrings.YES_SOMETIMES) {
           this.dataService.saveData(5, choice);
           return 5;
-        } else if (choice == this.answerStrings.NO) {
+        } else if (choice === this.answerStrings.NO) {
           this.dataService.saveData(6, choice);
           return 6;
         } else {
@@ -42,7 +41,7 @@ export class TsScreenerStateflowService {
           return 7;
         }
       case 5:
-        if(choice == this.answerStrings.YES) {
+        if (choice === this.answerStrings.YES) {
           this.dataService.saveData(6, choice);
           return 6;
         } else {
@@ -52,6 +51,8 @@ export class TsScreenerStateflowService {
       case 6:
           this.dataService.saveData(7, choice);
           return 7;
+      default:
+        return 7;
     }
   }
 

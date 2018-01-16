@@ -43,11 +43,11 @@ export class ThsQuestionComponent {
   answerStrings: ThsAnswerStrings = new ThsAnswerStrings;
 
   @Input() question: string = "";
-  @Input() radio1: string = this.answerStrings.No;
-  @Input() radio2: string = this.answerStrings.Small_Yes;
-  @Input() radio3: string = this.answerStrings.Moderate_Yes;
-  @Input() radio4: string = this.answerStrings.Big_Yes;
-  @Input() radio5: string = this.answerStrings.Very_Big_Yes;
+  @Input() radio1: string = this.answerStrings.NO;
+  @Input() radio2: string = this.answerStrings.SMALL_YES;
+  @Input() radio3: string = this.answerStrings.MODERATE_YES;
+  @Input() radio4: string = this.answerStrings.BIG_YES;
+  @Input() radio5: string = this.answerStrings.VERY_BIG_YES;
 
   @Output() onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() onClickedNext: EventEmitter<string> = new EventEmitter<string>();

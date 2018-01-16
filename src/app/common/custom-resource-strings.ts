@@ -1,35 +1,35 @@
 export class TsScreenerQuestionStrings {
-  question1: string = 'Have you experienced tinnitus lasting more than 2-3 minutes?';
+  public question1: string = 'Have you experienced tinnitus lasting more than 2-3 minutes?';
 
-  question2: string = 'Have you experienced tinnitus for at least 6 months?';
+  public question2: string = 'Have you experienced tinnitus for at least 6 months?';
 
-  question3: string = 'In a quiet room, can you hear tinnitus?';
+  public question3: string = 'In a quiet room, can you hear tinnitus?';
 
-  question4: string = 'When you heard tinnitus this past year, was it caused by a recent event?';
+  public question4: string = 'When you heard tinnitus this past year, was it caused by a recent event?';
 
-  question5: string = 'Does your tinnitus seem to come and go on its own, in addition to being caused by a recent event(s)';
+  public question5: string = 'Does your tinnitus seem to come and go on its own, in addition to being caused by a recent event(s)';
 
-  question6: string = 'Do you experience tinnitus on a: ';
+  public question6: string = 'Do you experience tinnitus on a: ';
 }
 
 export class TsScreenerAnswerStrings {
-  YES: string = 'YES';
+  public YES: string = 'YES';
 
-  NO: string = 'NO';
+  public NO: string = 'NO';
 
-  ALWAYS: string = 'Always';
+  public ALWAYS: string = 'Always';
 
-  USUALLY: string = 'Usually';
+  public USUALLY: string = 'Usually';
 
-  SOMETIMES_OCCASIONALLY: string = 'Sometimes/Occasionally';
+  public SOMETIMES_OCCASIONALLY: string = 'Sometimes/Occasionally';
 
-  YES_ALWAYS: string = 'YES, Always';
+  public YES_ALWAYS: string = 'YES, Always';
 
-  YES_SOMETIMES: string = 'YES, Sometimes';
+  public YES_SOMETIMES: string = 'YES, Sometimes';
 
-  DAILY_OR_WEEKLY_BASIS: string = 'Daily or weekly basis';
+  public DAILY_OR_WEEKLY_BASIS: string = 'Daily or weekly basis';
 
-  MONTHLY_OR_YEARLY_BASIS: string = 'Monthly or yearly basis';
+  public MONTHLY_OR_YEARLY_BASIS: string = 'Monthly or yearly basis';
 }
 
 export class ThsQuestionStrings {
@@ -61,13 +61,13 @@ export class ThsQuestionStrings {
 }
 
 export class ThsAnswerStrings {
-  public No: string = '0 - No, not a problem';
+  public NO: string = '0 - No, not a problem';
 
-  public Small_Yes: string = '1 - Yes, a small problem';
+  public SMALL_YES: string = '1 - Yes, a small problem';
 
-  public Moderate_Yes: string = '2 - Yes, a moderate problem';
+  public MODERATE_YES: string = '2 - Yes, a moderate problem';
 
-  public Big_Yes: string = '3 - Yes, a big problem';
+  public BIG_YES: string = '3 - Yes, a big problem';
 
-  public Very_Big_Yes: string = '4 - Yes, a very big problem';
+  public VERY_BIG_YES: string = '4 - Yes, a very big problem';
 }

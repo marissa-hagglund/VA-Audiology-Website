@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ThsQuestionStrings } from "../common/custom-resource-strings";
-import { ThsStateflowService } from "../services/ths-stateflow.service";
-import { Router } from "@angular/router";
+import { ThsQuestionStrings } from '../common/custom-resource-strings';
+import { ThsStateflowService } from '../services/ths-stateflow.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ths',
@@ -28,10 +28,10 @@ export class ThsComponent {
   questionStrings: ThsQuestionStrings = new ThsQuestionStrings;
 
   constructor(private stateMachine: ThsStateflowService,
-              private router: Router) {};
+              private router: Router) { };
 
   moveStateBackward(): void {
-    let prevState:number = this.stateMachine.moveStateBackward();
+    let prevState: number = this.stateMachine.moveStateBackward();
 
     if (prevState) {
       this.currentState = prevState;
@@ -48,7 +48,7 @@ export class ThsComponent {
 
     this.currentState = nextState;
 
-    if (this.currentState == 11) {
+    if (this.currentState === 11) {
       this.router.navigateByUrl('/thank-you');
     }
   }
