@@ -1,30 +1,32 @@
-<div class="container">
-    <div class="parent-container">
-      <div class="row">
-        <div class="col-sm-6 col-xs-6 col-md-6 col-lg-4">
-            <logo logoRouteOption="1"></logo>
+<html>
+  <div class="container">
+      <div class="parent-container">
+        <div class="row">
+          <div class="col-sm-6 col-xs-6 col-md-6 col-lg-4">
+              <logo logoRouteOption="1"></logo>
+          </div>
         </div>
+      </div>
+
+    <div class="child-container">
+        <div class="row">
+          <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+              <button (click)="onInitialAssessment()">Initial Assessment</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+              <button (click)="onHearingAidsFitting()" >Hearing Aids Fitting</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+              <button (click)="onHearingAidsEvaluation()" >Hearing Aid Follow-Up Visit</button>
+          </div>
+        </div>
+
       </div>
     </div>
-
-  <div class="child-container">
-      <div class="row">
-        <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
-            <button (click)="onInitialAssessment()">Initial Assessment</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
-            <button (click)="onHearingAidsFitting()" >Hearing Aids Fitting</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
-            <button (click)="onHearingAidsEvaluation()" >Hearing Aid Follow-Up Visit</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
+</html>

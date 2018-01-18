@@ -13,10 +13,11 @@ export function LogoComponentNgSummary():any[] {
   return [{summaryKind:1,type:{reference:i0.LogoComponent,diDeps:[{isAttribute:false,
       isHost:false,isSelf:false,isSkipSelf:false,isOptional:false,token:{identifier:{reference:i1.Router}}}],
       lifecycleHooks:([] as any[])},isComponent:true,selector:'logo',exportAs:(null as any),
-      inputs:{},outputs:{},hostListeners:{},hostProperties:{},hostAttributes:{},providers:([] as any[]),
-      viewProviders:([] as any[]),queries:([] as any[]),viewQueries:([] as any[]),
-      entryComponents:([] as any[]),changeDetection:1,template:{ngContentSelectors:([] as any[]),
-          encapsulation:0},componentViewType:i2.View_LogoComponent_0,rendererType:i2.RenderType_LogoComponent,
+      inputs:{logoRouteOption:'logoRouteOption',imgLink:'imgLink'},outputs:{},hostListeners:{},
+      hostProperties:{},hostAttributes:{},providers:([] as any[]),viewProviders:([] as any[]),
+      queries:([] as any[]),viewQueries:([] as any[]),entryComponents:([] as any[]),
+      changeDetection:1,template:{ngContentSelectors:([] as any[]),encapsulation:0},
+      componentViewType:i2.View_LogoComponent_0,rendererType:i2.RenderType_LogoComponent,
       componentFactory:i2.LogoComponentNgFactory}];
 }
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9sb2dvL2xvZ28uY29tcG9uZW50Lm5nc3VtbWFyeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9sb2dvL2xvZ28uY29tcG9uZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9sb2dvL2xvZ28uY29tcG9uZW50Lm5nc3VtbWFyeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9sb2dvL2xvZ28uY29tcG9uZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIiAiXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7In0=

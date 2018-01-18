@@ -27,19 +27,19 @@ export function View_AppointmentsComponent_0(_l:any):i1.ɵViewDefinition {
           (null as any),4,'div',[['class','col-sm-6 col-xs-6 col-md-6 col-lg-4']],
           (null as any),(null as any),(null as any),(null as any),(null as any))),
       (_l()(),i1.ɵted(-1,(null as any),['\n            '])),(_l()(),i1.ɵeld(8,0,(null as any),
-          (null as any),1,'logo',([] as any[]),(null as any),(null as any),(null as any),
-          i2.View_LogoComponent_0,i2.RenderType_LogoComponent)),i1.ɵdid(9,49152,(null as any),
-          0,i3.LogoComponent,[i4.Router],(null as any),(null as any)),(_l()(),i1.ɵted(-1,
-          (null as any),['\n        '])),(_l()(),i1.ɵted(-1,(null as any),['\n      '])),
-      (_l()(),i1.ɵted(-1,(null as any),['\n    '])),(_l()(),i1.ɵted(-1,(null as any),
-          ['\n\n  '])),(_l()(),i1.ɵeld(14,0,(null as any),(null as any),28,'div',[['class',
-          'child-container']],(null as any),(null as any),(null as any),(null as any),
-          (null as any))),(_l()(),i1.ɵted(-1,(null as any),['\n      '])),(_l()(),
-          i1.ɵeld(16,0,(null as any),(null as any),7,'div',[['class','row']],(null as any),
-              (null as any),(null as any),(null as any),(null as any))),(_l()(),i1.ɵted(-1,
-          (null as any),['\n        '])),(_l()(),i1.ɵeld(18,0,(null as any),(null as any),
-          4,'div',[['class','col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1']],
-          (null as any),(null as any),(null as any),(null as any),(null as any))),
+          (null as any),1,'logo',[['logoRouteOption','1']],(null as any),(null as any),
+          (null as any),i2.View_LogoComponent_0,i2.RenderType_LogoComponent)),i1.ɵdid(9,
+          49152,(null as any),0,i3.LogoComponent,[i4.Router],{logoRouteOption:[0,'logoRouteOption']},
+          (null as any)),(_l()(),i1.ɵted(-1,(null as any),['\n        '])),(_l()(),
+          i1.ɵted(-1,(null as any),['\n      '])),(_l()(),i1.ɵted(-1,(null as any),
+          ['\n    '])),(_l()(),i1.ɵted(-1,(null as any),['\n\n  '])),(_l()(),i1.ɵeld(14,
+          0,(null as any),(null as any),28,'div',[['class','child-container']],(null as any),
+          (null as any),(null as any),(null as any),(null as any))),(_l()(),i1.ɵted(-1,
+          (null as any),['\n      '])),(_l()(),i1.ɵeld(16,0,(null as any),(null as any),
+          7,'div',[['class','row']],(null as any),(null as any),(null as any),(null as any),
+          (null as any))),(_l()(),i1.ɵted(-1,(null as any),['\n        '])),(_l()(),
+          i1.ɵeld(18,0,(null as any),(null as any),4,'div',[['class','col-xs-10 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-1']],
+              (null as any),(null as any),(null as any),(null as any),(null as any))),
       (_l()(),i1.ɵted(-1,(null as any),['\n            '])),(_l()(),i1.ɵeld(20,0,(null as any),
           (null as any),1,'button',([] as any[]),(null as any),[[(null as any),'click']],
           (_v,en,$event) => {
@@ -89,8 +89,11 @@ export function View_AppointmentsComponent_0(_l:any):i1.ɵViewDefinition {
           },(null as any),(null as any))),(_l()(),i1.ɵted(-1,(null as any),['Hearing Aid Follow-Up Visit'])),
       (_l()(),i1.ɵted(-1,(null as any),['\n        '])),(_l()(),i1.ɵted(-1,(null as any),
           ['\n      '])),(_l()(),i1.ɵted(-1,(null as any),['\n\n    '])),(_l()(),i1.ɵted(-1,
-          (null as any),['\n  '])),(_l()(),i1.ɵted(-1,(null as any),['\n']))],(null as any),
-      (null as any));
+          (null as any),['\n  '])),(_l()(),i1.ɵted(-1,(null as any),['\n']))],(_ck,
+      _v) => {
+    const currVal_0:any = '1';
+    _ck(_v,9,0,currVal_0);
+  },(null as any));
 }
 export function View_AppointmentsComponent_Host_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵeld(0,0,(null as any),(null as any),1,'appointments',
@@ -100,4 +103,4 @@ export function View_AppointmentsComponent_Host_0(_l:any):i1.ɵViewDefinition {
 }
 export const AppointmentsComponentNgFactory:i1.ComponentFactory<i5.AppointmentsComponent> = i1.ɵccf('appointments',
     i5.AppointmentsComponent,View_AppointmentsComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9hcHBvaW50bWVudHMvYXBwb2ludG1lbnRzLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvYXBwb2ludG1lbnRzL2FwcG9pbnRtZW50cy5jb21wb25lbnQudHMiLCJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvYXBwb2ludG1lbnRzL2FwcG9pbnRtZW50cy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9hcHBvaW50bWVudHMvYXBwb2ludG1lbnRzLmNvbXBvbmVudC50cy5BcHBvaW50bWVudHNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwiY29udGFpbmVyXCI+XG4gICAgPGRpdiBjbGFzcz1cInBhcmVudC1jb250YWluZXJcIj5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC1zbS02IGNvbC14cy02IGNvbC1tZC02IGNvbC1sZy00XCI+XG4gICAgICAgICAgICA8bG9nbz48L2xvZ28+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG5cbiAgPGRpdiBjbGFzcz1cImNoaWxkLWNvbnRhaW5lclwiPlxuICAgICAgPGRpdiBjbGFzcz1cInJvd1wiPlxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29sLXhzLTEwIGNvbC1zbS04IGNvbC1tZC04IGNvbC1sZy02IGNvbC1sZy1vZmZzZXQtMyBjb2wtbWQtb2Zmc2V0LTIgY29sLXNtLW9mZnNldC0yIGNvbC14cy1vZmZzZXQtMVwiPlxuICAgICAgICAgICAgPGJ1dHRvbiAoY2xpY2spPVwib25Jbml0aWFsQXNzZXNzbWVudCgpXCI+SW5pdGlhbCBBc3Nlc3NtZW50PC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC14cy0xMCBjb2wtc20tOCBjb2wtbWQtOCBjb2wtbGctNiBjb2wtbGctb2Zmc2V0LTMgY29sLW1kLW9mZnNldC0yIGNvbC1zbS1vZmZzZXQtMiBjb2wteHMtb2Zmc2V0LTFcIj5cbiAgICAgICAgICAgIDxidXR0b24gKGNsaWNrKT1cIm9uSGVhcmluZ0FpZHNGaXR0aW5nKClcIiA+SGVhcmluZyBBaWRzIEZpdHRpbmc8L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPGRpdiBjbGFzcz1cInJvd1wiPlxuICAgICAgICA8ZGl2IGNsYXNzPVwiY29sLXhzLTEwIGNvbC1zbS04IGNvbC1tZC04IGNvbC1sZy02IGNvbC1sZy1vZmZzZXQtMyBjb2wtbWQtb2Zmc2V0LTIgY29sLXNtLW9mZnNldC0yIGNvbC14cy1vZmZzZXQtMVwiPlxuICAgICAgICAgICAgPGJ1dHRvbiAoY2xpY2spPVwib25IZWFyaW5nQWlkc0V2YWx1YXRpb24oKVwiID5IZWFyaW5nIEFpZCBGb2xsb3ctVXAgVmlzaXQ8L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cblxuICAgIDwvZGl2PlxuICA8L2Rpdj5cbiIsIjxhcHBvaW50bWVudHM+PC9hcHBvaW50bWVudHM+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FBO01BQUE7TUFBdUIsOENBQ25CO1VBQUE7VUFBQSw0Q0FBOEI7VUFBQSxlQUM1QjtVQUFBO01BQWlCLGtEQUNmO1VBQUE7VUFBQTtNQUFpRCxzREFDN0M7VUFBQTs2REFBQSxVQUFBO1VBQUEsNERBQWE7VUFBQSwrQkFDWDtNQUNGLDhDQUNGO1VBQUEsYUFFUjtVQUFBO1VBQUEsZ0JBQTZCLGdEQUN6QjtpQkFBQTtjQUFBLDBEQUFpQjtVQUFBLCtCQUNmO1VBQUE7VUFBQTtNQUFrSCxzREFDOUc7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBd0M7TUFBMkIsa0RBQ2pFO1VBQUEsZUFDRixrREFFTjtpQkFBQTtjQUFBLDBEQUFpQjtVQUFBLCtCQUNmO1VBQUE7VUFBQTtNQUFrSCxzREFDOUc7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBMEM7TUFBNkIsa0RBQ3JFO1VBQUEsZUFDRixrREFFTjtpQkFBQTtjQUFBLDBEQUFpQjtVQUFBLCtCQUNmO1VBQUE7VUFBQTtNQUFrSCxzREFDOUc7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBNkM7TUFBb0Msa0RBQy9FO1VBQUEsZUFDRixnREFFRjtVQUFBLHlCQUNGOzs7O29CQzdCUjtNQUFBO3NDQUFBLFVBQUE7TUFBQTs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9hcHBvaW50bWVudHMvYXBwb2ludG1lbnRzLmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvYXBwb2ludG1lbnRzL2FwcG9pbnRtZW50cy5jb21wb25lbnQudHMiLCJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvYXBwb2ludG1lbnRzL2FwcG9pbnRtZW50cy5jb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC9hcHBvaW50bWVudHMvYXBwb2ludG1lbnRzLmNvbXBvbmVudC50cy5BcHBvaW50bWVudHNDb21wb25lbnRfSG9zdC5odG1sIl0sInNvdXJjZXNDb250ZW50IjpbIiAiLCI8ZGl2IGNsYXNzPVwiY29udGFpbmVyXCI+XG4gICAgPGRpdiBjbGFzcz1cInBhcmVudC1jb250YWluZXJcIj5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC1zbS02IGNvbC14cy02IGNvbC1tZC02IGNvbC1sZy00XCI+XG4gICAgICAgICAgICA8bG9nbyBsb2dvUm91dGVPcHRpb249XCIxXCI+PC9sb2dvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIDwvZGl2PlxuXG4gIDxkaXYgY2xhc3M9XCJjaGlsZC1jb250YWluZXJcIj5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC14cy0xMCBjb2wtc20tOCBjb2wtbWQtOCBjb2wtbGctNiBjb2wtbGctb2Zmc2V0LTMgY29sLW1kLW9mZnNldC0yIGNvbC1zbS1vZmZzZXQtMiBjb2wteHMtb2Zmc2V0LTFcIj5cbiAgICAgICAgICAgIDxidXR0b24gKGNsaWNrKT1cIm9uSW5pdGlhbEFzc2Vzc21lbnQoKVwiPkluaXRpYWwgQXNzZXNzbWVudDwvYnV0dG9uPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuXG4gICAgICA8ZGl2IGNsYXNzPVwicm93XCI+XG4gICAgICAgIDxkaXYgY2xhc3M9XCJjb2wteHMtMTAgY29sLXNtLTggY29sLW1kLTggY29sLWxnLTYgY29sLWxnLW9mZnNldC0zIGNvbC1tZC1vZmZzZXQtMiBjb2wtc20tb2Zmc2V0LTIgY29sLXhzLW9mZnNldC0xXCI+XG4gICAgICAgICAgICA8YnV0dG9uIChjbGljayk9XCJvbkhlYXJpbmdBaWRzRml0dGluZygpXCIgPkhlYXJpbmcgQWlkcyBGaXR0aW5nPC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC14cy0xMCBjb2wtc20tOCBjb2wtbWQtOCBjb2wtbGctNiBjb2wtbGctb2Zmc2V0LTMgY29sLW1kLW9mZnNldC0yIGNvbC1zbS1vZmZzZXQtMiBjb2wteHMtb2Zmc2V0LTFcIj5cbiAgICAgICAgICAgIDxidXR0b24gKGNsaWNrKT1cIm9uSGVhcmluZ0FpZHNFdmFsdWF0aW9uKClcIiA+SGVhcmluZyBBaWQgRm9sbG93LVVwIFZpc2l0PC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICA8L2Rpdj5cbiAgPC9kaXY+XG4iLCI8YXBwb2ludG1lbnRzPjwvYXBwb2ludG1lbnRzPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7OztvQkNBQTtNQUFBO01BQXVCLDhDQUNuQjtVQUFBO1VBQUEsNENBQThCO1VBQUEsZUFDNUI7VUFBQTtNQUFpQixrREFDZjtVQUFBO1VBQUE7TUFBaUQsc0RBQzdDO1VBQUE7VUFBQSwyRUFBQTtVQUFBO1VBQUEsZUFBaUMsa0RBQy9CO2lCQUFBLGlDQUNGO1VBQUEsYUFDRiw4Q0FFUjtVQUFBO1VBQUEsMERBQTZCO1VBQUEsNkJBQ3pCO1VBQUE7VUFBQSxnQkFBaUIsa0RBQ2Y7aUJBQUE7Y0FBQTtNQUFrSCxzREFDOUc7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBd0M7TUFBMkIsa0RBQ2pFO1VBQUEsZUFDRixrREFFTjtpQkFBQTtjQUFBLDBEQUFpQjtVQUFBLCtCQUNmO1VBQUE7VUFBQTtNQUFrSCxzREFDOUc7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBMEM7TUFBNkIsa0RBQ3JFO1VBQUEsZUFDRixrREFFTjtpQkFBQTtjQUFBLDBEQUFpQjtVQUFBLCtCQUNmO1VBQUE7VUFBQTtNQUFrSCxzREFDOUc7VUFBQTtVQUFBO1lBQUE7WUFBQTtZQUFRO2NBQUE7Y0FBQTtZQUFBO1lBQVI7VUFBQSxnQ0FBNkM7TUFBb0Msa0RBQy9FO1VBQUEsZUFDRixnREFFRjtVQUFBLHlCQUNGOztJQXpCVTtJQUFOLFdBQU0sU0FBTjs7OztvQkNKWjtNQUFBO3NDQUFBLFVBQUE7TUFBQTs7OyJ9

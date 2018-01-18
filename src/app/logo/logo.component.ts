@@ -17,7 +17,6 @@ export class LogoComponent {
     /*
       #1 - route to "home page"
       #2 - display logo image with "HOME" text
-      #3 - disable routing to home page.
     */
     constructor(private router: Router) {
     }
@@ -31,5 +30,5 @@ export class LogoComponent {
           console.log('stay put');
       }
     }
+// tslint:disable-next-line:eofline
 }
-

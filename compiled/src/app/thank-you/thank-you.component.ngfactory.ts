@@ -17,20 +17,44 @@ export const RenderType_ThankYouComponent:i1.RendererType2 = i1.ɵcrt({encapsula
     styles:styles_ThankYouComponent,data:{}});
 export function View_ThankYouComponent_0(_l:any):i1.ɵViewDefinition {
   return i1.ɵvid(0,[(_l()(),i1.ɵted(-1,(null as any),['\n'])),(_l()(),i1.ɵeld(1,0,
-      (null as any),(null as any),16,'html',([] as any[]),(null as any),(null as any),
+      (null as any),(null as any),44,'html',([] as any[]),(null as any),(null as any),
       (null as any),(null as any),(null as any))),(_l()(),i1.ɵted(-1,(null as any),
-      ['\n'])),(_l()(),i1.ɵeld(3,0,(null as any),(null as any),1,'head',([] as any[]),
-      (null as any),(null as any),(null as any),(null as any),(null as any))),(_l()(),
-      i1.ɵted(-1,(null as any),['\n'])),(_l()(),i1.ɵted(-1,(null as any),['\n  '])),
-      (_l()(),i1.ɵeld(6,0,(null as any),(null as any),1,'logo',([] as any[]),(null as any),
-          (null as any),(null as any),i2.View_LogoComponent_0,i2.RenderType_LogoComponent)),
-      i1.ɵdid(7,49152,(null as any),0,i3.LogoComponent,[i4.Router],(null as any),(null as any)),
-      (_l()(),i1.ɵted(-1,(null as any),['\n\n  '])),(_l()(),i1.ɵeld(9,0,(null as any),
-          (null as any),1,'h2',([] as any[]),(null as any),(null as any),(null as any),
-          (null as any),(null as any))),(_l()(),i1.ɵted(10,(null as any),[' ',' '])),
-      (_l()(),i1.ɵted(-1,(null as any),['\n  '])),(_l()(),i1.ɵeld(12,0,(null as any),
-          (null as any),1,'button',[['class','button-video'],['type','button']],(null as any),
-          [[(null as any),'click']],(_v,en,$event) => {
+      ['\n'])),(_l()(),i1.ɵeld(3,0,(null as any),(null as any),41,'div',[['class',
+      'container']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵted(-1,(null as any),['\n    '])),(_l()(),i1.ɵeld(5,0,(null as any),
+          (null as any),11,'div',[['class','parent-container']],(null as any),(null as any),
+          (null as any),(null as any),(null as any))),(_l()(),i1.ɵted(-1,(null as any),
+          ['\n      '])),(_l()(),i1.ɵeld(7,0,(null as any),(null as any),8,'div',[['class',
+          'row']],(null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵted(-1,(null as any),['\n        '])),(_l()(),i1.ɵeld(9,0,(null as any),
+          (null as any),5,'div',[['class','col-sm-6 col-xs-6 col-md-6 col-lg-4']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵted(-1,(null as any),['\n            '])),(_l()(),i1.ɵeld(11,0,(null as any),
+          (null as any),2,'logo',[['imgLink','assets/images/home_button_for_thank-you_page.png'],
+              ['logoRouteOption','1']],(null as any),(null as any),(null as any),i2.View_LogoComponent_0,
+          i2.RenderType_LogoComponent)),i1.ɵdid(12,49152,(null as any),0,i3.LogoComponent,
+          [i4.Router],{logoRouteOption:[0,'logoRouteOption'],imgLink:[1,'imgLink']},
+          (null as any)),(_l()(),i1.ɵted(-1,(null as any),[' '])),(_l()(),i1.ɵted(-1,
+          (null as any),['\n        '])),(_l()(),i1.ɵted(-1,(null as any),['\n      '])),
+      (_l()(),i1.ɵted(-1,(null as any),['\n    '])),(_l()(),i1.ɵted(-1,(null as any),
+          ['\n\n      '])),(_l()(),i1.ɵeld(18,0,(null as any),(null as any),7,'div',
+          [['class','row']],(null as any),(null as any),(null as any),(null as any),
+          (null as any))),(_l()(),i1.ɵted(-1,(null as any),['\n          '])),(_l()(),
+          i1.ɵeld(20,0,(null as any),(null as any),4,'div',[['class','col-xs-8 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-2']],
+              (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵted(-1,(null as any),['\n              '])),(_l()(),i1.ɵeld(22,0,
+          (null as any),(null as any),1,'h2',([] as any[]),(null as any),(null as any),
+          (null as any),(null as any),(null as any))),(_l()(),i1.ɵted(23,(null as any),
+          [' ',' '])),(_l()(),i1.ɵted(-1,(null as any),['\n          '])),(_l()(),
+          i1.ɵted(-1,(null as any),['\n        '])),(_l()(),i1.ɵted(-1,(null as any),
+          ['\n\n      '])),(_l()(),i1.ɵeld(27,0,(null as any),(null as any),7,'div',
+          [['class','row']],(null as any),(null as any),(null as any),(null as any),
+          (null as any))),(_l()(),i1.ɵted(-1,(null as any),['\n        '])),(_l()(),
+          i1.ɵeld(29,0,(null as any),(null as any),4,'div',[['class','col-xs-8 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-2']],
+              (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵted(-1,(null as any),['\n            '])),(_l()(),i1.ɵeld(31,0,(null as any),
+          (null as any),1,'button',[['type','button']],(null as any),[[(null as any),
+              'click']],(_v,en,$event) => {
             var ad:boolean = true;
             var _co:i5.ThankYouComponent = _v.component;
             if (('click' === en)) {
@@ -39,9 +63,16 @@ export function View_ThankYouComponent_0(_l:any):i1.ɵViewDefinition {
             }
             return ad;
           },(null as any),(null as any))),(_l()(),i1.ɵted(-1,(null as any),['Informative Video'])),
-      (_l()(),i1.ɵted(-1,(null as any),['\n  '])),(_l()(),i1.ɵeld(15,0,(null as any),
-          (null as any),1,'button',[['class','button-information'],['type','button']],
-          (null as any),[[(null as any),'click']],(_v,en,$event) => {
+      (_l()(),i1.ɵted(-1,(null as any),['\n        '])),(_l()(),i1.ɵted(-1,(null as any),
+          ['\n      '])),(_l()(),i1.ɵted(-1,(null as any),['\n\n      '])),(_l()(),
+          i1.ɵeld(36,0,(null as any),(null as any),7,'div',[['class','row']],(null as any),
+              (null as any),(null as any),(null as any),(null as any))),(_l()(),i1.ɵted(-1,
+          (null as any),['\n        '])),(_l()(),i1.ɵeld(38,0,(null as any),(null as any),
+          4,'div',[['class','col-xs-8 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-2']],
+          (null as any),(null as any),(null as any),(null as any),(null as any))),
+      (_l()(),i1.ɵted(-1,(null as any),['\n            '])),(_l()(),i1.ɵeld(40,0,(null as any),
+          (null as any),1,'button',[['type','button']],(null as any),[[(null as any),
+              'click']],(_v,en,$event) => {
             var ad:boolean = true;
             var _co:i5.ThankYouComponent = _v.component;
             if (('click' === en)) {
@@ -50,11 +81,17 @@ export function View_ThankYouComponent_0(_l:any):i1.ɵViewDefinition {
             }
             return ad;
           },(null as any),(null as any))),(_l()(),i1.ɵted(-1,(null as any),['Other Information'])),
-      (_l()(),i1.ɵted(-1,(null as any),['\n\n'])),(_l()(),i1.ɵted(-1,(null as any),
-          ['\n']))],(null as any),(_ck,_v) => {
+      (_l()(),i1.ɵted(-1,(null as any),['\n        '])),(_l()(),i1.ɵted(-1,(null as any),
+          ['\n      '])),(_l()(),i1.ɵted(-1,(null as any),['\n  '])),(_l()(),i1.ɵted(-1,
+          (null as any),['\n  '])),(_l()(),i1.ɵted(-1,(null as any),['\n']))],(_ck,
+      _v) => {
+    const currVal_0:any = '1';
+    const currVal_1:any = 'assets/images/home_button_for_thank-you_page.png';
+    _ck(_v,12,0,currVal_0,currVal_1);
+  },(_ck,_v) => {
     var _co:i5.ThankYouComponent = _v.component;
-    const currVal_0:any = _co.title;
-    _ck(_v,10,0,currVal_0);
+    const currVal_2:any = _co.title;
+    _ck(_v,23,0,currVal_2);
   });
 }
 export function View_ThankYouComponent_Host_0(_l:any):i1.ɵViewDefinition {
@@ -67,4 +104,4 @@ export function View_ThankYouComponent_Host_0(_l:any):i1.ɵViewDefinition {
 }
 export const ThankYouComponentNgFactory:i1.ComponentFactory<i5.ThankYouComponent> = i1.ɵccf('thank-you',
     i5.ThankYouComponent,View_ThankYouComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC90aGFuay15b3UvdGhhbmsteW91LmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvdGhhbmsteW91L3RoYW5rLXlvdS5jb21wb25lbnQudHMiLCJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvdGhhbmsteW91L3RoYW5rLXlvdS5jb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC90aGFuay15b3UvdGhhbmsteW91LmNvbXBvbmVudC50cy5UaGFua1lvdUNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjwhRE9DVFlQRSBodG1sPlxuPGh0bWw+XG48aGVhZD5cbjwvaGVhZD5cbiAgPGxvZ28+PC9sb2dvPlxuXG4gIDxoMj4ge3t0aXRsZX19IDwvaDI+XG4gIDxidXR0b24gKGNsaWNrKT1cIk9uQ2xpY2tWaWRlb0xpbmsoKVwiIGNsYXNzPVwiYnV0dG9uLXZpZGVvXCIgdHlwZT1cImJ1dHRvblwiPkluZm9ybWF0aXZlIFZpZGVvPC9idXR0b24+XG4gIDxidXR0b24gKGNsaWNrKT1cIk9uQ2xpY2tJbmZvTGluaygpXCIgY2xhc3M9XCJidXR0b24taW5mb3JtYXRpb25cIiB0eXBlPVwiYnV0dG9uXCI+T3RoZXIgSW5mb3JtYXRpb248L2J1dHRvbj5cblxuPC9odG1sPlxuIiwiPHRoYW5rLXlvdT48L3RoYW5rLXlvdT4iXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7b0JDQWUsMENBQ2Y7TUFBQTtNQUFBLDRDQUFNO01BQUEsU0FDTjtNQUFBLHdFQUFNO2FBQUEsMkJBQ0M7TUFDTDtVQUFBO2FBQUE7TUFBYSw4Q0FFYjtVQUFBO1VBQUEsOEJBQUk7TUFBZ0IsNENBQ3BCO1VBQUE7VUFBQTtZQUFBO1lBQUE7WUFBUTtjQUFBO2NBQUE7WUFBQTtZQUFSO1VBQUEsZ0NBQXdFO01BQTBCLDRDQUNsRztVQUFBO1VBQUE7WUFBQTtZQUFBO1lBQVE7Y0FBQTtjQUFBO1lBQUE7WUFBUjtVQUFBLGdDQUE2RTtNQUEwQiw0Q0FFbEc7VUFBQTs7SUFKRDtJQUFBOzs7O29CQ05OO01BQUE7a0NBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7In0=
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC90aGFuay15b3UvdGhhbmsteW91LmNvbXBvbmVudC5uZ2ZhY3RvcnkudHMiLCJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvdGhhbmsteW91L3RoYW5rLXlvdS5jb21wb25lbnQudHMiLCJuZzovLy9Vc2Vycy90dXR1eWluL1ZBLUF1ZGlvbG9neS1XZWJzaXRlL3NyYy9hcHAvdGhhbmsteW91L3RoYW5rLXlvdS5jb21wb25lbnQuaHRtbCIsIm5nOi8vL1VzZXJzL3R1dHV5aW4vVkEtQXVkaW9sb2d5LVdlYnNpdGUvc3JjL2FwcC90aGFuay15b3UvdGhhbmsteW91LmNvbXBvbmVudC50cy5UaGFua1lvdUNvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjwhRE9DVFlQRSBodG1sPlxuPGh0bWw+XG48ZGl2IGNsYXNzPVwiY29udGFpbmVyXCI+XG4gICAgPGRpdiBjbGFzcz1cInBhcmVudC1jb250YWluZXJcIj5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC1zbS02IGNvbC14cy02IGNvbC1tZC02IGNvbC1sZy00XCI+XG4gICAgICAgICAgICA8bG9nbyBpbWdMaW5rID0gXCJhc3NldHMvaW1hZ2VzL2hvbWVfYnV0dG9uX2Zvcl90aGFuay15b3VfcGFnZS5wbmdcIiBsb2dvUm91dGVPcHRpb249XCIxXCI+IDwvbG9nbz5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cblxuICAgICAgPGRpdiBjbGFzcz1cInJvd1wiPlxuICAgICAgICAgIDxkaXYgY2xhc3M9XCJjb2wteHMtOCBjb2wtc20tOCBjb2wtbWQtOCBjb2wtbGctNiBjb2wtbGctb2Zmc2V0LTMgY29sLW1kLW9mZnNldC0yIGNvbC1zbS1vZmZzZXQtMiBjb2wteHMtb2Zmc2V0LTJcIj5cbiAgICAgICAgICAgICAgPGgyPiB7e3RpdGxlfX0gPC9oMj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC14cy04IGNvbC1zbS04IGNvbC1tZC04IGNvbC1sZy02IGNvbC1sZy1vZmZzZXQtMyBjb2wtbWQtb2Zmc2V0LTIgY29sLXNtLW9mZnNldC0yIGNvbC14cy1vZmZzZXQtMlwiPlxuICAgICAgICAgICAgPGJ1dHRvbiAoY2xpY2spPVwiT25DbGlja1ZpZGVvTGluaygpXCIgdHlwZT1cImJ1dHRvblwiPkluZm9ybWF0aXZlIFZpZGVvPC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cbiAgICAgIDxkaXYgY2xhc3M9XCJyb3dcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cImNvbC14cy04IGNvbC1zbS04IGNvbC1tZC04IGNvbC1sZy02IGNvbC1sZy1vZmZzZXQtMyBjb2wtbWQtb2Zmc2V0LTIgY29sLXNtLW9mZnNldC0yIGNvbC14cy1vZmZzZXQtMlwiPlxuICAgICAgICAgICAgPGJ1dHRvbiAoY2xpY2spPVwiT25DbGlja0luZm9MaW5rKClcIiB0eXBlPVwiYnV0dG9uXCI+T3RoZXIgSW5mb3JtYXRpb248L2J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgPC9kaXY+XG4gIDwvaHRtbD5cbiIsIjx0aGFuay15b3U+PC90aGFuay15b3U+Il0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7O29CQ0FlLDBDQUNmO01BQUE7TUFBQSw0Q0FBTTtNQUFBLFNBQ047TUFBQTtNQUF1Qiw4Q0FDbkI7VUFBQTtVQUFBLDRDQUE4QjtVQUFBLGVBQzVCO1VBQUE7TUFBaUIsa0RBQ2Y7VUFBQTtVQUFBO01BQWlELHNEQUM3QztVQUFBO2NBQUE7cUNBQUEsVUFBQTtVQUFBO1VBQUEsZUFBdUYseUNBQVE7VUFBQSwrQkFDN0Y7TUFDRiw4Q0FDRjtVQUFBLGlCQUVKO1VBQUE7VUFBQSxnQkFBaUIsb0RBQ2I7aUJBQUE7Y0FBQTtNQUFpSCx3REFDN0c7VUFBQTtVQUFBLDRDQUFJO1VBQUEsWUFBZ0Isb0RBQ2xCO2lCQUFBLG1DQUNGO1VBQUEsaUJBRVI7VUFBQTtVQUFBLGdCQUFpQixrREFDZjtpQkFBQTtjQUFBO01BQWlILHNEQUM3RztVQUFBO2NBQUE7WUFBQTtZQUFBO1lBQVE7Y0FBQTtjQUFBO1lBQUE7WUFBUjtVQUFBLGdDQUFtRDtNQUEwQixrREFDM0U7VUFBQSxlQUNGLGtEQUVOO2lCQUFBO2NBQUEsMERBQWlCO1VBQUEsK0JBQ2Y7VUFBQTtVQUFBO01BQWlILHNEQUM3RztVQUFBO2NBQUE7WUFBQTtZQUFBO1lBQVE7Y0FBQTtjQUFBO1lBQUE7WUFBUjtVQUFBLGdDQUFrRDtNQUEwQixrREFDMUU7VUFBQSxlQUNGLDRDQUNKO1VBQUEseUJBQ0M7O0lBdkJzRTtJQUE3RDtJQUFOLFlBQW1FLFVBQTdELFNBQU47OztJQU9NO0lBQUE7Ozs7b0JDYmxCO01BQUE7a0NBQUEsVUFBQTtNQUFBO0lBQUE7Ozs7In0=
