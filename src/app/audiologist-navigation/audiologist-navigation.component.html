@@ -1,53 +1,37 @@
-<body class="bg">
-  <div class="flex-container">
-          <input id="slide-sidebar" type="checkbox" role="button" />
-              <label for="slide-sidebar"><span>close</span></label>
-          <!-- <nav id="sidebar" class="{{active ? 'bg active' : 'bg'}}"> -->
-          <!-- <nav class="sidebar"> -->
-          <nav class="sidebar">
-            <span class="header">
-              <logo></logo>
-            </span>
+<div class="audio">
+  <div class="container">
+      <div class="{{active ? 'left-container' : 'left-container-hide'}}">
+        <div class="row">
+          <logo logoRouteOption="1"></logo>
+        </div>
 
-            <span class="search">
-              <input  class="search-input" type="text" src="/assets/images/search_icon.png" placeholder="search here">
-              <button class="search-button">Search</button>
-            </span>
-              <!-- Sidebar Links -->
-            <!-- <u class="list-unstyled components"> -->
-            <span class="div-button">
-              <!-- <label class="tests">TESTS</label> -->
-              <button class="audiogram-button">Audiogram</button>
-              <button class="otoscopy-button">Otoscopy</button>
-              <button class="tymps-button">Tympanometry</button>
-              <!-- <label class="summary">SUMMARY</label> -->
-              <button class="summary-button">Summary</button>
-            </span>
-            <span class="footer"></span>
-          </nav>
-
-          <!-- <div class="{{active ? 'handle active' : 'handle'}}"> -->
-          <div class="content">
-              <!-- <button class="collapse-button" (click)="onClick()" type="button"> -->
-              <!-- </button> -->
+        <div class="row">
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <input class="search-input" type="text" src="/assets/images/search_icon.png" placeholder="search here">
           </div>
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <button type="button" class="search-btn"></button>
+          </div>
+        </div>
+
+        <div class="row"><button class="main-btn">Audiogram</button></div>
+        <div class="row"><button class="main-btn">Otoscopy</button></div>
+        <div class="row"><button class="main-btn">Tympanometry</button></div>
+        <div class="row"><button class="main-btn">Summary</button></div>
+
+      </div>
+
+      <div class="{{active ? 'right-container' : 'right-container-full'}}">
+          <button type="button" class="toggle-btn" (click)= "onToggle()"></button>
+       ...
+      </div>
+
   </div>
-</body>
 
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- <input id="slide-sidebar" type="checkbox" role="button" />
+            <label for="slide-sidebar"><span>close</span></label> -->
 <!--
 <body  class="bg">
     <logo></logo>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,11 +12,24 @@ import { Router } from '@angular/router';
 })
 
 export class LogoComponent {
-    public imgLink = 'assets/images/logo.png';
+    @Input() public logoRouteOption: string;
+    @Input()public imgLink = 'assets/images/logo.png';
+    /*
+      #1 - route to "home page"
+      #2 - display logo image with "HOME" text
+      #3 - disable routing to home page.
+    */
+    constructor(private router: Router) {
+    }
 
-    constructor(private router: Router) {}
     public onClick() {
+      if (this.logoRouteOption === '1') {
         this.router.navigateByUrl('/home');
         console.log('back to home page.');
+      }
+      if (this.logoRouteOption === '2') {
+          console.log('stay put');
+      }
     }
 }
+

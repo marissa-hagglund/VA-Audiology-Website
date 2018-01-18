@@ -9,8 +9,8 @@ import { NgForm } from '@angular/forms';
 })
 
 export class AudiologistNavigationComponent {
-    public active: boolean = false;
-    public onClick() {
+    public active: boolean = true;
+    public onToggle() {
       if (!this.active) {
           this.active = true;
           console.log('is active');
