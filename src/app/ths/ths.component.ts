@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
   <ths-question *ngIf="currentState === 7" [question]="questionStrings.question7" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 8" [question]="questionStrings.question8" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 9" [question]="questionStrings.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <p *ngIf="currentState === 9" style="text-align: center;">{{questionStrings.note}}</p>
+  <p *ngIf="currentState === 9" style="text-align: center; color: black;">{{questionStrings.note}}</p>
   <ths-question *ngIf="currentState === 10" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
 `
 })

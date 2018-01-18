@@ -3,39 +3,42 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
 
 @Component({
   selector: 'ths-question',
-  styleUrls: ['../ths.component.css'],
+  styleUrls: ['./ths-question.component.css'],
   template: `
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 questionFont sectionWrap" style="text-align: center;">{{question}}</div>
-    </div>
-    <div *ngIf="question !== 'Please list two examples of sounds that are too loud or uncomfortable for you, but seem normal to others:'" class="row">
-      <div class="col-sm-6 col-sm-offset-3 questionFont">
+    <h2 style="color: black;" align="center">{{question}}</h2>
+    <div *ngIf="question !== 'Please list two examples of sounds that are too loud or uncomfortable for you, but seem normal to others:'; else input_questions" class="row">
+      <div class="col-sm-4 col-sm-offset-3 col-xs-offset-2 questionFont">
         <div class="form-check">
-          <label class="form-check-label">
-            <label><input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio1}}">
-            {{radio1}}</label> <br>
-            <label><input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio2}}">
-            {{radio2}}</label> <br>
-            <label><input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio3}}">
-            {{radio3}}</label><br>
-            <label><input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio4}}">
-            {{radio4}}</label> <br>
-            <label><input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio5}}">
-            {{radio5}}</label> <br>
-          </label>
+          <mat-radio-group [(ngModel)]="selectedValue" class = "options" >
+            <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button> <br>
+            <mat-radio-button value="{{radio2}}">{{radio2}}</mat-radio-button> <br>
+            <mat-radio-button value="{{radio3}}">{{radio3}}</mat-radio-button> <br>
+            <mat-radio-button value="{{radio4}}">{{radio4}}</mat-radio-button> <br>
+            <mat-radio-button value="{{radio5}}">{{radio5}}</mat-radio-button> <br>
+          </mat-radio-group>
         </div>
       </div>
     </div>
+    <ng-template #input_questions>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <form class="inputForm">
+        <mat-form-field class="fields">
+        <textarea matInput placeholder="Example 1" value="{{example1}}"></textarea>
+        </mat-form-field><br>
+        <mat-form-field class="fields">
+        <textarea matInput placeholder="Example 2" value="{{example2}}"></textarea>
+        </mat-form-field>
+      </form>
+      </div>
+    <div class="col-sm-3"></div>
+    </ng-template>
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 questionFont sectionWrap">
+      <div class="col-sm-6 col-sm-offset-3 sectionWrap" style="padding-top: 2%;">
         <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
         <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>
     </div>
-    <mat-radio-group>
-    <mat-radio-button value="1">Option 1</mat-radio-button>
-    <mat-radio-button value="2">Option 2</mat-radio-button>
-  </mat-radio-group>
     `
 })
 
@@ -48,6 +51,9 @@ export class ThsQuestionComponent {
   @Input() public radio3: string = this.answerStrings.MODERATE_YES;
   @Input() public radio4: string = this.answerStrings.BIG_YES;
   @Input() public radio5: string = this.answerStrings.VERY_BIG_YES;
+
+  @Input() public example1: string = '';
+  @Input() public example2: string = '';
 
   @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();

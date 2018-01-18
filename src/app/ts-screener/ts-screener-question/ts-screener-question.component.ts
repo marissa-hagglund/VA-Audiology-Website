@@ -3,39 +3,30 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
 
 @Component({
   selector: 'screener-question',
-  styleUrls: ['../ts-screener.component.css'],
+  styleUrls: ['./ts-screener-question.component.css'],
   template: `
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap">{{statement}}</div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap">{{question}}</div>
-    </div>
-    <br>
-    <div class="col-sm-4 col-sm-offset-4 questionFont" style="padding-left: 14%">
+    <h2 style="color: black;" align="center">{{statement}}</h2>
+    <h2 style="color: black;" align="center">{{question}}</h2>
+    <div class="col-sm-4 col-sm-offset-4 col-xs-offset-4 questionFont" style="padding-left: 14%">
       <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio1}}" [checked]="selectedValue === 'YES'">
-          {{radio1}} <br>
-          <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio2}}">
-          {{radio2}} <br>
-          <span *ngIf="radio3"><input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="{{radio3}}">
-          {{radio3}} </span>
-        </label>
+      <mat-radio-group [(ngModel)]="selectedValue" class = "options" >
+        <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button> <br>
+        <mat-radio-button value="{{radio2}}">{{radio2}}</mat-radio-button> <br>
+          <span *ngIf="radio3"><mat-radio-button value="{{radio3}}">{{radio3}}</mat-radio-button></span>
+      </mat-radio-group>
       </div>
     </div>
-    <div class="row" style="margin-top: 100px">
-      <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap">
-        <button style="width: 100px;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
-        <button style="width: 100px;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 questionFont sectionWrap" style="padding-top: 2%;">
+        <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>
     </div>
   `
 })
 
 export class TsScreenerQuestionComponent {
-  @Input() public statement: string = 'During the PAST YEAR';
+  @Input() public statement: string = 'During the PAST YEAR:';
   @Input() public question: string = '';
   @Input() public showThirdRadioButton: boolean = false;
   @Input() public radio1: string = 'YES';

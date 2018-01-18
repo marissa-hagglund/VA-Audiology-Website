@@ -17,6 +17,7 @@ import {
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -84,7 +85,8 @@ type StoreType = {
     TsScreenerQuestionComponent
   ],
   exports: [
-    MatRadioModule
+    MatRadioModule,
+    MatInputModule
   ],
   /**
    * Import Angular's modules.
@@ -95,6 +97,7 @@ type StoreType = {
     FormsModule,
     HttpModule,
     MatRadioModule,
+    MatInputModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
