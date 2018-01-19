@@ -15,7 +15,7 @@ export class TfiComponent {
   private currentState: number = 0;
   constructor(private router: Router,
               private dataService: TfiDataService) { }
-  
+
   private moveStateBackward(): void {
     if (this.currentState === 0) {
       return;

@@ -8,7 +8,7 @@ import { MatSliderModule } from '@angular/material/slider';
 export class TfiQuestionComponent implements OnInit {
   @Input() private question: string = '';
   @Input() private section: string = 'In the past year...';
-
+  @Input() private percent: boolean = false;
   @Output() private onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() private onClickedNext: EventEmitter<string> = new EventEmitter<string>();
   private selectedValue: number = 0;

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap" >{{section}}</div>
+  <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap" >{{section}}....</div>
 </div>
 <br>
 <div class="row">
@@ -9,7 +9,12 @@
 <div class="col-sm-4 col-sm-offset-4 questionFont" style="padding-left:0%">
   <div class="form-check">
     <label class="form-check-label">
+      <div *ngIf="percent === false">
       <mat-slider min="0" max="10" step="1" value="5" thumbLabel="true" tickInterval="1" [(ngModel)]="selectedValue"></mat-slider>
+      </div>
+      <div *ngIf="percent === true">
+        <mat-slider min="0" max="100" step="5" value="50" thumbLabel="true" tickInterval="5" [(ngModel)]="selectedValue"></mat-slider>
+      </div>
     </label>
   </div>
 </div>

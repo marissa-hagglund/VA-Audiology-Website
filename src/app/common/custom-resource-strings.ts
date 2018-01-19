@@ -61,14 +61,14 @@ export class TfiQuestionStrings {
 }
 
 export class TfiSectionStrings {
-  public section1: string = 'I. Over the PAST WEEK....';
-  public section2: string = 'SC. Over the PAST WEEK....';
-  public section3: string = 'C. Over the PAST WEEK how much did your tinnitus interfere with...';
-  public section4: string = 'SL. Over the PAST WEEK....';
-  public section5: string = 'A. Over the PAST WEEK how much did your tinnitus interfere with...';
-  public section6: string = 'R. Over the PAST WEEK how much did your tinnitus interfere with...';
-  public section7: string = 'Q. Over the PAST WEEK how much did your tinnitus interfere with...';
-  public section8: string = 'E. Over the PAST WEEK....';
+  public section1: string = 'I. Over the PAST WEEK';
+  public section2: string = 'SC. Over the PAST WEEK';
+  public section3: string = 'C. Over the PAST WEEK how much did your tinnitus interfere with';
+  public section4: string = 'SL. Over the PAST WEEK';
+  public section5: string = 'A. Over the PAST WEEK how much did your tinnitus interfere with';
+  public section6: string = 'R. Over the PAST WEEK how much did your tinnitus interfere with';
+  public section7: string = 'Q. Over the PAST WEEK how much did your tinnitus interfere with';
+  public section8: string = 'E. Over the PAST WEEK';
 }
 
 export class ThsQuestionStrings {
