@@ -21,7 +21,7 @@ import {
 } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatSliderModule } from '@angular/material'
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -45,7 +45,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { TsScreenerStateflowService } from './services/ts-screener-stateflow.service';
 import { TsScreenerDataService } from './services/ts-screener-data.service';
 import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
-import { TfiDataService } from "./services/tfi-data.service";
+import { TfiDataService } from './services/tfi-data.service';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -81,6 +81,9 @@ type StoreType = {
     SummaryComponent,
     TsScreenerQuestionComponent
   ],
+  exports: [
+    MatSliderModule
+  ],
   /**
    * Import Angular's modules.
    */
@@ -89,6 +92,7 @@ type StoreType = {
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    MatSliderModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules

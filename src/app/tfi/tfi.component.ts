@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TfiDataService } from '../services/tfi-data.service';
 import { Router } from '@angular/router';
 // import { MatSliderModule } from '@angular/material/slider';
@@ -9,15 +9,13 @@ import { TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource
   templateUrl: './tfi.component.html',
   styleUrls: ['./tfi.component.css']
 })
-export class TfiComponent implements OnInit {
+export class TfiComponent {
   private questions: TfiQuestionStrings = new TfiQuestionStrings();
   private sections: TfiSectionStrings =  new TfiSectionStrings();
   private currentState: number = 0;
   constructor(private router: Router,
               private dataService: TfiDataService) { }
-
-  public ngOnInit() {
-  }
+  
   private moveStateBackward(): void {
     if (this.currentState === 0) {
       return;

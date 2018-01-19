@@ -1,0 +1,40 @@
+mat-slider{
+  color: deepskyblue;
+  border-color: #eeeeee;
+  width: 500px;
+}
+h1{
+  color:white;
+  font-size: 20px;
+}
+
+.centerColumn {
+  float: none;
+  margin: 0 auto;
+}
+
+.questionFont {
+  color: white;
+}
+
+.sectionWrap {
+  text-align: center;
+}
+
+.radio-label {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3%;
+}
+.radio-input {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}

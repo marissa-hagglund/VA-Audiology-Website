@@ -6,21 +6,10 @@
   <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap">{{question}}</div>
 </div>
 <br>
-<div class="col-sm-4 col-sm-offset-4 questionFont" style="padding-left:9%">
+<div class="col-sm-4 col-sm-offset-4 questionFont" style="padding-left:0%">
   <div class="form-check">
     <label class="form-check-label">
-      <!--<mat-slider min="0" max="10" step="1" value="5" thumbLabel="true" tickInterval="1"></mat-slider>-->
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="0">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="1">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="2">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="3">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="4">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="5">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="6">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="7">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="8">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="9">
-      <input class="form-check-input" [(ngModel)]="selectedValue" type="radio" name="radioButton" value="10">
+      <h1>0</h1><mat-slider min="0" max="10" step="1" value="5" thumbLabel="true" tickInterval="1" [(ngModel)]="selectedValue"></mat-slider><h1>10</h1>
     </label>
   </div>
 </div>
