@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 
 export class LogoComponent {
     @Input() public logoRouteOption: string;
+
     @Input()public imgLink = 'assets/images/logo.png';
     /*
       #1 - route to "home page"
