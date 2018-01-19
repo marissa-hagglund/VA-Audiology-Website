@@ -45,6 +45,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { TsScreenerStateflowService } from './services/ts-screener-stateflow.service';
 import { TsScreenerDataService } from './services/ts-screener-data.service';
 import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
+import { TfiDataService } from "./services/tfi-data.service";
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -100,7 +101,8 @@ type StoreType = {
     ENV_PROVIDERS,
     APP_PROVIDERS,
     TsScreenerStateflowService,
-    TsScreenerDataService
+    TsScreenerDataService,
+    TfiDataService
   ]
 })
 export class AppModule {
