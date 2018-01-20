@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-  <logo></logo>
+<div class="container">
+    <div class="parent-container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-4" style="text-align: left;">
+            <logo imgLink = "assets/images/home_button_for_thank-you_page.png" logoRouteOption="1"> </logo>
+        </div>
+      </div>
+    </div>
 
-  <h2> {{title}} </h2>
-  <button (click)="OnClickVideoLink()" class="button-video" type="button">Informative Video</button>
-  <button (click)="OnClickInfoLink()" class="button-information" type="button">Other Information</button>
+      <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+              <h2> {{title}} </h2>
+          </div>
+        </div>
 
-</html>
+      <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+            <button (click)="OnClickVideoLink()" type="button">Informative Video</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-6 col-lg-offset-3 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+            <button (click)="OnClickInfoLink()" type="button">Other Information</button>
+        </div>
+      </div>
+  </div>
+  </html>

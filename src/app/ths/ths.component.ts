@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
   selector: 'app-ths',
   styleUrls: ['./ths.component.css'],
   template: `
-  <logo></logo>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-4" style="text-align: left;">
+        <logo logoRouteOption="2"></logo>
+    </div>
+  </div>
   <h3 style="color: white" align="center">Tinnitus & Hearing Survey: Normative Standards</h3>
   <ths-question *ngIf="currentState === 1" [question]="questionStrings.question1" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 2" [question]="questionStrings.question2" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
@@ -18,7 +22,7 @@ import { Router } from '@angular/router';
   <ths-question *ngIf="currentState === 7" [question]="questionStrings.question7" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 8" [question]="questionStrings.question8" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 9" [question]="questionStrings.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <p *ngIf="currentState === 9" style="text-align: center; color: black;">{{questionStrings.note}}</p>
+  <p *ngIf="currentState === 9" style="text-align: center; color: black; margin-top: 2%;">{{questionStrings.note}}</p>
   <ths-question *ngIf="currentState === 10" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
 `
 })

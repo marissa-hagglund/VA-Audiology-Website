@@ -24,11 +24,8 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
     <div class="col-sm-6">
       <form class="inputForm">
         <mat-form-field class="fields">
-        <textarea matInput placeholder="Example 1" value="{{example1}}"></textarea>
+        <textarea matInput placeholder="Example 1 & 2:" value="{{selectedValue}}" [(ngModel)]="selectedValue" name="textBox"></textarea>
         </mat-form-field><br>
-        <mat-form-field class="fields">
-        <textarea matInput placeholder="Example 2" value="{{example2}}"></textarea>
-        </mat-form-field>
       </form>
       </div>
     <div class="col-sm-3"></div>
@@ -51,9 +48,6 @@ export class ThsQuestionComponent {
   @Input() public radio3: string = this.answerStrings.MODERATE_YES;
   @Input() public radio4: string = this.answerStrings.BIG_YES;
   @Input() public radio5: string = this.answerStrings.VERY_BIG_YES;
-
-  @Input() public example1: string = '';
-  @Input() public example2: string = '';
 
   @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
