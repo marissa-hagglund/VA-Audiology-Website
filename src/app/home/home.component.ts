@@ -27,11 +27,6 @@ export class HomeComponent implements OnInit {
      */
   }
 
-  public submitState(value: string) {
-    this.appState.set('value', value);
-    this.localState.value = '';
-  }
-
   public patientOnClick() {
     this.router.navigateByUrl('/login');
     console.log('patient button to log in');

@@ -12,6 +12,8 @@ cache:
 
 addons:
   chrome: stable
+  sonarcloud:
+    organization: "marissa-hagglund-github" # the key of the org
 
 capabilities:
   browserName:
@@ -43,4 +45,6 @@ before_script:
   - sleep 3
 
 script:
+  - sonar-scanner
+  - npm run rimraf -- compiled
   - npm run ci:travis

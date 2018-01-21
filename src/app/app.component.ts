@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
@@ -17,18 +16,15 @@ import { AppState } from './app.service';
   ],
   template: `
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <main>
+    <main class="mainPage">
       <router-outlet></router-outlet>
     </main>
   `
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   constructor(
     public appState: AppState
   ) {}
-
-  public ngOnInit() {
-  }
 
 }

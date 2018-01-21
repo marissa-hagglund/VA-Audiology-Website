@@ -9,14 +9,16 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
 
 import { DataResolver } from './app.resolver';
 import { TsScreenerComponent } from './ts-screener/ts-screener.component';
+import { ThsComponent } from './ths/ths.component';
 
 export const ROUTES: Routes = [
-  { path: '',      component: HomeComponent },
+  { path: '',      redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
   { path: 'login', component: CheckInComponent},
   { path: 'appointments', component: AppointmentsComponent},
   { path: 'audio-nav', component: AudiologistNavigationComponent},
   { path: 'thank-you', component: ThankYouComponent},
   { path: 'ts-screener', component: TsScreenerComponent},
+  { path: 'ths', component: ThsComponent},
   { path: '**',    component: NoContentComponent },
 ];

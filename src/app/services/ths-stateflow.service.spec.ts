@@ -1,11 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { ThsStateflowService } from './ths-stateflow.service';
+import { ThsDataService } from './ths-data.service';
 
 describe('ThsStateflowService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ThsStateflowService]
+      providers: [ThsStateflowService, ThsDataService]
     });
   });
 

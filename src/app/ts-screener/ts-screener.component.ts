@@ -8,7 +8,11 @@ import { Router } from '@angular/router';
   selector: 'screener',
   styleUrls: ['./ts-screener.component.css'],
   template: `
-    <logo></logo>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-4" style="text-align: left;">
+        <logo logoRouteOption="2"></logo>
+    </div>
+  </div>
     <h3 style="color: white" align="center">Tinnitus Screener</h3>
     <screener-question *ngIf="currentState === 1" [question]="questionStrings.question1" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></screener-question>
     <screener-question *ngIf="currentState === 2" [question]="questionStrings.question2" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></screener-question>
@@ -50,7 +54,7 @@ export class TsScreenerComponent {
     this.currentState = nextState;
 
     if (this.currentState === 7) {
-      this.router.navigateByUrl('/thank-you');
+      this.router.navigateByUrl('/ths');
     }
   }
 }
