@@ -6,12 +6,12 @@ import { MatSliderModule } from '@angular/material/slider';
   styleUrls: ['./tfi-question.component.css']
 })
 export class TfiQuestionComponent implements OnInit {
-  @Input() private question: string = '';
-  @Input() private section: string = 'In the past year...';
-  @Input() private percent: boolean = false;
-  @Output() private onClickedBack: EventEmitter<string> = new EventEmitter<string>();
-  @Output() private onClickedNext: EventEmitter<string> = new EventEmitter<string>();
-  private selectedValue: number = 0;
+  public selectedValue: number = 0;
+  @Input() public question: string = '';
+  @Input() public section: string = 'In the past year...';
+  @Input() public percent: boolean = false;
+  @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
+  @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
   constructor() { }
 
   public ngOnInit() {
