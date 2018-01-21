@@ -1,11 +1,5 @@
-<div class="row">
-  <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap" >{{section}}....</div>
-</div>
-<br>
-<div class="row">
-  <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap">{{question}}</div>
-</div>
-<br>
+<h2 style="color: black;" align="center">{{section}}:</h2>
+<h2 style="color: black;" align="center">{{question}}</h2>
 <div class="col-sm-4 col-sm-offset-4 questionFont" style="padding-left:0%">
   <div class="form-check">
     <label class="form-check-label">
@@ -18,10 +12,9 @@
     </label>
   </div>
 </div>
-<br>
 <div class="row" style="margin-top: 100px">
-  <div class="col-sm-4 col-sm-offset-4 questionFont sectionWrap">
-    <button style="width: 100px;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
-    <button style="width: 100px;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
+  <div class="col-sm-6 col-sm-offset-3 sectionWrap" style="padding-top: 2%;">
+    <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+    <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
   </div>
 </div>
