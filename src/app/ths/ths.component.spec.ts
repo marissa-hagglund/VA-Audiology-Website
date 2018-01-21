@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ThsComponent } from './ths.component';
+import { ThsStateflowService } from '../services/ths-stateflow.service';
 
 describe('ThsComponent', () => {
   let component: ThsComponent;
@@ -8,7 +9,8 @@ describe('ThsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ThsComponent ]
+      declarations: [ ThsComponent ],
+      providers: [ ThsStateflowService ]
     })
     .compileComponents();
   }));
@@ -19,7 +21,4 @@ describe('ThsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

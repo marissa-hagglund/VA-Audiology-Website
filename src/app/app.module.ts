@@ -1,8 +1,3 @@
-import { LogoComponent } from './logo/logo.component';
-import { CheckInComponent } from './check-in/check-in.component';
-import { AppointmentsComponent } from './appointments/appointments.component';
-// tslint:disable-next-line:max-line-length
-import { AudiologistNavigationComponent } from './audiologist-navigation/audiologist-navigation.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -21,6 +16,8 @@ import {
 } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -28,23 +25,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ENV_PROVIDERS } from '../environments/environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
-import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { HomeComponent } from './home';
-import { NoContentComponent } from './no-content';
 
 import '../styles/styles.scss';
+import { AppComponent } from './app.component';
+import { LogoComponent } from './logo/logo.component';
+import { HomeComponent } from './home';
+import { NoContentComponent } from './no-content';
+import { CheckInComponent } from './check-in/check-in.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { AudiologistNavigationComponent } from './audiologist-navigation/audiologist-navigation.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
-import { TsScreenerComponent } from './ts-screener/ts-screener.component';
-import { ThsComponent } from './ths/ths.component';
-import { ThsQuestionComponent } from './ths/ths-question/ths-question.component';
+import { SummaryComponent } from './summary/summary.component';
+
 import { TfiComponent } from './tfi/tfi.component';
 import { TfiQuestionComponent } from './tfi/tfi-question/tfi-question.component';
-import { SummaryComponent } from './summary/summary.component';
+import { TsScreenerComponent } from './ts-screener/ts-screener.component';
 import { TsScreenerStateflowService } from './services/ts-screener-stateflow.service';
 import { TsScreenerDataService } from './services/ts-screener-data.service';
 import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
+import { ThsComponent } from './ths/ths.component';
+import { ThsStateflowService } from './services/ths-stateflow.service';
+import { ThsDataService } from './services/ths-data.service';
+import { ThsQuestionComponent } from './ths/ths-question/ths-question.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -80,6 +84,10 @@ type StoreType = {
     SummaryComponent,
     TsScreenerQuestionComponent
   ],
+  exports: [
+    MatRadioModule,
+    MatInputModule
+  ],
   /**
    * Import Angular's modules.
    */
@@ -88,6 +96,8 @@ type StoreType = {
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    MatRadioModule,
+    MatInputModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
@@ -100,7 +110,9 @@ type StoreType = {
     ENV_PROVIDERS,
     APP_PROVIDERS,
     TsScreenerStateflowService,
-    TsScreenerDataService
+    TsScreenerDataService,
+    ThsStateflowService,
+    ThsDataService
   ]
 })
 export class AppModule {
