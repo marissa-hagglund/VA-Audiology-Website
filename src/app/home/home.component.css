@@ -32,7 +32,7 @@ button {
     height: 85%;
   }
 }
-@media all and (max-width:438px) {
+@media all and (max-width:450px) {
   button {
     font-size: 0.9em;
     height: 80%;
