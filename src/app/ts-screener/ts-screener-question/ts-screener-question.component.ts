@@ -7,7 +7,7 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
   template: `
     <h2 style="color: black;" align="center">{{statement}}</h2>
     <h2 style="color: black;" align="center">{{question}}</h2>
-    <div class="col-sm-4 col-sm-offset-4 col-xs-offset-4 questionFont" style="padding-left: 14%">
+    <div [ngClass] ="radio3 ? 'other col-sm-4 col-sm-offset-4 col-xs-offset-3' : 'questionFont col-sm-4 col-sm-offset-4 col-xs-offset-4'">
       <div class="form-check">
       <mat-radio-group [(ngModel)]="selectedValue" class = "options" >
         <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button> <br>
@@ -17,7 +17,7 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 questionFont sectionWrap" style="padding-top: 2%;">
+      <div class="col-sm-6 col-sm-offset-3" style="padding-top: 2%;">
         <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
         <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>

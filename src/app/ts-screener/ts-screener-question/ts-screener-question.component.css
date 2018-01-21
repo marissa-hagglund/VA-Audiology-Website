@@ -1,3 +1,128 @@
 .options {
   color: black;
 }
+
+button {
+  background-color: #004273;
+  font-family: 'Roboto';
+  color: white;
+  border: 2px solid #93b9dd;
+  border-radius: 8px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 1em;
+}
+
+.questionFont {
+  padding-left: 15%
+}
+
+.other {
+  padding-left: 10%;
+}
+
+@media all and (max-width: 1595px) {
+  .questionFont {
+    padding-left: 14.5%;
+  }
+
+  .other {
+    padding-left: 9%;
+  }
+}
+
+@media all and (max-width: 1495px) {
+  .questionFont {
+    padding-left: 14%;
+  }
+
+  .other {
+    padding-left: 8%;
+  }
+}
+
+@media all and (max-width: 1332px) {
+  .questionFont {
+    padding-left: 13.5%;
+  }
+  .other {
+    padding-left: 7%;
+  }
+}
+
+@media all and (max-width: 1332px) {
+  .other {
+    padding-left: 6%;
+  }
+}
+
+@media all and (max-width: 1040px) {
+  .questionFont {
+    padding-left: 13%;
+  }
+  .other {
+    padding-left: 5%;
+  }
+}
+
+@media all and (max-width: 905px) {
+  .questionFont {
+    padding-left: 12%;
+  }
+  .other {
+    padding-left: 3%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .questionFont {
+    padding-left: 11%;
+  }
+  .other {
+    padding-left: 10%;
+  }
+}
+
+@media all and (max-width: 665px) {
+  .other {
+    padding-left: 5%;
+  }
+}
+
+@media all and (max-width: 620px) {
+  .other {
+    padding-left: 3%;
+  }
+}
+
+@media all and (max-width: 532px) {
+  .questionFont {
+    padding-left: 9%;
+  }
+
+  .other {
+    padding-left: 0;
+  }
+}
+
+@media all and (max-width: 440px) {
+  .questionFont {
+    padding-left: 8%;
+    font-size: .9em;
+  }
+
+  .other {
+    margin-left: 17%;
+  }
+}
+
+@media all and (max-width: 340px) {
+  .questionFont {
+    padding-left: 5%;
+    font-size: .87em;
+  }
+
+  .other {
+    margin-left: 5%;
+  }
+}

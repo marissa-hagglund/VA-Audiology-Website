@@ -2,27 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daea6970-da16-4192-b0ca-a1d9c4ea4580" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/images/home_button_for_thank-you_page.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/images/search_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/favicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.angular-cli.json" afterPath="$PROJECT_DIR$/.angular-cli.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/app/ts-screener/ts-screener-question/ts-screener-question.component.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.css" afterPath="$PROJECT_DIR$/src/app/app.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.component.ts" afterPath="$PROJECT_DIR$/src/app/app.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/appointments/appointments.component.css" afterPath="$PROJECT_DIR$/src/app/appointments/appointments.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/appointments/appointments.component.html" afterPath="$PROJECT_DIR$/src/app/appointments/appointments.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/appointments/appointments.component.ts" afterPath="$PROJECT_DIR$/src/app/appointments/appointments.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/audiologist-navigation/audiologist-navigation.component.css" afterPath="$PROJECT_DIR$/src/app/audiologist-navigation/audiologist-navigation.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/audiologist-navigation/audiologist-navigation.component.html" afterPath="$PROJECT_DIR$/src/app/audiologist-navigation/audiologist-navigation.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/audiologist-navigation/audiologist-navigation.component.ts" afterPath="$PROJECT_DIR$/src/app/audiologist-navigation/audiologist-navigation.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/check-in/check-in.component.css" afterPath="$PROJECT_DIR$/src/app/check-in/check-in.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/check-in/check-in.component.html" afterPath="$PROJECT_DIR$/src/app/check-in/check-in.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/check-in/check-in.component.ts" afterPath="$PROJECT_DIR$/src/app/check-in/check-in.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/home/home.component.css" afterPath="$PROJECT_DIR$/src/app/home/home.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/home/home.component.html" afterPath="$PROJECT_DIR$/src/app/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/home/home.component.ts" afterPath="$PROJECT_DIR$/src/app/home/home.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/logo/logo.component.css" afterPath="$PROJECT_DIR$/src/app/logo/logo.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/logo/logo.component.ts" afterPath="$PROJECT_DIR$/src/app/logo/logo.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/thank-you/thank-you.component.css" afterPath="$PROJECT_DIR$/src/app/thank-you/thank-you.component.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/thank-you/thank-you.component.html" afterPath="$PROJECT_DIR$/src/app/thank-you/thank-you.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.css" afterPath="$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.ts" afterPath="$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ths/ths.component.ts" afterPath="$PROJECT_DIR$/src/app/ths/ths.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ts-screener/ts-screener-question/ts-screener-question.component.css" afterPath="$PROJECT_DIR$/src/app/ts-screener/ts-screener-question/ts-screener-question.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ts-screener/ts-screener-question/ts-screener-question.component.ts" afterPath="$PROJECT_DIR$/src/app/ts-screener/ts-screener-question/ts-screener-question.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/ts-screener/ts-screener.component.ts" afterPath="$PROJECT_DIR$/src/app/ts-screener/ts-screener.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/styles.scss" afterPath="$PROJECT_DIR$/src/styles/styles.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,88 +48,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tfi.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tfi-question.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi-question/tfi-question.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="91" lean-forward="false" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.component.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="102" column="19" lean-forward="false" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-                <element signature="e#689#749#0" expanded="true" />
-                <element signature="e#823#879#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.routes.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-resource-strings.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/common/custom-resource-strings.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="64" column="51" lean-forward="false" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tfi.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-              <folding>
-                <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tfi.component.spec.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi.component.spec.ts">
+      <file leaf-file-name="tfi-question.component.spec.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi-question/tfi-question.component.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -135,13 +60,123 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ths.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/ths/ths.component.ts">
+      <file leaf-file-name="tfi.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="291">
+              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tfi-question.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi-question/tfi-question.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+              <folding>
+                <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ths-question.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#96#0" expanded="true" />
+                <marker date="1516514433297" expanded="true" signature="182:1394" ph="{&quot;selector&quot;: 'ths-question'...}" />
+                <marker date="1516514433297" expanded="true" signature="288:301" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="507:1177" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="581:1166" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="614:1153" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="688:1138" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="1212:1394" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="1272:1394" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="1303:1394" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="1343:1394" ph="..." />
+                <marker date="1516514433297" expanded="true" signature="2457:2690" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tfi.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ts-screener.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/ts-screener/ts-screener.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="31" column="86" lean-forward="false" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
+              <folding>
+                <marker date="1516514433313" expanded="true" signature="402:490" ph="{&quot;selector&quot;: 'screener'...}" />
+                <marker date="1516514433313" expanded="true" signature="3079:3088" ph="{...}" />
+                <marker date="1516514433313" expanded="true" signature="3079:3092" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ts-screener-question.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/ts-screener/ts-screener-question/ts-screener-question.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="20" column="10" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="22" selection-end-column="12" />
+              <folding>
+                <marker date="1516514433313" expanded="true" signature="190:1360" ph="{&quot;selector&quot;: 'screener-question'...}" />
+                <marker date="1516514433313" expanded="true" signature="309:322" ph="..." />
+                <marker date="1516514433313" expanded="false" signature="373:386" ph="..." />
+                <marker date="1516514433313" expanded="true" signature="1040:1353" ph="..." />
+                <marker date="1516514433313" expanded="false" signature="1049:1065" ph="..." />
+                <marker date="1516514433313" expanded="true" signature="1066:1342" ph="..." />
+                <marker date="1516514433313" expanded="false" signature="1091:1115" ph="..." />
+                <marker date="1516514433313" expanded="false" signature="1222:1247" ph="..." />
+                <marker date="1516514433313" expanded="true" signature="1404:1964" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tfi-question.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi-question/tfi-question.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+              <folding>
+                <marker date="1516513936755" expanded="true" signature="200:203" ph="{...}" />
+                <marker date="1516513936755" expanded="true" signature="218:243" ph="{...}" />
+                <marker date="1516513936755" expanded="true" signature="258:329" ph="{...}" />
+                <marker date="1516513936755" expanded="true" signature="343:394" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -270,6 +305,29 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="ths" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="VA-Audiology-Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VA-Audiology-Website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ths" type="462c0819:PsiDirectoryNode" />
+              <item name="ths-question" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VA-Audiology-Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VA-Audiology-Website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ts-screener" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VA-Audiology-Website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VA-Audiology-Website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="ts-screener" type="462c0819:PsiDirectoryNode" />
+              <item name="ts-screener-question" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -386,12 +444,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10847000" />
+    <option name="totallyTimeSpent" value="11383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.6877551" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.198036" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -403,13 +462,23 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.198036" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1739645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17342342" sideWeight="0.3122449" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2234375" sideWeight="0.6877551" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -469,9 +538,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/patient-check-in/patient-check-in.component.ts" />
-    <entry file="file://$PROJECT_DIR$/src/app/patient-check-in/patient-check-in.component.html" />
-    <entry file="file://$PROJECT_DIR$/src/app/patient-check-in/patient-check-in.component.css" />
     <entry file="file://$PROJECT_DIR$/src/app/logo/logo.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/home/home.component.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -553,8 +619,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/ts-screener/ts-screener.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="63">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -666,6 +733,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -678,15 +746,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/ts-screener/ts-screener-question/ts-screener-question.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="20" column="10" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <marker date="1516514433313" expanded="true" signature="190:1360" ph="{&quot;selector&quot;: 'screener-question'...}" />
+            <marker date="1516514433313" expanded="true" signature="309:322" ph="..." />
+            <marker date="1516514433313" expanded="false" signature="373:386" ph="..." />
+            <marker date="1516514433313" expanded="true" signature="1040:1353" ph="..." />
+            <marker date="1516514433313" expanded="false" signature="1049:1065" ph="..." />
+            <marker date="1516514433313" expanded="true" signature="1066:1342" ph="..." />
+            <marker date="1516514433313" expanded="false" signature="1091:1115" ph="..." />
+            <marker date="1516514433313" expanded="false" signature="1222:1247" ph="..." />
+            <marker date="1516514433313" expanded="true" signature="1404:1964" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/ts-screener/ts-screener.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
-          <caret line="27" column="86" lean-forward="true" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+          <caret line="31" column="86" lean-forward="false" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
+          <folding>
+            <marker date="1516514433313" expanded="true" signature="402:490" ph="{&quot;selector&quot;: 'screener'...}" />
+            <marker date="1516514433313" expanded="true" signature="3079:3088" ph="{...}" />
+            <marker date="1516514433313" expanded="true" signature="3079:3092" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -699,8 +783,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi-question/tfi-question.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="84">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding>
+            <marker date="1516513936755" expanded="true" signature="200:203" ph="{...}" />
+            <marker date="1516513936755" expanded="true" signature="218:243" ph="{...}" />
+            <marker date="1516513936755" expanded="true" signature="258:329" ph="{...}" />
+            <marker date="1516513936755" expanded="true" signature="343:394" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -720,7 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,9 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
           <caret line="64" column="51" lean-forward="false" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,9 +837,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi-question/tfi-question.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
+        <state relative-caret-position="291">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
@@ -766,9 +869,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -780,19 +881,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ths/ths-question/ths-question.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#96#0" expanded="true" />
+            <marker date="1516514433297" expanded="true" signature="182:1394" ph="{&quot;selector&quot;: 'ths-question'...}" />
+            <marker date="1516514433297" expanded="true" signature="288:301" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="507:1177" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="581:1166" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="614:1153" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="688:1138" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="1212:1394" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="1272:1394" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="1303:1394" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="1343:1394" ph="..." />
+            <marker date="1516514433297" expanded="true" signature="2457:2690" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/tfi/tfi-question/tfi-question.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="91" lean-forward="false" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
+        <state relative-caret-position="21">
+          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
           <folding>
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="299">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>

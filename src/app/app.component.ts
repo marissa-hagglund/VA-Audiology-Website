@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit,
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
@@ -22,13 +21,10 @@ import { AppState } from './app.service';
     </main>
   `
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   constructor(
     public appState: AppState
   ) {}
-
-  public ngOnInit() {
-  }
 
 }
