@@ -6,48 +6,26 @@
         </div>
 
         <div class="row">
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+          <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
             <input class="search-input" type="text" src="/assets/images/search_icon.png" placeholder="search here">
           </div>
-          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <button type="button" class="search-btn"></button>
-          </div>
+          <a href="#">
+            <span class="search-btn glyphicon glyphicon-search"></span>
+          </a>
         </div>
 
+        <div class="row"><label class="sec-label">TESTS SECTION</label></div>
         <div class="row"><button class="main-btn">Audiogram</button></div>
         <div class="row"><button class="main-btn">Otoscopy</button></div>
         <div class="row"><button class="main-btn">Tympanometry</button></div>
+        <div class="row"><label class="sec-label">SUMMARY SECTION</label></div>
         <div class="row"><button class="main-btn">Summary</button></div>
 
       </div>
-
       <div class="{{active ? 'right-container' : 'right-container-full'}}">
           <button type="button" class="toggle-btn" (click)= "onToggle()"></button>
-       ...
-      </div>
+          <app-summary></app-summary>
 
+      </div>
   </div>
-
 </div>
-
-        <!-- <input id="slide-sidebar" type="checkbox" role="button" />
-            <label for="slide-sidebar"><span>close</span></label> -->
-<!--
-<body  class="bg">
-    <logo></logo>
-    <input type="text" src="/assets/images/search_icon.png" placeholder="search here">
-    <button class="search-button">Search</button>
-    <label class="tests">TESTS</label>
-    <div class="sidenav">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-      </div>
-    <button class="audiogram-button">Audiogram</button>
-    <button class="otoscopy-button">Otoscopy</button>
-    <button class="tymps-button">TYMPS</button>
-    <label class="summary">SUMMARY</label>
-    <button class="summary-button">Summary</button>
-</body>
--->
