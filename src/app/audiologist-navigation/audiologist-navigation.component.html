@@ -5,13 +5,9 @@
           <logo logoRouteOption="1"></logo>
         </div>
 
-        <div class="row">
-          <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-            <input class="search-input" type="text" src="/assets/images/search_icon.png" placeholder="search here">
-          </div>
-          <a href="#">
-            <span class="search-btn glyphicon glyphicon-search"></span>
-          </a>
+        <div class="search-container">
+              <input type="text" placeholder="Search...">
+              <button type="submit"><i class="fa fa-search"></i></button>
         </div>
 
         <div class="row"><label class="sec-label">TESTS SECTION</label></div>
@@ -23,8 +19,9 @@
 
       </div>
       <div class="{{active ? 'right-container' : 'right-container-full'}}">
-          <button type="button" class="toggle-btn" (click)= "onToggle()"></button>
-          <app-summary></app-summary>
+          <!-- <button type="button" class="toggle-btn" (click)= "onToggle()"></button> -->
+          <button type="button"><i class="glyphicon glyphicon-th-list" (click)="onToggle()"></i></button>
+          <div class="main-right-container">Summary</div>
 
       </div>
   </div>
