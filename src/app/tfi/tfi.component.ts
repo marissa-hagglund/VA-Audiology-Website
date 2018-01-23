@@ -10,9 +10,9 @@ import { TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource
   styleUrls: ['./tfi.component.css']
 })
 export class TfiComponent {
+  public currentState: number = 0;
   private questions: TfiQuestionStrings = new TfiQuestionStrings();
   private sections: TfiSectionStrings =  new TfiSectionStrings();
-  private currentState: number = 0;
   constructor(private router: Router,
               private dataService: TfiDataService) { }
 
