@@ -107,7 +107,7 @@
   },
   "devDependencies": {
     "@compodoc/compodoc": "^1.0.0-beta.15",
-    "@types/hammerjs": "^2.0.34",
+    "@types/hammerjs": "^2.0.35",
     "@types/jasmine": "2.5.45",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "^7.0.39",
