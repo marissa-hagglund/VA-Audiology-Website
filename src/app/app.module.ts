@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import 'hammerjs';
 import {
   NgModule,
   ApplicationRef
@@ -16,9 +17,9 @@ import {
 } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
-
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -45,6 +46,7 @@ import { TsScreenerComponent } from './ts-screener/ts-screener.component';
 import { TsScreenerStateflowService } from './services/ts-screener-stateflow.service';
 import { TsScreenerDataService } from './services/ts-screener-data.service';
 import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
+import { TfiDataService } from './services/tfi-data.service';
 import { ThsComponent } from './ths/ths.component';
 import { ThsStateflowService } from './services/ths-stateflow.service';
 import { ThsDataService } from './services/ths-data.service';
@@ -85,6 +87,7 @@ type StoreType = {
     TsScreenerQuestionComponent
   ],
   exports: [
+    MatSliderModule,
     MatRadioModule,
     MatInputModule
   ],
@@ -96,6 +99,7 @@ type StoreType = {
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    MatSliderModule,
     MatRadioModule,
     MatInputModule,
     RouterModule.forRoot(ROUTES, {
@@ -111,6 +115,7 @@ type StoreType = {
     APP_PROVIDERS,
     TsScreenerStateflowService,
     TsScreenerDataService,
+    TfiDataService,
     ThsStateflowService,
     ThsDataService
   ]
