@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/*import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TfiComponent } from './tfi.component';
 
@@ -23,3 +23,5 @@ describe('TfiComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+*/
