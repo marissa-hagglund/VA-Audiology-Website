@@ -1,17 +1,23 @@
 .container {
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .parent-container {
   /* padding-top: 20%; */
   width: 100%;
   height: 25%;
+  padding: 0;
+  /* margin: 0; */
 }
 
 .child-container {
   width: 100%;
   height: 70%;
+  padding: 0;
+  /* margin: 0; */
   /* transform: translate(20%, 10%); */
 }
 
@@ -19,7 +25,7 @@ button {
   color: white;
   font-family: 'Roboto';
   font-size: 1.8em;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   height: 100%;
   left: 20%;
   width: 100%;
@@ -42,75 +48,12 @@ button:hover {
   cursor: pointer;
 }
 
-@media all and (max-height: 400px) {
+@media all and (max-width: 425px) {
 
   button {
     height:100%;
-    font-size: 0.8em;
-    margin-bottom: 5%;
-  }
-  .child-container {
-    width: 80%;
-    margin-left: 10%;
-  }
-}
-
-
-@media all and (orientation:landscape) {
-  button {
-    height: 85%;
-    margin-bottom: 5%;
-    padding: 3%;
-  }
-
-}
-
-
-@media all and (max-width:610px) {
-    button {
-      font-size: 0.9em;
-      /* height: 80%; */
-    }
-    .parent-container {
-      height:20%;
-    }}
-
-    @media all and (max-width:610px) and (orientation: portrait){
-      button {
-        font-size: 1em;
-        /* height: 80%; */
-      }
-      .parent-container {
-        height:30%;
-      }
-     }
-
-@media all and (orientation:landscape) and (max-width: 650px ){
-  button {
-    font-size: 0.95em;
-  }
-}
-
-@media all and (max-height: 700px) and (min-height: 410px) {
-  button {
     font-size: 1em;
   }
 }
 
-@media all and (max-height: 600px) and (min-height: 410px) {
-  button {
-    font-size: 0.95em;
-    margin-bottom: 5%;
-  }
-  .child-container {
-    width: 70%;
-    margin-left: 15%;
-  }
-}
 
-
-@media all and (min-height: 1350px) and (min-width: 1024px) {
-  button {
-    font-size: 2.5em;
-  }
-}
