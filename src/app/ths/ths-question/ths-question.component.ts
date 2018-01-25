@@ -10,11 +10,11 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
       <div class="col-sm-4 col-sm-offset-3 col-xs-offset-2 questionFont">
         <div class="form-check">
           <mat-radio-group [(ngModel)]="selectedValue" class = "options" >
-            <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio2}}">{{radio2}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio3}}">{{radio3}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio4}}">{{radio4}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio5}}">{{radio5}}</mat-radio-button> <br>
+            <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button>
+            <mat-radio-button value="{{radio2}}">{{radio2}}</mat-radio-button>
+            <mat-radio-button value="{{radio3}}">{{radio3}}</mat-radio-button>
+            <mat-radio-button value="{{radio4}}">{{radio4}}</mat-radio-button>
+            <mat-radio-button value="{{radio5}}">{{radio5}}</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>
