@@ -23,11 +23,11 @@ export class TfiComponent {
     this.dataService.moveStateBackward();
     --this.currentState;
   }
-  private moveStateForward(choice: number): void {
+  private moveStateForward(choice: string): void {
     if (!choice) {
       return;
     }
-    this.dataService.saveData(this.currentState, choice);
+    this.dataService.saveData(this.currentState, +choice);
     if (this.currentState === 24) {
       this.router.navigateByUrl('/thank-you');
     }
