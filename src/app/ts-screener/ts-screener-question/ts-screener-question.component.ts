@@ -5,8 +5,8 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
   selector: 'screener-question',
   styleUrls: ['./ts-screener-question.component.css'],
   template: `
-    <h2 style="color: black;" align="center">{{statement}}</h2>
-    <h2 style="color: black;" align="center">{{question}}</h2>
+    <h2 style="color: white;" align="center">{{statement}}</h2>
+    <h2 style="color: white;" align="center">{{question}}</h2>
     <div class="radio-{{questionType}} col-sm-4 col-sm-offset-4 col-xs-offset-4">
       <div class="form-check">
       <mat-radio-group [(ngModel)]="selectedValue" class = "options" >
