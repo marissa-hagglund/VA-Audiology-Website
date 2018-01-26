@@ -23,21 +23,25 @@
 }
 
 .audio .left-container {
-  width: 30%;
+  width: 35%;
   height: 100%;
   display: inline-block;
   background-color: #014e88;
+  /* transition: all ease-out .4s; */
 }
 
 .audio .left-container-hide {
-  display: none;
+  /* transition: all ease-in-out .2s; */
+  display: none
+  /* margin-left: -130%; */
 }
 
 .audio .right-container {
   height: 100%;
-  width: 70%;
+  width: 65%;
   background-color: white;
   float: right;
+  transition: all ease-in-out .2s;
 }
 
 .audio .right-container-full {
@@ -45,19 +49,19 @@
   width: 100%;
   background-color: white;
   float: right;
+  transition: all ease-in-out .2s;
 }
 
-.audio .right-container .toggle-btn,
-.audio .right-container-full .toggle-btn {
-  background-color: transparent;
-  background-image: url("/assets/images/nav_icon.png");
-  background-repeat: no-repeat;
+.audio .right-container .main-right-container {
+  height: 90%;
+}
 
-  border:0;
-  width: 50px;
-  height: 50px;
-  margin-left: 2%;
-  margin-top: 2%;
+.glyphicon-th-list {
+  margin-top: 10px;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  color:rgb(109, 109, 109);
 }
 
 .audio .left-container .main-btn {
@@ -80,31 +84,68 @@
   background-repeat: no-repeat;
 }
 
-.audio .left-container .search-btn {
-  /* color: white; */
-  /* border-color: rgb(119, 199, 233); */
-  width: 50px;
-  height: 50px;
-  border: 0;
-  background-image: url("/assets/images/search_icon.png");
-  background-color: #014e88;
-  /* border-radius: 2px; */
-  border-left-width: 0;
-  background-repeat: no-repeat;
-
+.audio .left-container .search-container {
+  float: left;
+  width: 100%;
 }
 
-.audio .left-container .search-input {
-  margin: 0;
+.audio .left-container .search-container input[type=text] {
+  float: left;
+  padding: 6px;
+  width: 75%;
+  border: none;
+  margin-right: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.audio .left-container .search-container button {
+  float: right;
+  width: 25%;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: #ddd;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.audio .left-container .sec-label {
+  color: #f2f2f2;
+  background-color: rgb(109, 109, 109);
   width: 100%;
-  font-size: 0.8em;
-  border-radius: 4px;
-  margin-bottom: 6%;
-  margin-left: -2%;
+  padding: 2%;
+  margin-bottom: 2%;
+  font-size: 0.6em;
+}
+
+.audio .left-container .search-container button:hover {
+  background: rgb(160, 159, 159);
+  cursor: pointer;
 }
 
 .audio .left-container .main-btn:hover {
   background-repeat: no-repeat;
   background: linear-gradient(to right, #0086D1, #0098DB);
   cursor: pointer;
+}
+
+@media all and (max-width:425px) {
+  .audio .left-container {
+      width: 70%;
+  }
+  .audio .right-container {
+    width: 30%;
+  }
+}
+
+@media all and (min-width:1024px) {
+  .audio .left-container {
+    width: 25%;
+   }
+  .audio .right-container {
+  width: 75%;
+  }
 }
