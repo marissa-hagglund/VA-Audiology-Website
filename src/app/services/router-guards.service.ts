@@ -20,20 +20,20 @@ export class RouterGuards implements CanActivate {
 
     // must always start at the home page or pick up where left off if the url is one of these
     if (url === 'appointments' || url === 'ts' || url === 'ths' || url === 'tfi' || url === 'thank-you') {
-        if (/*no session storage for patient id saved or patient id saved but done*/) {
+    /*  if (no session storage for patient id saved or patient id saved but done) {
             this.router.navigate(['home']);
         } else {
     	      // check current page
     	      // reroute to current page if this is not it
-        }
+        }*/
     }
 
     //restrict access to audiologist pages
     if (url === 'audiologist') {
-      	if (/* no pin stored */) {
+      	/*if (no pin stored) {
       	     this.router.navigate(['check-in']);
       	} else {
       	   // verify somehow (check against static one for now?)
-      	}
+      	}*/
     }
 }

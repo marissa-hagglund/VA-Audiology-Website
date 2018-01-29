@@ -12,7 +12,7 @@ import { TsScreenerComponent } from './ts-screener/ts-screener.component';
 import { TfiComponent } from './tfi/tfi.component';
 import { ThsComponent } from './ths/ths.component';
 
-import { RouterGuards }     from './services/router-guards.service';
+import { RouterGuards } from './services/router-guards.service';
 
 //URL paths to redirect to and load components when appropriate
 export const ROUTES: Routes = [
