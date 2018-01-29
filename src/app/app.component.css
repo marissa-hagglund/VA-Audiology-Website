@@ -1,6 +1,3 @@
-
-
-
 html, body{
   height: 100%;
   /*font-family: Arial, Helvetica, sans-serif;*/
@@ -11,11 +8,14 @@ html, body{
   min-height: 375px;
 
   font-family: 'Roboto';font-size: 22px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background: url(/assets/images/background.png) no-repeat center center fixed;
-  background-size: cover;
+ }
+
+ .mainPage {
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background: url(/assets/images/background.png) no-repeat center center fixed;
+   background-size: cover;
  }
 
 main {
