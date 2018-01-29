@@ -54,5 +54,4 @@ export class ThsQuestionComponent {
 
   public selectedValue: string = '';
 
-  constructor() {};
 }
