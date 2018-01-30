@@ -25,21 +25,40 @@ describe('TfiQuestionservice', () => {
     });
   });
   describe ('moveStateBackward', () => {
-    it('should have dataRecord to stay the same', () => {
-      service.dataRecord = [];
+    it('should have dataRecord start empty', () => {
       expect(service.dataRecord.length).toEqual(0);
     });
-    it('should pop dataRecord', () => {
+    it('should print on the console', () => {
+      let spy = spyOn(console, 'log');
+      service.moveStateBackward();
+      expect(spy).toHaveBeenCalled();
+    });
+    it('should decrease dataRecord length', () => {
       service.dataRecord = [{state: 2, choice: 3}, {state: 2, choice: 2}];
       service.moveStateBackward();
-      expect(service.dataRecord[0]).toEqual({state: 2, choice: 3});
+      expect(service.dataRecord.length).toEqual(1);
+    });
+    it('should pop dataRecord off top', () => {
+      service.dataRecord = [{state: 2, choice: 3}, {state: 2, choice: 2}];
+      service.moveStateBackward();
+      expect(service.dataRecord[service.dataRecord.length - 1]).toEqual({state: 2, choice: 3});
     });
   });
   describe('saveData', () => {
-    it('should push a dataRecord', () => {
+    it('should print on the console', () => {
+      let spy = spyOn(console, 'log');
+      service.saveData(1, 2);
+      expect(spy).toHaveBeenCalled();
+    });
+    it('should increase dataRecord length', () => {
       service.dataRecord = [{state: 2, choice: 2}];
       service.saveData(1, 2);
       expect(service.dataRecord.length).toEqual(2);
+    });
+    it('should push a dataRecord on top', () => {
+      service.dataRecord = [{state: 2, choice: 2}];
+      service.saveData(1, 2);
+      expect(service.dataRecord[service.dataRecord.length - 1]).toEqual({state: 1, choice: 2});
     });
   });
 });
