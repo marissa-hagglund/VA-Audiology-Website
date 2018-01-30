@@ -16,7 +16,6 @@ describe('TfiComponent', () => {
       providers: [TfiDataService],
       schemas: [NO_ERRORS_SCHEMA],
       declarations: [TfiComponent],
-
     }).compileComponents();
 
     fixture = TestBed.createComponent(TfiComponent);
@@ -25,11 +24,6 @@ describe('TfiComponent', () => {
     service = TestBed.get(TfiDataService);
   });
 
-  // beforeEach(() => {
-  //   fixture = TestBed.createComponent(TfiComponent);
-  //   component = fixture.componentInstance;
-  //   fixture.detectChanges();
-  // });
   describe('moveStateForward', () => {
     it('Test null choice', () => {
       let spy = spyOn(service, 'saveData');
