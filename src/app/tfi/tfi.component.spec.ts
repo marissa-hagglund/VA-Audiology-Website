@@ -25,19 +25,19 @@ describe('TfiComponent', () => {
   });
 
   describe('moveStateForward', () => {
-    it('Test null choice', () => {
+    it('should not increment state', () => {
       let spy = spyOn(service, 'saveData');
       component.moveStateForward(null);
       expect(component.currentState).toEqual(0);
     });
 
-    it('Test intermediate choice', () => {
+    it('should increment state', () => {
       let spy = spyOn(service, 'saveData');
       component.currentState = 12;
       component.moveStateForward('happy');
       expect(component.currentState).toEqual(13);
     });
-    it('Test state 24 router', () => {
+    it('should route to /thank-you', () => {
       let spy = spyOn(service, 'saveData');
       let navSpy = spyOn(component.router, 'navigateByUrl');
       component.currentState = 24;
@@ -47,13 +47,13 @@ describe('TfiComponent', () => {
   });
 
   describe('moveStateBackward', () => {
-    it('Test state zero', () => {
+    it('should not decrement state', () => {
       let spy = spyOn(service, 'moveStateBackward');
       component.moveStateBackward();
       expect(component.currentState).toEqual(0);
     });
 
-    it('Test state greater than zero', () => {
+    it('should decrement state', () => {
       let spy = spyOn(service, 'moveStateBackward');
       component.currentState = 4;
       component.moveStateBackward();
