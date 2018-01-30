@@ -5,16 +5,16 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
   selector: 'ths-question',
   styleUrls: ['./ths-question.component.css'],
   template: `
-    <h2 style="color: black;" align="center">{{question}}</h2>
+    <h2 style="color: white;" align="center">{{question}}</h2>
     <div *ngIf="question !== 'Please list two examples of sounds that are too loud or uncomfortable for you, but seem normal to others:'; else input_questions" class="row">
       <div class="col-sm-4 col-sm-offset-3 col-xs-offset-2 questionFont">
         <div class="form-check">
           <mat-radio-group [(ngModel)]="selectedValue" class = "options" >
-            <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio2}}">{{radio2}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio3}}">{{radio3}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio4}}">{{radio4}}</mat-radio-button> <br>
-            <mat-radio-button value="{{radio5}}">{{radio5}}</mat-radio-button> <br>
+            <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button>
+            <mat-radio-button value="{{radio2}}">{{radio2}}</mat-radio-button>
+            <mat-radio-button value="{{radio3}}">{{radio3}}</mat-radio-button>
+            <mat-radio-button value="{{radio4}}">{{radio4}}</mat-radio-button>
+            <mat-radio-button value="{{radio5}}">{{radio5}}</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>

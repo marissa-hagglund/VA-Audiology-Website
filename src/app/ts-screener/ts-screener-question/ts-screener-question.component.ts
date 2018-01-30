@@ -5,9 +5,9 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
   selector: 'screener-question',
   styleUrls: ['./ts-screener-question.component.css'],
   template: `
-    <h2 style="color: black;" align="center">{{statement}}</h2>
-    <h2 style="color: black;" align="center">{{question}}</h2>
-    <div [ngClass] ="radio3 ? 'other col-sm-4 col-sm-offset-4 col-xs-offset-3' : 'questionFont col-sm-4 col-sm-offset-4 col-xs-offset-4'">
+    <h2 style="color: white;" align="center">{{statement}}</h2>
+    <h2 style="color: white;" align="center">{{question}}</h2>
+    <div class="radio-{{questionType}} col-sm-4 col-sm-offset-4 col-xs-offset-4">
       <div class="form-check">
       <mat-radio-group [(ngModel)]="selectedValue" class = "options" >
         <mat-radio-button value="{{radio1}}">{{radio1}}</mat-radio-button> <br>
@@ -28,6 +28,7 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
 export class TsScreenerQuestionComponent {
   @Input() public statement: string = 'During the PAST YEAR:';
   @Input() public question: string = '';
+  @Input() public questionType: number = 1;
   @Input() public showThirdRadioButton: boolean = false;
   @Input() public radio1: string = 'YES';
   @Input() public radio2: string = 'NO';

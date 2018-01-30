@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
         <logo logoRouteOption="2"></logo>
     </div>
   </div>
-  <h3 style="color: white" align="center">Tinnitus & Hearing Survey: Normative Standards</h3>
+  <h3 style="color: white" align="center">Tinnitus & Hearing Survey</h3>
   <ths-question *ngIf="currentState === 1" [question]="questionStrings.question1" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 2" [question]="questionStrings.question2" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 3" [question]="questionStrings.question3" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
