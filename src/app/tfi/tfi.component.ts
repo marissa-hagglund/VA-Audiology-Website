@@ -13,17 +13,17 @@ export class TfiComponent {
   public currentState: number = 0;
   private questions: TfiQuestionStrings = new TfiQuestionStrings();
   private sections: TfiSectionStrings =  new TfiSectionStrings();
-  constructor(private router: Router,
+  constructor(public router: Router,
               private dataService: TfiDataService) { }
 
-  private moveStateBackward(): void {
+  public moveStateBackward(): void {
     if (this.currentState === 0) {
       return;
     }
     this.dataService.moveStateBackward();
     --this.currentState;
   }
-  private moveStateForward(choice: string): void {
+  public moveStateForward(choice: string): void {
     if (!choice) {
       return;
     }
