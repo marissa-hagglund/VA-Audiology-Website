@@ -63,9 +63,9 @@ export class ThsComponent {
     // if the no was not selected for Q1 on TS, routes to tfi like normal
     // If it was, then tfi is skipped
     if (this.currentState === 11) {
-        let nextComponent = sessionStorage.getItem('nextComponent'); //will be null if this doesn't exist (meaning it wasn't even set)
-        if(nextComponent === 'true') { // if it is finished
-            sessionStorage.removeItem('nextComponent'); //clears it right after use
+        let nextComponent = sessionStorage.getItem('nextComponent'); // will be null if this doesn't exist (meaning it wasn't even set)
+        if (nextComponent === 'true') { // if it is finished
+            sessionStorage.removeItem('nextComponent'); // clears it right after use
             this.router.navigateByUrl('/thank-you');
         } else { // If it is not finished
             this.router.navigateByUrl('/tfi');

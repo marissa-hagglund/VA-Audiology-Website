@@ -28,7 +28,7 @@ export class RouterGuards implements CanActivate {
         }*/
     }
 
-    //restrict access to audiologist pages
+    // restrict access to audiologist pages
     if (url === 'audiologist') {
       	/*if (no pin stored) {
       	     this.router.navigate(['check-in']);
@@ -36,4 +36,6 @@ export class RouterGuards implements CanActivate {
       	   // verify somehow (check against static one for now?)
       	}*/
     }
+    return true;
+  }
 }
