@@ -28,10 +28,5 @@ describe('TfiQuestionComponent', () => {
     it('should create', () => {
       expect(component).toBeTruthy();
     });
-    it('Test precent', () => {
-      component.percent = true;
-      component.ngOnInit();
-      expect(component.selectedValue).toEqual('50');
-    });
   });
 });
