@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource-strings';
 
 @Component({
-  selector: 'app-tfi',
+  selector: 'tfi',
   templateUrl: './tfi.component.html',
   styleUrls: ['./tfi.component.css']
 })

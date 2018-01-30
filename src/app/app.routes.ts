@@ -20,7 +20,7 @@ export const ROUTES: Routes = [
   { path: 'audio-nav', component: AudiologistNavigationComponent},
   { path: 'thank-you', component: ThankYouComponent},
   { path: 'ts-screener', component: TsScreenerComponent},
-  { path: 'app-tfi', component: TfiComponent },
+  { path: 'tfi', component: TfiComponent },
   { path: 'ths', component: ThsComponent},
   { path: '**',    component: NoContentComponent },
 ];
