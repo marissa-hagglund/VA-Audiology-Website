@@ -14,14 +14,14 @@ export class AppointmentsComponent {
 
   public onInitialAssessment() {
     console.log('Initial Assessment');
-    this.router.navigateByUrl('/ts-screener');
+    this.router.navigateByUrl('/ts');
   }
   public onHearingAidsFitting() {
     console.log('Hearing Aids Fitting');
-    this.router.navigateByUrl('/ts-screener');
+    this.router.navigateByUrl('/ts');
   }
   public onHearingAidsEvaluation() {
     console.log('Hearing Aids Evaluation');
-    this.router.navigateByUrl('/ts-screener');
+    this.router.navigateByUrl('/ts');
   }
 }

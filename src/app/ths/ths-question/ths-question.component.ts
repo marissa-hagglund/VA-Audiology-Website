@@ -5,7 +5,7 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
   selector: 'ths-question',
   styleUrls: ['./ths-question.component.css'],
   template: `
-    <h2 style="color: black;" align="center">{{question}}</h2>
+    <h2 style="color: white;" align="center">{{question}}</h2>
     <div *ngIf="question !== 'Please list two examples of sounds that are too loud or uncomfortable for you, but seem normal to others:'; else input_questions" class="row">
       <div class="col-sm-4 col-sm-offset-3 col-xs-offset-2 questionFont">
         <div class="form-check">
@@ -54,5 +54,4 @@ export class ThsQuestionComponent {
 
   public selectedValue: string = '';
 
-  constructor() {};
 }

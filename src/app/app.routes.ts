@@ -12,15 +12,18 @@ import { TsScreenerComponent } from './ts-screener/ts-screener.component';
 import { TfiComponent } from './tfi/tfi.component';
 import { ThsComponent } from './ths/ths.component';
 
+import { RouterGuards } from './services/router-guards.service';
+
+//URL paths to redirect to and load components when appropriate
 export const ROUTES: Routes = [
   { path: '',      redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
   { path: 'login', component: CheckInComponent},
-  { path: 'appointments', component: AppointmentsComponent},
-  { path: 'audio-nav', component: AudiologistNavigationComponent},
-  { path: 'thank-you', component: ThankYouComponent},
-  { path: 'ts-screener', component: TsScreenerComponent},
-  { path: 'app-tfi', component: TfiComponent },
-  { path: 'ths', component: ThsComponent},
+  { path: 'appointments', component: AppointmentsComponent, canActivate: [RouterGuards]},
+  { path: 'audiologist', component: AudiologistNavigationComponent, canActivate: [RouterGuards]},
+  { path: 'thank-you', component: ThankYouComponent, canActivate: [RouterGuards]},
+  { path: 'ts', component: TsScreenerComponent, canActivate: [RouterGuards]},
+  { path: 'tfi', component: TfiComponent, canActivate: [RouterGuards] },
+  { path: 'ths', component: ThsComponent, canActivate: [RouterGuards]},
   { path: '**',    component: NoContentComponent },
 ];
