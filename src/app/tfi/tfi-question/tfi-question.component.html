@@ -1,13 +1,15 @@
-<h2 style="color: black;" align="center">{{section}}:</h2>
-<h2 style="color: black;" align="center">{{question}}</h2>
-<div class="row" style="margin-top: 100px">
+<h2 style="color: white;" align="center">{{section}}:</h2>
+<h2 style="color: white;" align="center">{{question}}</h2>
+<div class="col-sm-6 col-sm-offset-3 sectionWrap" style="padding-top: 1%;">
+  <div *ngIf="percent === false">
+    <mat-slider min="0" max="10" step="1" value="{{selectedValue}}" thumbLabel="true" tickInterval="1" [(ngModel)]="selectedValue"></mat-slider>
+  </div>
+  <div *ngIf="percent === true">
+    <mat-slider min="0" max="100" step="5" value="{{selectedValue}}" thumbLabel="true" tickInterval="5" [(ngModel)]="selectedValue"></mat-slider>
+  </div>
+</div>
+<div class="row">
   <div class="col-sm-6 col-sm-offset-3 sectionWrap" style="padding-top: 2%;">
-    <div *ngIf="percent === false">
-      <mat-slider min="0" max="10" step="1" value="{{selectedValue}}" thumbLabel="true" tickInterval="1" [(ngModel)]="selectedValue"></mat-slider>
-    </div>
-    <div *ngIf="percent === true">
-      <mat-slider min="0" max="100" step="5" value="{{selectedValue}}" thumbLabel="true" tickInterval="5" [(ngModel)]="selectedValue"></mat-slider>
-    </div>
     <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
     <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
   </div>
