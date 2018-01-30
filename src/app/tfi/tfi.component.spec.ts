@@ -43,6 +43,13 @@ describe('TfiComponent', () => {
       component.moveStateForward('happy');
       expect(component.currentState).toEqual(13);
     });
+    it('Test state 24 router', () => {
+      let spy = spyOn(service, 'saveData');
+      let navSpy = spyOn(component.router, 'navigateByUrl');
+      component.currentState = 24;
+      component.moveStateForward('happy');
+      expect(navSpy).toHaveBeenCalledWith('/thank-you');
+    });
   });
 
   describe('moveStateBackward', () => {

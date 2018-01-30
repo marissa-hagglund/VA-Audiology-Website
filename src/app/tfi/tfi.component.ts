@@ -13,7 +13,7 @@ export class TfiComponent {
   public currentState: number = 0;
   private questions: TfiQuestionStrings = new TfiQuestionStrings();
   private sections: TfiSectionStrings =  new TfiSectionStrings();
-  constructor(private router: Router,
+  constructor(public router: Router,
               private dataService: TfiDataService) { }
 
   public moveStateBackward(): void {
