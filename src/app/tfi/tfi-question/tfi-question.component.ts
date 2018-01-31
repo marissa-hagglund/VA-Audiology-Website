@@ -5,6 +5,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   templateUrl: './tfi-question.component.html',
   styleUrls: ['./tfi-question.component.css']
 })
+// Information for a single TFI question
 export class TfiQuestionComponent implements OnInit {
   public selectedValue = '0';
   @Input() public question: string = '';

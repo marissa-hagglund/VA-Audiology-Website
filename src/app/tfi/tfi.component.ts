@@ -9,6 +9,7 @@ import { TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource
   templateUrl: './tfi.component.html',
   styleUrls: ['./tfi.component.css']
 })
+// Main componenet of the Tinnitus Functional Index
 export class TfiComponent {
   public currentState: number = 0;
   private questions: TfiQuestionStrings = new TfiQuestionStrings();
@@ -16,6 +17,7 @@ export class TfiComponent {
   constructor(public router: Router,
               private dataService: TfiDataService) { }
 
+  // Step back by one question
   public moveStateBackward(): void {
     if (this.currentState === 0) {
       return;
@@ -23,6 +25,7 @@ export class TfiComponent {
     this.dataService.moveStateBackward();
     --this.currentState;
   }
+  // Step forward by one question. If we've reached the end, route to thank-you page
   public moveStateForward(choice: string): void {
     if (!choice) {
       return;
