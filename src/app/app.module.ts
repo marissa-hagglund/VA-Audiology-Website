@@ -52,6 +52,8 @@ import { ThsStateflowService } from './services/ths-stateflow.service';
 import { ThsDataService } from './services/ths-data.service';
 import { ThsQuestionComponent } from './ths/ths-question/ths-question.component';
 
+import { RouterGuards }     from './services/router-guards.service';
+
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -117,7 +119,8 @@ type StoreType = {
     TsScreenerDataService,
     TfiDataService,
     ThsStateflowService,
-    ThsDataService
+    ThsDataService,
+    RouterGuards
   ]
 })
 export class AppModule {
