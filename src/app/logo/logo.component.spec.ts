@@ -2,11 +2,12 @@ import { LogoComponent } from './logo.component';
 import { TestBed, async, ComponentFixture, fakeAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { Router } from '@angular/router';
 
 describe('Initial Assessment', () => {
   let component: LogoComponent;
   let fixture: ComponentFixture<LogoComponent>;
-
+  let router: Router;
   beforeEach(async () => {
     TestBed.configureTestingModule({
         imports: [
@@ -22,14 +23,21 @@ describe('Initial Assessment', () => {
 
     fixture = TestBed.createComponent(LogoComponent);
     component = fixture.debugElement.componentInstance;
-
+    router = TestBed.get(Router);
     fixture.detectChanges();
+    router.initialNavigation();
   });
 
-  it('should test for logo image route to home page', fakeAsync(() => {
-    let spy = spyOn(component, 'onClick');
+  it('should test for logo image route', fakeAsync(() => {
+    let spy = spyOn(router, 'navigateByUrl');
+    component.logoRouteOption = '1';
     component.onClick();
-    expect(component.onClick).toHaveBeenCalled();
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/home');
+
+    spy = spyOn(console, 'log');
+    component.logoRouteOption = '2';
+    component.onClick();
+    expect(console.log).toHaveBeenCalled();
   }));
 
 });

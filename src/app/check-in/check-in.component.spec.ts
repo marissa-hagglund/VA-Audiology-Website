@@ -48,6 +48,13 @@ describe('Initial Assessment', () => {
     expect(router.navigateByUrl).toHaveBeenCalledWith('/audio-nav');
   }));
 
+  it('click should not route with incorrect passcode', fakeAsync(() => {
+    let spy = spyOn(console, 'log');
+    component.patientId = '55555';
+    component.onClick();
+    expect(console.log).toHaveBeenCalled();
+  }));
+
   it('keydown should submit', fakeAsync(() => {
     let spy = spyOn(component, 'onClick');
     component.keyDownFunction({keyCode: 13});
