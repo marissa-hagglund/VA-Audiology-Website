@@ -53,7 +53,7 @@ export class ThsComponent {
     this.currentState = nextState;
 
     if (this.currentState === 11) {
-      this.router.navigateByUrl('/app-tfi');
+      this.router.navigateByUrl('/tfi');
     }
   }
 }
