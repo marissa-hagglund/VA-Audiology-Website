@@ -30,7 +30,7 @@ export class SummaryComponent implements OnInit {
     let items = [];
     
     var index = 0;
-    
+    this.summaryItems.push(new SectionTitle('Test section title', 16));
     for (let questionNum of history){
       let question = this.grabTHSQuestions(questionNum);
       this.summaryItems.push(new Question(question, history[questionNum]));

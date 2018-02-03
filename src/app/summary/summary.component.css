@@ -16,3 +16,15 @@
     text-align: center;
     padding-left: 20%;
 }
+
+.container .question {
+    text-align: center;
+}
+
+.container .totalScore {
+    text-align: right;
+}
+
+.container .questionScore {
+    text-align: right;
+}
