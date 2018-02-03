@@ -1,3 +1,37 @@
-<p>
-  summary works!
-</p>
+<div class="container">
+  <div class="summary-container">
+    <div class="row">
+      <div class="col-sm-4 col-md-2 col-lg-2 col-lg-offset-5 col-md-offset-5 col-sm-offset-4">
+        <label class="title">
+          SUMMARY
+        </label>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-2 col-lg-2 col-lg-offset-5 col-md-offset-5 col-sm-offset-4">
+          <label class="patientID">
+            {{patientID}}
+          </label>
+        </div>
+      </div>
+  </div>
+
+  <li *ngFor="let item of summaryItems">
+
+
+    <div class="row" *ngIf="item.type == 'SurveyTitle'">
+      <div class="col-sm-8 col-md-4 col-lg-6 col-lg-offset-2 col-md-offset-4 col-sm-offset-3">
+        <label class="title">
+          {{item.title}}
+        </label>
+      </div>
+    </div>
+      
+
+      <!-- <h2 *ngIf="item.type == 'SurveyTitle'">{{item.title}}</h2> -->
+      <h3 *ngIf="item.type == 'SectionTitle'">{{item.title}} Grand Total: {{item.totalScore}}</h3>
+      <p *ngIf="item.type == 'Question'">{{item.content}} {{item.score}}</p>
+      <p *ngIf="item.type == 'Description'">{{item.content}}</p>
+  </li>
+
+</div>

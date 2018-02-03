@@ -24,6 +24,7 @@ import { Router } from '@angular/router';
   <ths-question *ngIf="currentState === 9" [question]="questionStrings.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <p *ngIf="currentState === 9" style="text-align: center; color: black; margin-top: 2%;">{{questionStrings.note}}</p>
   <ths-question *ngIf="currentState === 10" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <button (click)= "test()" type="button"> testButton </button>
 `
 })
 export class ThsComponent {
@@ -55,5 +56,11 @@ export class ThsComponent {
     if (this.currentState === 11) {
       this.router.navigateByUrl('/thank-you');
     }
+  }
+
+  test(){
+    console.log("test!!!!!!!")
+    this.router.navigateByUrl('/audio-nav');
+    console.log("test!!!!!!!")
   }
 }
