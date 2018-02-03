@@ -15,6 +15,7 @@ export class TsScreenerStateflowService {
           this.dataService.saveData(2, choice);
           return 2;
         } else {
+          sessionStorage.setItem('nextComponent', 'true');
           this.dataService.saveData(7, choice);
           return 7;
         }
