@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ThsQuestionStrings } from '../common/custom-resource-strings';
 import { ThsStateflowService } from '../services/ths-stateflow.service';
 import { Router } from '@angular/router';
+import { RouterGuards } from '../services/router-guards.service';
 
 @Component({
   selector: 'app-ths',
-  styleUrls: ['./ths.component.css'],
   template: `
   <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-4" style="text-align: left;">
@@ -32,8 +32,11 @@ export class ThsComponent {
   public questionStrings: ThsQuestionStrings = new ThsQuestionStrings();
 
   constructor(private stateMachine: ThsStateflowService,
-              private router: Router) { };
+              public router: Router) { };
 
+  // This function uses the stateflow service to determine what the previous state
+  // should be (right now, it'll jsut be sequential) and then sets that as the current state
+  // To the user it'll be reflected in hitting a back button to go back to their previous question
   public moveStateBackward(): void {
     let prevState: number = this.stateMachine.moveStateBackward();
 
@@ -42,6 +45,10 @@ export class ThsComponent {
     }
   }
 
+  // This function takes in the answer the user chose from the radio buttons and
+  // utilizes the stateflow service to move forward one question while saving the data.
+  // however, if it is at the end, it will go to the tfi or, if the user selected no
+  // on the ts, it will route to the thank you page
   public moveStateForward(choice: string): void {
     console.log(choice);
     if (!choice) {
@@ -52,8 +59,16 @@ export class ThsComponent {
 
     this.currentState = nextState;
 
+    // if the no was not selected for Q1 on TS, routes to tfi like normal
+    // If it was, then tfi is skipped
     if (this.currentState === 11) {
-      this.router.navigateByUrl('/tfi');
+        let nextComponent = sessionStorage.getItem('nextComponent'); // will be null if this doesn't exist (meaning it wasn't even set)
+        if (nextComponent === 'true') { // if it is finished
+            sessionStorage.removeItem('nextComponent'); // clears it right after use
+            this.router.navigateByUrl('/thank-you');
+        } else { // If it is not finished
+            this.router.navigateByUrl('/tfi');
+        }
     }
   }
 }
