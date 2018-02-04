@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TsScreenerDataService {
-  private history: number[] = [1];
-  private dataRecord: Array<{state, choice}> = [];
+  public history: number[] = [1];
+  public dataRecord: Array<{state, choice}> = [];
 
   constructor() { }
 
   public saveData(state: number, selection: string): void {
     let initialState = this.history[this.history.length - 1];
 
-    let index: number = this.dataRecord.findIndex(x => x.state == initialState);
+    let index: number = this.dataRecord.findIndex((x) => x.state === initialState);
     if (index !== -1) {
       this.dataRecord.splice(index, 1);
     }
@@ -27,7 +27,7 @@ export class TsScreenerDataService {
       return null;
     }
 
-    let index: number = this.dataRecord.findIndex(x => x.state == currentState);
+    let index: number = this.dataRecord.findIndex((x) => x.state === currentState);
     if (index !== -1) {
       this.dataRecord.splice(index, 1);
     }
@@ -41,7 +41,7 @@ export class TsScreenerDataService {
   }
 
   public populateAnswers(state: number): string {
-    let choice = this.dataRecord.find(x => x.state == state);
+    let choice = this.dataRecord.find((x) => x.state === state);
 
     if (choice) {
       return choice.choice;

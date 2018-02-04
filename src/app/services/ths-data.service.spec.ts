@@ -30,25 +30,25 @@ describe('ThsQuestionservice', () => {
   describe('moveStateBackward', () => {
     it('should return null', () => {
         service.history = [];
-        expect(service.moveStateBackward()).toEqual(null);
+        expect(service.moveStateBackward(1)).toEqual(null);
     });
 
     it('should pop history', () => {
         service.history = [1, 2];
-        service.moveStateBackward();
+        service.moveStateBackward(4);
         expect(service.history[0]).toEqual(1);
     });
 
     it('should print on the console', () => {
         service.history = [1, 2];
         let spy = spyOn(console, 'log');
-        service.moveStateBackward();
+        service.moveStateBackward(4);
         expect(spy).toHaveBeenCalled();
     });
 
     it('should return 1', () => {
         service.history = [1, 2];
-        expect(service.moveStateBackward()).toEqual(1);
+        expect(service.moveStateBackward(4)).toEqual(1);
     });
   });
 

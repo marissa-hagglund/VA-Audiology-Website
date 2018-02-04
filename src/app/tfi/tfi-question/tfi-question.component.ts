@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import {TfiDataService} from '../../services/tfi-data.service';
+import { TfiDataService } from '../../services/tfi-data.service';
 
 @Component({
   selector: 'app-tfi-question',

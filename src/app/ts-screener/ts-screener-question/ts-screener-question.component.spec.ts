@@ -5,9 +5,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ThsStateflowService } from '../../services/ths-stateflow.service';
 import { ThsDataService } from '../../services/ths-data.service';
 import { ThsQuestionComponent } from './ths-question.component';
-import {TsScreenerQuestionComponent} from "./ts-screener-question.component";
-import {TsScreenerStateflowService} from "../../services/ts-screener-stateflow.service";
-import {TsScreenerDataService} from "../../services/ts-screener-data.service";
+import { TsScreenerQuestionComponent } from './ts-screener-question.component';
+import { TsScreenerStateflowService } from '../../services/ts-screener-stateflow.service';
+import { TsScreenerDataService } from '../../services/ts-screener-data.service';
 
 describe('ThsQuestionComponent', () => {
   let component: TsScreenerQuestionComponent;

@@ -3,9 +3,9 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { ThsComponent } from './ths.component';
-import {TsScreenerComponent} from './ts-screener.component';
-import {TsScreenerStateflowService} from '../services/ts-screener-stateflow.service';
-import {TsScreenerDataService} from '../services/ts-screener-data.service';
+import { TsScreenerComponent } from './ts-screener.component';
+import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
+import { TsScreenerDataService } from '../services/ts-screener-data.service';
 
 describe('TsScreenerComponent', () => {
   let component: TsScreenerComponent;
@@ -61,20 +61,12 @@ describe('TsScreenerComponent', () => {
       expect(component.currentState).toEqual(5);
     });
 
-    it('should route to tfi', () => {
-      let spy = spyOn(service, 'moveStateForward').and.returnValue(11);
+    it('should route to ths', () => {
+      let spy = spyOn(service, 'moveStateForward').and.returnValue(7);
       let navSpy = spyOn(component.router, 'navigateByUrl');
       sessionStorage.setItem('nextComponent', 'false');
       component.moveStateForward('hello');
-      expect(navSpy).toHaveBeenCalledWith('/tfi');
-    });
-
-    it('should route to thank you', () => {
-      let spy = spyOn(service, 'moveStateForward').and.returnValue(11);
-      let navSpy = spyOn(component.router, 'navigateByUrl');
-      sessionStorage.setItem('nextComponent', 'true');
-      component.moveStateForward('hello');
-      expect(navSpy).toHaveBeenCalledWith('/thank-you');
+      expect(navSpy).toHaveBeenCalledWith('/ths');
     });
   });
 });

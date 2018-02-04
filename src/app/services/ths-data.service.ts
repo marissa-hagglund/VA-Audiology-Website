@@ -12,7 +12,7 @@ export class ThsDataService {
   public saveData(state: number, selection: string): void {
     let initialState = this.history[this.history.length - 1];
 
-    let index: number = this.dataRecord.findIndex(x => x.state == initialState);
+    let index: number = this.dataRecord.findIndex((x) => x.state === initialState);
     if (index !== -1) {
       this.dataRecord.splice(index, 1);
     }
@@ -48,7 +48,7 @@ export class ThsDataService {
     } else if (state === 9) { // Sound Tolerance section
         this.pointRecord[2] = 0;
     } */
-    let index: number = this.dataRecord.findIndex(x => x.state == currentState);
+    let index: number = this.dataRecord.findIndex((x) => x.state === currentState);
     if (index !== -1) {
       this.dataRecord.splice(index, 1);
     }
@@ -62,7 +62,7 @@ export class ThsDataService {
   }
 
   public populateAnswers(state: number): string {
-    let choice = this.dataRecord.find(x => x.state == state);
+    let choice = this.dataRecord.find((x) => x.state === state);
 
     if (choice) {
       return choice.choice;
