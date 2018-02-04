@@ -45,7 +45,7 @@ describe('Initial Assessment', () => {
     let spy = spyOn(router, 'navigateByUrl');
     component.patientId = '888888';
     component.onClick();
-    expect(router.navigateByUrl).toHaveBeenCalledWith('/audio-nav');
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/audiologist');
   }));
 
   it('click should not route with incorrect passcode', fakeAsync(() => {

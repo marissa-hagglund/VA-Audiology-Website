@@ -24,7 +24,7 @@ export class CheckInComponent {
    public onClick() {
       if (this.patientId.length === 6) {
           console.log('Audiologist log in ' + this.patientId);
-          this.router.navigateByUrl('/audio-nav');
+          this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
         this.router.navigateByUrl('/appointments');
         console.log('log in with ' + this.patientId);
