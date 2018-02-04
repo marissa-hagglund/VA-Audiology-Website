@@ -50,7 +50,7 @@
     "server": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
     "start": "npm run rimraf -- compiled && npm run server:dev",
-    "test": "npm run lint && karma start",
+    "test": "npm run clean:aot && npm run lint && karma start",
     "tslint": "tslint",
     "typedoc": "typedoc",
     "version": "npm run build",

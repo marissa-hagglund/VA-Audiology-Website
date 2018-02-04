@@ -5,8 +5,9 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   templateUrl: './tfi-question.component.html',
   styleUrls: ['./tfi-question.component.css']
 })
+// Information for a single TFI question
 export class TfiQuestionComponent implements OnInit {
-  public selectedValue = '5';
+  public selectedValue = '0';
   @Input() public question: string = '';
   @Input() public section: string = 'In the past year...';
   @Input() public percent: boolean = false;
@@ -15,9 +16,6 @@ export class TfiQuestionComponent implements OnInit {
   constructor() { }
 
   public ngOnInit() {
-    if (this.percent === true) {
-      this.selectedValue = '50';
-    }
   }
 
 }
