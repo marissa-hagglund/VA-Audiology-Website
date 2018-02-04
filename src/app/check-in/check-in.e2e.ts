@@ -20,7 +20,7 @@ describe('Login', function() {
     browser.get('/login');
     await element(by.css('[placeholder="Usercode"]')).sendKeys('994444');
     await element(by.buttonText('Log In')).click();
-    await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/audio-nav');
+    await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/audiologist');
   });
   it('return to home page', async function() {
     browser.get('/login');
