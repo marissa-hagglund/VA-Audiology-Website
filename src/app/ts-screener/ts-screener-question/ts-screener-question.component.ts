@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from '@angular/core';
+import {Component, Input, Output, EventEmitter, ViewChild, ContentChild, OnInit, AfterViewInit} from '@angular/core';
 import { TsScreenerDataService } from '../../services/ts-screener-data.service';
 
 @Component({
@@ -25,7 +25,7 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
   `
 })
 
-export class TsScreenerQuestionComponent {
+export class TsScreenerQuestionComponent implements OnInit {
   @Input() public statement: string = 'During the PAST YEAR:';
   @Input() public question: string = '';
   @Input() public questionType: number = 1;
@@ -33,11 +33,16 @@ export class TsScreenerQuestionComponent {
   @Input() public radio1: string = 'YES';
   @Input() public radio2: string = 'NO';
   @Input() public radio3: string = null;
+  @Input() public state: number = null;
 
   @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
 
-  public selectedValue: string = '';
+  public selectedValue: string;
 
   constructor(private dataService: TsScreenerDataService) {};
+
+  ngOnInit() {
+    this.selectedValue = this.dataService.populateAnswers(this.state);
+  }
 }

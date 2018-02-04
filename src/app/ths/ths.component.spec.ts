@@ -76,5 +76,4 @@ describe('ThsComponent', () => {
         expect(navSpy).toHaveBeenCalledWith('/thank-you');
     });
   });
-
 });

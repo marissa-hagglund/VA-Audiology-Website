@@ -57,7 +57,7 @@ export class TsScreenerStateflowService {
     }
   }
 
-  public moveStateBackward(): number {
-    return this.dataService.moveStateBackward();
+  public moveStateBackward(currentState: number): number {
+    return this.dataService.moveStateBackward(currentState);
   }
 }
