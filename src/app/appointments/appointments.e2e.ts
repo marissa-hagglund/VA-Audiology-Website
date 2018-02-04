@@ -13,20 +13,20 @@ describe('Appointments', function() {
   });
 
   it('should click Initial Assessment', async function() {
-    await element(by.buttonText('Initial Assessment')).click();
-    await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
+    element(by.buttonText('Initial Assessment')).click();
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
   });
   it('should click Hearing Aids Fitting', async function() {
-    await element(by.buttonText('Hearing Aids Fitting')).click();
-    await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
+    element(by.buttonText('Hearing Aids Fitting')).click();
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
   });
   it('should click Hearing Aids Follow-Up Visit', async function() {
-    await element(by.buttonText('Hearing Aid Follow-Up Visit')).click();
-    await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
+    element(by.buttonText('Hearing Aid Follow-Up Visit')).click();
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
   });
   it('should click home page', async function() {
-    await element(by.css('[class="logo"]')).click();
-    await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/home');
+    element(by.css('[class="logo"]')).click();
+    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/home');
   });
 
 });
