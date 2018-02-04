@@ -2,6 +2,7 @@ import { TestBed, async, inject, fakeAsync, tick, ComponentFixture } from '@angu
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockBackend } from '@angular/http/testing';
+import { RouterModule, Router, Routes } from '@angular/router';
 import {
   HttpModule,
   BaseRequestOptions,
@@ -19,7 +20,8 @@ import { HomeComponent } from './home.component';
 describe(`Home`, () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-
+  let router: Router;
+  let location: Location;
   /**
    * async beforeEach.
    */
@@ -53,11 +55,24 @@ describe(`Home`, () => {
     /**
      * Trigger initial data binding.
      */
+    router = TestBed.get(Router);
     fixture.detectChanges();
+    router.initialNavigation();
   }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should test for the home routing to login page ', () => {
+    let spy = spyOn(router, 'navigateByUrl');
+    component.patientOnClick();
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/login');
+  });
+
+  it('should test for the on home console output', () => {
+    let spy = spyOn(console, 'log');
+    component.patientOnClick();
+    expect(console.log).toHaveBeenCalled();
+  });
 });
