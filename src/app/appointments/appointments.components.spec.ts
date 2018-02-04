@@ -36,8 +36,10 @@ describe('Initial Assessment', () => {
     let spy = spyOn(console, 'log');
     component.onInitialAssessment();
     expect(console.log).toHaveBeenCalled();
+  });
 
-    spy = spyOn(router, 'navigateByUrl');
+  it('should test for the on Initial Assessment routes to ts screen', () => {
+    let spy = spyOn(router, 'navigateByUrl');
     component.onInitialAssessment();
     expect(router.navigateByUrl).toHaveBeenCalledWith('/ts');
   });
@@ -46,21 +48,23 @@ describe('Initial Assessment', () => {
     let spy = spyOn(console, 'log');
     component.onHearingAidsFitting();
     expect(console.log).toHaveBeenCalled();
+  });
 
-    spy = spyOn(router, 'navigateByUrl');
-    component.onHearingAidsFitting();
+  it('should test for the on Hearing Aids Fitting routes to ts screen', () => {
+    let spy = spyOn(router, 'navigateByUrl');
+    component.onInitialAssessment();
     expect(router.navigateByUrl).toHaveBeenCalledWith('/ts');
   });
 
-  it('should test for the on HHearing Aids Evaluation console output', () => {
+  it('should test for the on Hearing Aids Evaluation console output', () => {
     let spy = spyOn(console, 'log');
     component.onHearingAidsEvaluation();
     expect(console.log).toHaveBeenCalled();
-
-    spy = spyOn(router, 'navigateByUrl');
-    component.onHearingAidsEvaluation();
-    expect(router.navigateByUrl).toHaveBeenCalledWith('/ts');
-
   });
 
+  it('should test for the on Hearing Aids Evaluation routes to ts screen', () => {
+    let spy = spyOn(router, 'navigateByUrl');
+    component.onInitialAssessment();
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/ts');
+  });
 });

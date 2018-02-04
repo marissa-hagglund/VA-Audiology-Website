@@ -64,14 +64,15 @@ describe(`Home`, () => {
     expect(component).toBeTruthy();
   });
 
-  it('should test for the on Hearing Aids Fitting console output', () => {
+  it('should test for the home routing to login page ', () => {
     let spy = spyOn(router, 'navigateByUrl');
     component.patientOnClick();
     expect(router.navigateByUrl).toHaveBeenCalledWith('/login');
+  });
 
-    spy = spyOn(console, 'log');
+  it('should test for the on home console output', () => {
+    let spy = spyOn(console, 'log');
     component.patientOnClick();
     expect(console.log).toHaveBeenCalled();
-
   });
 });
