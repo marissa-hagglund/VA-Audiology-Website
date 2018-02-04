@@ -1,32 +1,33 @@
 import { browser, by, element } from 'protractor';
+import { AppointmentsPage } from './appointments.po';
 import 'tslib';
 
 describe('Appointments', function() {
-
+  let appointments: AppointmentsPage;
   beforeEach(() => {
     /**
      * Change hash depending on router LocationStrategy.
      */
     // browser.get('/');
-    browser.get('/');
-    element(by.linkText('appointments'));
+    appointments = new AppointmentsPage();
+    appointments.navigateTo();
   });
 
   it('should click Initial Assessment', async function() {
-    element(by.buttonText('Initial Assessment')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
+    appointments.getInitialAssessment().click();
+    expect(appointments.getUrl()).toEqual('http://localhost:3000/ts');
   });
   it('should click Hearing Aids Fitting', async function() {
-    element(by.buttonText('Hearing Aids Fitting')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
+    appointments.getHearingAidsFitting().click();
+    expect(appointments.getUrl()).toEqual('http://localhost:3000/ts');
   });
   it('should click Hearing Aids Follow-Up Visit', async function() {
-    element(by.buttonText('Hearing Aid Follow-Up Visit')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/ts');
+    appointments.getHearingAidsFollowUp().click();
+    expect(appointments.getUrl()).toEqual('http://localhost:3000/ts');
   });
   it('should click home page', async function() {
     element(by.css('[class="logo"]')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/home');
+    expect(appointments.getUrl()).toEqual('http://localhost:3000/home');
   });
 
 });

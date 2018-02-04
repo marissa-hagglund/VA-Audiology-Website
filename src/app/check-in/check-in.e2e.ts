@@ -1,35 +1,36 @@
 import { browser, by, element } from 'protractor';
+import { LoginPage } from './check-in.po';
 import 'tslib';
 
 describe('Login', function() {
-
+  let login: LoginPage;
   beforeEach(() => {
     /**
      * Change hash depending on router LocationStrategy.
      */
     // let textBox = element(by.name('Username'));
-    browser.get('/');
-    element(by.linkText('login'));
+    login = new LoginPage();
+    login.navigateTo();
   });
 
   it('should login as patient', async function() {
-    element(by.css('[placeholder="Usercode"]')).sendKeys('4444');
-    element(by.buttonText('Log In')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/appointments');
+    login.getTextBox().sendKeys('4444');
+    login.getSignInBtn().click();
+    expect(login.getUrl()).toEqual('http://localhost:3000/appointments');
   });
   it('should login as audiologist', async function() {
-    element(by.css('[placeholder="Usercode"]')).sendKeys('994444');
-    element(by.buttonText('Log In')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/audiologist');
+    login.getTextBox().sendKeys('994444');
+    login.getSignInBtn().click();
+    expect (login.getUrl()).toEqual('http://localhost:3000/audiologist');
   });
   it('return to home page', async function() {
     element(by.css('[class="logo"]')).click();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/home');
+    expect (login.getUrl()).toEqual('http://localhost:3000/home');
   });
   it('should not login', async function() {
-    element(by.css('[placeholder="Usercode"]')).sendKeys('9948444');
-    element(by.buttonText('Log In')).click();
+    login.getTextBox().sendKeys('9948444');
+    login.getSignInBtn().click();
     element(by.css('[class="failLogIn"]')).isDisplayed();
-    expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/login');
+    expect(login.getUrl()).toEqual('http://localhost:3000/login');
   });
 });
