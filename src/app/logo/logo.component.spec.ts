@@ -34,7 +34,10 @@ describe('Initial Assessment', () => {
     component.onClick();
     expect(router.navigateByUrl).toHaveBeenCalledWith('/home');
 
-    spy = spyOn(console, 'log');
+  }));
+
+  it('should test for logo image console log', fakeAsync(() => {
+    let spy = spyOn(console, 'log');
     component.logoRouteOption = '2';
     component.onClick();
     expect(console.log).toHaveBeenCalled();

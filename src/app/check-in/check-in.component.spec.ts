@@ -55,14 +55,16 @@ describe('Initial Assessment', () => {
     expect(console.log).toHaveBeenCalled();
   }));
 
-  it('keydown should submit', fakeAsync(() => {
+  it('keydown should submit with enter key', fakeAsync(() => {
     let spy = spyOn(component, 'onClick');
     component.keyDownFunction({keyCode: 13});
     expect(component.onClick).toHaveBeenCalled();
+  }));
 
+  it('keydown should not submit with any key besides the enter key', fakeAsync(() => {
+    let spy = spyOn(component, 'onClick');
     component.keyDownFunction({keyCode: 12});
     expect(component.authenticationFlag).toBe(true);
-
   }));
 
 });
