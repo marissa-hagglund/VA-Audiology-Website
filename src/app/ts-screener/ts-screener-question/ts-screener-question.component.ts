@@ -42,7 +42,7 @@ export class TsScreenerQuestionComponent implements OnInit {
 
   constructor(private dataService: TsScreenerDataService) {};
 
-  ngOnInit() {
+  public ngOnInit() {
     this.selectedValue = this.dataService.populateAnswers(this.state);
   }
 }

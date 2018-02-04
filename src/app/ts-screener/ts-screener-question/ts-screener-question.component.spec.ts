@@ -41,5 +41,9 @@ describe('ThsQuestionComponent', () => {
     it('should create', () => {
       expect(component).toBeTruthy();
     });
+
+    it('should get resource TsScreenerAnswerStrings answer 0', () => {
+      expect(component.radio1).toBe('YES');
+    });
   });
 });
