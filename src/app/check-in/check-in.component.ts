@@ -14,6 +14,10 @@ export class CheckInComponent {
 
    constructor(private router: Router) {};
 
+   /* checking in as a patient or an audiologist.
+    * we don't have credentials so the length of the
+    * string is checked instead.
+    */
    public onClick() {
       if (this.patientId.length === 6) {
           console.log('Audiologist log in ' + this.patientId);

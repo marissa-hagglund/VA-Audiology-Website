@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 export class AppointmentsComponent {
 
   constructor(private router: Router) {};
-
+  
+  //buttons for deciding the type of appointment
   public onInitialAssessment() {
     console.log('Initial Assessment');
     this.router.navigateByUrl('/ts-screener');
