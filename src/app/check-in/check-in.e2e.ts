@@ -8,8 +8,7 @@ describe('Login', function() {
      * Change hash depending on router LocationStrategy.
      */
     // let textBox = element(by.name('Username'));
-    browser.get('/');
-    element(by.linkText('login'));
+    browser.get('/login');
   });
 
   it('should login as patient', async function() {
@@ -23,6 +22,7 @@ describe('Login', function() {
     await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/audiologist');
   });
   it('return to home page', async function() {
+    browser.get('/login');
     await element(by.css('[class="logo"]')).click();
     await expect(browser.getCurrentUrl()).toEqual('http://localhost:3000/home');
   });
