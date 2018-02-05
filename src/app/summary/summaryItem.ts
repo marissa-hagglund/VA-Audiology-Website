@@ -27,10 +27,12 @@ class summayItem {
   export class Question extends summayItem {
     readonly content;
     readonly score;
-    constructor(content: String, score: Number) {
+    readonly answer;
+    constructor(content: String, score: Number, answer: String) {
         super('Question');
         this.content = content;
         this.score   = score;
+        this.answer  = answer;
     }
   }
   export class Description extends summayItem {

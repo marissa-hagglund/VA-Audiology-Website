@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class TsScreenerDataService {
-  private history: number[] = [1];
-  private dataRecord: Array<{state, choice}> = [];
+  public history: number[] = [1];
+  public dataRecord: Array<{state, choice}> = [];
 
   constructor() { }
 

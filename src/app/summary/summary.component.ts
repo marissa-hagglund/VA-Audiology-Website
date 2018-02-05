@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { SurveyTitle, SectionTitle, Question, Description} from './summaryItem';
 import { ThsDataService } from '../services/ths-data.service';
+import { TsScreenerDataService } from '../services/ts-screener-data.service';
 import { constructDependencies } from '@angular/core/src/di/reflective_provider';
-import { ThsQuestionStrings, TsScreenerQuestionStrings } from '../common/custom-resource-strings'
+import { ThsQuestionStrings, TsScreenerQuestionStrings, ThsAnswerStrings, TsScreenerAnswerStrings } from '../common/custom-resource-strings'
 import { ThsQuestionComponent } from 'src/app/ths/ths-question/ths-question.component';
-import { TsScreenerDataService } from 'src/app/services/ts-screener-data.service';
+import { SummaryResolver } from '@angular/compiler';
+import { HighlightDelayBarrier } from 'blocking-proxy/built/lib/highlight_delay_barrier';
 
 @Component({
   selector: 'app-summary',
@@ -19,31 +21,46 @@ export class SummaryComponent implements OnInit {
   //                 new Question("question test", 5),
   //                 new Description("description test")];
   summaryItems = [];
-  constructor(private thsDataService: ThsDataService) {
-    this.constructTHSReport(thsDataService);
+  constructor(private thsDataService: ThsDataService, private dataService: TsScreenerDataService) {
+    this.constructTSScreenerReport();
+    this.constructTHSReport();
   };
 
-  private constructTHSReport(thsDataService: ThsDataService) {
-    this.summaryItems.push(new SurveyTitle('Tinnius & Hearing Survey'));
+  private constructTHSReport() {
     let history = this.thsDataService.history;
     let answers = this.thsDataService.dataRecord;
-    let items = [];
-    
-    var index = 0;
-    this.summaryItems.push(new SectionTitle('Test section title', 16));
+    if(history.length <= 1)
+      return;
+    this.summaryItems.push(new SurveyTitle('Tinnius & Hearing Survey'));
     for (let questionNum of history){
       let question = this.grabTHSQuestions(questionNum);
-      this.summaryItems.push(new Question(question, history[questionNum]));
-      ++index;
+      if(answers.length < questionNum) {
+        break;
+      }
+      let answer = answers[questionNum - 1].choice as String;
+      this.summaryItems.push(new Question(question, Number(answer.charAt(0)), answer.substring(4)));
     }
-    
+  }
+
+  private constructTSScreenerReport() {
+    let history = this.dataService.history;
+    let answers = this.dataService.dataRecord;
+    if(history.length <= 1)
+      return;
     this.summaryItems.push(new SurveyTitle('TS Screener'));
-    // need ts-screener data service to public the history and answers.
+    for (let questionNum of history) {
+      let question = this.getTSScreenerQuestions(questionNum);
+      if(answers.length < questionNum) {
+        break;
+      }
+      let answer = answers[questionNum - 1].choice as String;
+      this.summaryItems.push(new Question(question, -1, answer));
+    }    
   }
 
   private grabTHSQuestions(number: Number) {
     let thsQuestions = new ThsQuestionStrings();
-    switch (number){
+    switch (number) {
       case 1: return thsQuestions.question1;
       case 2: return thsQuestions.question2;
       case 3: return thsQuestions.question3;
@@ -68,7 +85,6 @@ export class SummaryComponent implements OnInit {
       case 6: return tsScreenerQuestions.question6;
     }
   }
-
   
   public ngOnInit() {
   }

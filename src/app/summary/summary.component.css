@@ -17,6 +17,10 @@
     padding-left: 20%;
 }
 
+.container .surveyTitle{
+    text-align: center;
+}
+
 .container .question {
     text-align: center;
 }
