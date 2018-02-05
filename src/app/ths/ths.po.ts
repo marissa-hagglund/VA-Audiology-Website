@@ -7,15 +7,17 @@ import 'tslib';
 export class ThsPage {
 
   public navigateTo() {
-    return browser.get('/ths');
+    browser.get('/');
+    browser.get('/ths');
+    return element(by.linkText('ths'));
   }
 
   public getTitleText() {
-    return element(by.xpath('//html/body/app/main/app-ths/h3')).getText();
+    return element(by.xpath('/html/body/app/main/app-ths/h3')).getText();
   }
 
   public getQuestionText() {
-    return element(by.xpath('//html/body/app/main/app-ths/ths-question/h2')).getText();
+    return element(by.tagName('h2')).getText();
   }
 
   // For testing just do radio button 4 for now.
