@@ -7,19 +7,19 @@ po.ts is a helper class for getting each elements on the page.
 */
 export class HomePage {
 
-  navigateTo() {
+  public navigateTo() {
     return browser.get('/');
   }
 
-  getPageTitleText() {
+  public getPageTitleText() {
     return browser.getTitle();
   }
 
-  getPatientCheckInBtn() {
+  public getPatientCheckInBtn() {
     return element(by.buttonText('Patient Check In'));
   }
 
-  getAudiologistLoginBtn() {
+  public getAudiologistLoginBtn() {
     return element(by.buttonText('Audiologist Log In'));
   }
 

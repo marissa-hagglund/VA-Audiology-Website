@@ -6,36 +6,36 @@ import 'tslib';
 */
 export class ThsPage {
 
-  navigateTo() {
+  public navigateTo() {
     return browser.get('/ths');
   }
 
-  getTitleText() {
+  public getTitleText() {
     return element(by.xpath('//html/body/app/main/app-ths/h3')).getText();
   }
 
-  getQuestionText() {
+  public getQuestionText() {
     return element(by.xpath('//html/body/app/main/app-ths/ths-question/h2')).getText();
   }
 
-  getAnswer(choice:number) {
+  public getAnswer(choice: number) {
     // radio button for answer starts at 2. first choice is  mat-radio-2
     // var real = choice+2;
-    var xPath = '//html/body/app/main/app-ths/ths-question/div[1]/div/div/mat-radio-group';
-    var radio = element(by.xpath(xPath)).all(by.id('mat-radio-4')).get(0);
+    let xPath = '//html/body/app/main/app-ths/ths-question/div[1]/div/div/mat-radio-group';
+    let radio = element(by.xpath(xPath)).all(by.id('mat-radio-4')).get(0);
     return radio;
   }
 
   // return 5 for now
-  getNumberOfChoices() {
+  public getNumberOfChoices() {
     return 5;
   }
 
-  getBackButton() {
+  public getBackButton() {
     return element(by.buttonText('BACK'));
   }
 
-  getNextButton() {
+  public getNextButton() {
     return element(by.buttonText('NEXT'));
   }
 
