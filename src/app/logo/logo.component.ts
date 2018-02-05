@@ -22,6 +22,11 @@ export class LogoComponent {
     constructor(private router: Router) {
     }
 
+    /**
+     * This function is called when the logo image is clicked.
+     * #1 indicating - the logo button is enabled, and routes to the "home" page
+     * #2 indicating - the logo button is disabled, it stays on the current page.
+     */
     public onClick() {
       if (this.logoRouteOption === '1') {
         this.router.navigateByUrl('/home');
