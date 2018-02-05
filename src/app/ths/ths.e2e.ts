@@ -13,7 +13,7 @@ describe('THS', function() {
 
   it('Should show title', async function() {
     Ths.navigateTo();
-    await expect(Ths.getTitleText()).toEqual('Tinnitus & Hearing Surveys');
+    await expect(Ths.getTitleText()).toEqual('Tinnitus & Hearing Survey');
   });
 
   it('Should show five answer choices', async function() {
@@ -32,8 +32,14 @@ describe('THS', function() {
     await expect(Ths.getNextButton().getText()).toEqual('NEXT');
   });
 
-  it('Should select answer choice 1', async function() {
-    await Ths.getAnswer(0).click();
+  // click through all the anwer choices for now
+  it('Should select answer choice ', async function() {
+    // await Ths.getAnswer(0).click();
+    // await Ths.getAnswer(1).click();
+    // await Ths.getAnswer(2).click();
+    await Ths.getAnswer(3).click();
+    await Ths.getNextButton().click();
+    await expect(Ths.getQuestionText()).toEqual(questionStrings.question2);
     // await browser.pause();
   });
 

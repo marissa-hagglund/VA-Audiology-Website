@@ -18,11 +18,14 @@ export class ThsPage {
     return element(by.xpath('//html/body/app/main/app-ths/ths-question/h2')).getText();
   }
 
+  // For testing just do radio button 4 for now.
   public getAnswer(choice: number) {
     // radio button for answer starts at 2. first choice is  mat-radio-2
-    // var real = choice+2;
+    let actual = choice + 2;
     let xPath = '//html/body/app/main/app-ths/ths-question/div[1]/div/div/mat-radio-group';
-    let radio = element(by.xpath(xPath)).all(by.id('mat-radio-4')).get(0);
+    // radio button ID is different for each question. Will need to update
+
+    let radio = element(by.xpath(xPath)).all(by.id('mat-radio-5')).get(0);
     return radio;
   }
 
