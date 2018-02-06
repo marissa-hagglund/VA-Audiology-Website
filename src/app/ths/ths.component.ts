@@ -23,8 +23,9 @@ import { RouterGuards } from '../services/router-guards.service';
   <ths-question *ngIf="currentState === 7" [question]="questionStrings.question7" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 8" [question]="questionStrings.question8" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 9" [question]="questionStrings.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <p *ngIf="currentState === 9" style="text-align: center; color: black; margin-top: 2%;">{{questionStrings.note}}</p>
+  <p *ngIf="currentState === 9" style="text-align: center; color: white; margin-top: 2%;">{{questionStrings.note}}</p>
   <ths-question *ngIf="currentState === 10" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <p *ngIf="currentState === 10" style="text-align: center; color: white; margin-top: 2%;">{{questionStrings.examples}}</p>
 `
 })
 export class ThsComponent {

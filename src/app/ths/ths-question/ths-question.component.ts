@@ -24,7 +24,7 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
     <div class="col-sm-6">
       <form class="inputForm">
         <mat-form-field class="fields">
-        <textarea matInput placeholder="Example 1 & 2:" value="{{selectedValue}}" [(ngModel)]="selectedValue" name="textBox"></textarea>
+        <textarea autofocus="true" matInput placeholder="Example 1 & 2:" value="{{selectedValue}}" [(ngModel)]="selectedValue" name="textBox"></textarea>
         </mat-form-field><br>
       </form>
       </div>

@@ -13,6 +13,7 @@ export class ThsDataService {
     this.history.push(state);
     console.log(this.history);
     console.log(this.dataRecord);
+  }
 
   // If it is not the first question in the process, then the record for that previous question will
   // be popped and the previous state returned
