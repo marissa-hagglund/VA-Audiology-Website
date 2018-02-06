@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ContentChild, OnInit } from '@angular/core';
 import { ThsAnswerStrings } from '../../common/custom-resource-strings';
+import { ThsDataService } from '../../services/ths-data.service';
 
 @Component({
   selector: 'ths-question',
@@ -39,7 +40,8 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
     `
 })
 
-export class ThsQuestionComponent {
+// Represents a single TinnitusScreener Question.  Commonly used component that can adjust with inputs.
+export class ThsQuestionComponent implements OnInit {
   public answerStrings: ThsAnswerStrings = new ThsAnswerStrings();
 
   @Input() public question: string = '';
@@ -48,11 +50,16 @@ export class ThsQuestionComponent {
   @Input() public radio3: string = this.answerStrings.MODERATE_YES;
   @Input() public radio4: string = this.answerStrings.BIG_YES;
   @Input() public radio5: string = this.answerStrings.VERY_BIG_YES;
+  @Input() public state: number = null;
 
   @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
 
-  public selectedValue: string = '';
+  public selectedValue: string;
 
-  constructor() {};
+  constructor(private dataService: ThsDataService) {};
+
+  public ngOnInit() {
+    this.selectedValue = this.dataService.populateAnswers(this.state);
+  }
 }

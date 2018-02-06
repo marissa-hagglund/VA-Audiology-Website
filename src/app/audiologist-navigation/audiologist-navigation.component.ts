@@ -7,7 +7,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./audiologist-navigation.component.css'],
   templateUrl: './audiologist-navigation.component.html',
 })
-
+/**
+ * This function controls the navigation sidebar.
+ * Either to show the sidebar or to hide the sidebar.
+ * active: boolean is a local variable will be switch between true and false to trigger the function.
+ */
 export class AudiologistNavigationComponent {
     public active: boolean = true;
     public onToggle() {

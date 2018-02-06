@@ -59,6 +59,21 @@ describe('ThsComponent', () => {
         component.moveStateForward('hello');
         expect(component.currentState).toEqual(5);
     });
-  });
 
+    it('should route to tfi', () => {
+        let spy = spyOn(service, 'moveStateForward').and.returnValue(11);
+        let navSpy = spyOn(component.router, 'navigateByUrl');
+        sessionStorage.setItem('nextComponent', 'false');
+        component.moveStateForward('hello');
+        expect(navSpy).toHaveBeenCalledWith('/tfi');
+    });
+
+    it('should route to thank you', () => {
+        let spy = spyOn(service, 'moveStateForward').and.returnValue(11);
+        let navSpy = spyOn(component.router, 'navigateByUrl');
+        sessionStorage.setItem('nextComponent', 'true');
+        component.moveStateForward('hello');
+        expect(navSpy).toHaveBeenCalledWith('/thank-you');
+    });
+  });
 });

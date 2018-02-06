@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { TsScreenerDataService } from './ts-screener-data.service';
 import { TsScreenerAnswerStrings } from '../common/custom-resource-strings';
 
+// Service that applies stateflow logic as according to the specs given by our sponsor.
 @Injectable()
 export class TsScreenerStateflowService {
   private answerStrings: TsScreenerAnswerStrings = new TsScreenerAnswerStrings();
 
   constructor(private dataService: TsScreenerDataService) {};
-
   public moveStateForward(state: number, choice: string): number {
     switch (state) {
       case 1:
@@ -15,6 +15,7 @@ export class TsScreenerStateflowService {
           this.dataService.saveData(2, choice);
           return 2;
         } else {
+          sessionStorage.setItem('nextComponent', 'true');
           this.dataService.saveData(7, choice);
           return 7;
         }
@@ -56,7 +57,7 @@ export class TsScreenerStateflowService {
     }
   }
 
-  public moveStateBackward(): number {
-    return this.dataService.moveStateBackward();
+  public moveStateBackward(currentState: number): number {
+    return this.dataService.moveStateBackward(currentState);
   }
 }
