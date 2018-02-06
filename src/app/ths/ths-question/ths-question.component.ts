@@ -40,6 +40,7 @@ import { ThsDataService } from '../../services/ths-data.service';
     `
 })
 
+// Represents a single TinnitusScreener Question.  Commonly used component that can adjust with inputs.
 export class ThsQuestionComponent implements OnInit {
   public answerStrings: ThsAnswerStrings = new ThsAnswerStrings();
 
