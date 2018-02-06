@@ -13,17 +13,17 @@ import { RouterGuards } from '../services/router-guards.service';
     </div>
   </div>
   <h3 style="color: white" align="center">Tinnitus & Hearing Survey</h3>
-  <ths-question *ngIf="currentState === 1" [question]="questionStrings.question1" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 2" [question]="questionStrings.question2" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 3" [question]="questionStrings.question3" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 4" [question]="questionStrings.question4" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 5" [question]="questionStrings.question5" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 6" [question]="questionStrings.question6" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 7" [question]="questionStrings.question7" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 8" [question]="questionStrings.question8" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
-  <ths-question *ngIf="currentState === 9" [question]="questionStrings.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 1" [state]="currentState" [question]="questionStrings.question1" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 2" [state]="currentState" [question]="questionStrings.question2" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 3" [state]="currentState" [question]="questionStrings.question3" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 4" [state]="currentState" [question]="questionStrings.question4" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 5" [state]="currentState" [question]="questionStrings.question5" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 6" [state]="currentState" [question]="questionStrings.question6" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 7" [state]="currentState" [question]="questionStrings.question7" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 8" [state]="currentState" [question]="questionStrings.question8" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 9" [state]="currentState" [question]="questionStrings.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <p *ngIf="currentState === 9" style="text-align: center; color: black; margin-top: 2%;">{{questionStrings.note}}</p>
-  <ths-question *ngIf="currentState === 10" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
+  <ths-question *ngIf="currentState === 10" [state]="currentState" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
 `
 })
 export class ThsComponent {
@@ -38,7 +38,7 @@ export class ThsComponent {
   // should be (right now, it'll jsut be sequential) and then sets that as the current state
   // To the user it'll be reflected in hitting a back button to go back to their previous question
   public moveStateBackward(): void {
-    let prevState: number = this.stateMachine.moveStateBackward();
+    let prevState: number = this.stateMachine.moveStateBackward(this.currentState);
 
     if (prevState) {
       this.currentState = prevState;
