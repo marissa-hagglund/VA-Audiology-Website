@@ -10,10 +10,9 @@
               <button type="submit"><i class="fa fa-search"></i></button>
         </div>
 
-        <div class="row"><label class="sec-label">TESTS SECTION</label></div>
-        <div class="row"><button class="main-btn">Audiogram</button></div>
-        <div class="row"><button class="main-btn">Otoscopy</button></div>
-        <div class="row"><button class="main-btn">Tympanometry</button></div>
+        <div class="row"><label class="sec-label">TESTS</label></div>
+        <div class="row"><button class="main-btn" (click)="toggleRecommendedTests">Recommended Tests</button></div>
+        <div class="row"><button class="main-btn">Suggested Tests</button></div>
         <div class="row"><label class="sec-label">SUMMARY SECTION</label></div>
         <div class="row"><button class="main-btn">Summary</button></div>
 
@@ -21,8 +20,9 @@
       <div class="{{active ? 'right-container' : 'right-container-full'}}">
           <!-- <button type="button" class="toggle-btn" (click)= "onToggle()"></button> -->
           <button type="button"><i class="glyphicon glyphicon-th-list" (click)="onToggle()"></i></button>
-          <div class="main-right-container">Summary</div>
-
+          <div class="{{recommendedTests ? 'main-right-container-hidden' : 'main-right-container'}}">Summary</div>
+          <otoscopy class="{{recommendedTests ? 'main-right-container': 'main-right-container-hidden'}}"></otoscopy>
+          <tympanometry class="{{recommendedTests ? 'main-right-container' : 'main-right-container-hidden'}}"></tympanometry>
       </div>
   </div>
 </div>

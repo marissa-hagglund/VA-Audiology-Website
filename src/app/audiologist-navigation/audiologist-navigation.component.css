@@ -56,6 +56,10 @@
   height: 90%;
 }
 
+.audio .right-container .main-right-container-hidden {
+  height: 90%;
+}
+
 .glyphicon-th-list {
   margin-top: 10px;
   position: absolute;
