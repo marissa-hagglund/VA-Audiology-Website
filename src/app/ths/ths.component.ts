@@ -6,7 +6,6 @@ import { RouterGuards } from '../services/router-guards.service';
 
 @Component({
   selector: 'app-ths',
-  styleUrls: ['./ths.component.css'],
   template: `
   <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-4" style="text-align: left;">
@@ -34,7 +33,7 @@ export class ThsComponent {
   public questionStrings: ThsQuestionStrings = new ThsQuestionStrings();
 
   constructor(private stateMachine: ThsStateflowService,
-              private router: Router) { };
+              public router: Router) { };
 
   // This function uses the stateflow service to determine what the previous state
   // should be (right now, it'll jsut be sequential) and then sets that as the current state

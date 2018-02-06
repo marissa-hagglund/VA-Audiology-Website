@@ -49,3 +49,15 @@ button {
   padding-bottom: 2%;
   font-size: 1em;
 }
+
+#space1{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+#space2{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
