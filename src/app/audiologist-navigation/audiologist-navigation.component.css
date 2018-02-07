@@ -57,7 +57,7 @@
 }
 
 .audio .right-container .main-right-container-hidden {
-  height: 90%;
+  display: none
 }
 
 .glyphicon-th-list {

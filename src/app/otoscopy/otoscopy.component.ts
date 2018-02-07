@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <h3 style="color: gray" align="center">Otoscopy</h3>
   <h2 styple="color: black" align="left">Type</h2>
+  <mat-radio-group>
   <mat-radio-button value="{{normal}}">{{normal}}</mat-radio-button> <br>
   <mat-radio-button value="{{notNormal}}">{{notNormal}}</mat-radio-button> <br>
+  </mat-radio-group>
   `
 })
 export class OtoscopyComponent implements OnInit {
