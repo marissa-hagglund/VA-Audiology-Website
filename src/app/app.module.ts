@@ -53,6 +53,7 @@ import { ThsDataService } from './services/ths-data.service';
 import { ThsQuestionComponent } from './ths/ths-question/ths-question.component';
 
 import { RouterGuards }     from './services/router-guards.service';
+import { AudiogramComponent } from './audiogram/audiogram.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -86,7 +87,8 @@ type StoreType = {
     TfiComponent,
     TfiQuestionComponent,
     SummaryComponent,
-    TsScreenerQuestionComponent
+    TsScreenerQuestionComponent,
+    AudiogramComponent
   ],
   exports: [
     MatSliderModule,

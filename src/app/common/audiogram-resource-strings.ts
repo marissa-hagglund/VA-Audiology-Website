@@ -1,0 +1,27 @@
+export class AudiogramType {
+  public conductive: string = 'Conductive';
+  public sensorNeural: string = 'Sensorneural';
+  public mixed: string = 'Mixed'
+
+}
+
+export class AudiogramSeverity {
+  public normal: string = 'Normal';
+  public moderate: string  = 'Moderate';
+  public moderateToSevere: string = 'Moderate/Severe';
+  public severe: string = 'Severe';
+  public profound: string = 'Profound';
+}
+
+export class AudiogramConfiguration {
+  public symmetric: string = 'Symmetric';
+  public asymetric: string = 'Asymetric';
+  public progressive: string = 'Progressive';
+  public sudden: string = 'Suddent';
+  public flat: string = 'Flat';
+  public sloping: string = 'Rising';
+  public cookieBite: string = 'Cookie Bite';
+  public precipitious: string = 'Precipitious';
+  public noiseNotch: string = 'Noise-Notch';
+  public corner: string = 'Corner';
+}
