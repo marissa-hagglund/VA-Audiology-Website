@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ContentChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ContentChild, OnInit } from '@angular/core';
 import { ThsAnswerStrings } from '../../common/custom-resource-strings';
+import { ThsDataService } from '../../services/ths-data.service';
 
 @Component({
   selector: 'ths-question',
@@ -30,16 +31,22 @@ import { ThsAnswerStrings } from '../../common/custom-resource-strings';
       </div>
     <div class="col-sm-3"></div>
     </ng-template>
+    <p *ngIf="state === 9" style="text-align: center; color: white; margin-top: 2%;">{{answerStrings.note}}</p>
+    <p *ngIf="state === 10" style="text-align: center; color: white; margin-top: 2%;">{{answerStrings.examples}}</p>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 sectionWrap" style="padding-top: 2%;">
-        <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <button *ngIf="state === 1; else disabled_btn" style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <ng-template #disabled_btn>
+          <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)" disabled>BACK</button>
+        </ng-template>
         <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>
     </div>
     `
 })
 
-export class ThsQuestionComponent {
+// Represents a single TinnitusScreener Question.  Commonly used component that can adjust with inputs.
+export class ThsQuestionComponent implements OnInit {
   public answerStrings: ThsAnswerStrings = new ThsAnswerStrings();
 
   @Input() public question: string = '';
@@ -48,10 +55,16 @@ export class ThsQuestionComponent {
   @Input() public radio3: string = this.answerStrings.MODERATE_YES;
   @Input() public radio4: string = this.answerStrings.BIG_YES;
   @Input() public radio5: string = this.answerStrings.VERY_BIG_YES;
+  @Input() public state: number = null;
 
   @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
 
-  public selectedValue: string = '';
+  public selectedValue: string;
 
+  constructor(private dataService: ThsDataService) {};
+
+  public ngOnInit() {
+    this.selectedValue = this.dataService.populateAnswers(this.state);
+  }
 }
