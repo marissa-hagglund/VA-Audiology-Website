@@ -73,9 +73,4 @@ export class ThsComponent {
     }
   }
 
-  test(){
-    console.log("test!!!!!!!")
-    this.router.navigateByUrl('/audio-nav');
-    console.log("test!!!!!!!")
-  }
 }
