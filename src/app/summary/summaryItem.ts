@@ -1,22 +1,31 @@
-
-class summayItem {
-    readonly type;
+/**
+ * The SummaryItem is the base class to define
+ * the abstract summary items
+ */
+class SummaryItem {
+    public readonly type;
     constructor(type: String) {
       this.type = type;
     }
 }
-  
-  export class SurveyTitle extends summayItem {
-    readonly title;
+
+/**
+ * The survey title type
+ */
+  export class SurveyTitle extends SummaryItem {
+    public readonly title;
     constructor(title: String) {
         super('SurveyTitle');
         this.title = title;
     }
   }
 
-  export class SectionTitle extends summayItem {
-    readonly title;
-    readonly totalScore;
+  /**
+   * The section title type
+   */
+  export class SectionTitle extends SummaryItem {
+    public readonly title;
+    public readonly totalScore;
     constructor(title: String, totalScore) {
         super('SectionTitle');
         this.title = title;
@@ -24,10 +33,13 @@ class summayItem {
     }
   }
 
-  export class Question extends summayItem {
-    readonly content;
-    readonly score;
-    readonly answer;
+  /**
+   * the Question type
+   */
+  export class Question extends SummaryItem {
+    public readonly content;
+    public readonly score;
+    public readonly answer;
     constructor(content: String, score: Number, answer: String) {
         super('Question');
         this.content = content;
@@ -35,11 +47,14 @@ class summayItem {
         this.answer  = answer;
     }
   }
-  export class Description extends summayItem {
-    readonly content
+
+  /**
+   * the description type
+   */
+  export class Description extends SummaryItem {
+    public readonly content;
     constructor(content: String) {
         super('Description');
         this.content = content;
     }
 }
-
