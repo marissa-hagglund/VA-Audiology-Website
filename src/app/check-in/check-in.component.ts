@@ -14,10 +14,17 @@ export class CheckInComponent {
 
    constructor(private router: Router) {};
 
+   /**
+    * This function will be call when the "check in" button is pressed.
+    * It evaluates the value is typed in the input area; if the value has the length of 6,
+    * then the page will be route to the "audiologist" page;
+    * if the value of length 4, then the page will be route to the "appointment" page.
+    * If the value has different length, then it will be informed as incorrect check in.
+    */
    public onClick() {
       if (this.patientId.length === 6) {
           console.log('Audiologist log in ' + this.patientId);
-          this.router.navigateByUrl('/audio-nav');
+          this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
         this.router.navigateByUrl('/appointments');
         console.log('log in with ' + this.patientId);
@@ -28,6 +35,11 @@ export class CheckInComponent {
       }
    }
 
+   /**
+    * This function is called when the "enter" key on the keyboard is pressed.
+    * If the key has the value of 13, then this function will call the "onClick" function from above.
+    * @param event the event caught by the action.
+    */
    public keyDownFunction(event) {
     if ( event.keyCode === 13) {
       this.onClick();
