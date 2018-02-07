@@ -35,7 +35,7 @@ import { ThsDataService } from '../../services/ths-data.service';
     <p *ngIf="state === 10" style="text-align: center; color: white; margin-top: 2%;">{{answerStrings.examples}}</p>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 sectionWrap" style="padding-top: 2%;">
-        <button *ngIf="state === 1; else disabled_btn" style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <button *ngIf="state !== 1; else disabled_btn" style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
         <ng-template #disabled_btn>
           <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)" disabled>BACK</button>
         </ng-template>
