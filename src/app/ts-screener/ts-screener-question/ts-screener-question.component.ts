@@ -18,7 +18,10 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
     </div>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3" style="padding-top: 2%;">
-        <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <button *ngIf="state !== 1; else disabled_btn" style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <ng-template #disabled_btn>
+          <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)" disabled>BACK</button>
+        </ng-template>
         <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>
     </div>
