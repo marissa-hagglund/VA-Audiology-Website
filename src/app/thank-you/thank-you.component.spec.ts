@@ -11,15 +11,14 @@ import {
 } from '@angular/http';
 import { BrowserDynamicTestingModule,
   platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ThankYouComponent } from './thank-you.component';
 import { LogoComponent } from '../logo/logo.component';
 
 describe('ThankYouComponent', () => {
   let component: ThankYouComponent;
   let fixture: ComponentFixture<ThankYouComponent>;
-
+  let router: Router;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -37,9 +36,23 @@ describe('ThankYouComponent', () => {
     fixture = TestBed.createComponent(ThankYouComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    router = TestBed.get(Router);
+    router.initialNavigation();
   }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('click on video link should navigate to home oage', fakeAsync(() => {
+    let spy = spyOn(router, 'navigateByUrl');
+    component.OnClickVideoLink();
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/home');
+  }));
+
+  it('click on info link should navigate to home oage', fakeAsync(() => {
+    let spy = spyOn(router, 'navigateByUrl');
+    component.OnClickInfoLink();
+    expect(router.navigateByUrl).toHaveBeenCalledWith('/home');
+  }));
 });

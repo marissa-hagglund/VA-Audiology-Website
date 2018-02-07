@@ -1,3 +1,27 @@
-<p>
-  tfi works!
-</p>
+<logo logoRouteOption="2"></logo>
+<h3 style="color: white" align="center">Tinnitus Functional Index</h3>
+<app-tfi-question *ngIf= "currentState === 0" [state]="currentState" [section]="sections.section1" [question]="questions.question1" [percent]="true" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 1" [state]="currentState" [section]="sections.section1" [question]="questions.question2" [percent]="false" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 2" [state]="currentState" [section]="sections.section1" [question]="questions.question3" [percent]="true" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 3" [state]="currentState" [section]="sections.section2" [question]="questions.question4" [percent]="false" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 4" [state]="currentState" [section]="sections.section2" [question]="questions.question5" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 5" [state]="currentState" [section]="sections.section2" [question]="questions.question6" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 6" [state]="currentState" [section]="sections.section3" [question]="questions.question7" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 7" [state]="currentState" [section]="sections.section3" [question]="questions.question8" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 8" [state]="currentState" [section]="sections.section3" [question]="questions.question9" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 9" [state]="currentState" [section]="sections.section4" [question]="questions.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 10" [state]="currentState" [section]="sections.section4" [question]="questions.question11" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 11" [state]="currentState" [section]="sections.section4" [question]="questions.question12" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 12" [state]="currentState" [section]="sections.section5" [question]="questions.question13" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 13" [state]="currentState" [section]="sections.section5" [question]="questions.question14" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 14" [state]="currentState" [section]="sections.section5" [question]="questions.question15" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 15" [state]="currentState" [section]="sections.section6" [question]="questions.question16" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 16" [state]="currentState" [section]="sections.section6" [question]="questions.question17" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 17" [state]="currentState" [section]="sections.section6" [question]="questions.question18" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 18" [state]="currentState" [section]="sections.section7" [question]="questions.question19" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 19" [state]="currentState" [section]="sections.section7" [question]="questions.question20" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 20" [state]="currentState" [section]="sections.section7" [question]="questions.question21" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 21" [state]="currentState" [section]="sections.section7" [question]="questions.question22" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 22" [state]="currentState" [section]="sections.section8" [question]="questions.question23" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 23" [state]="currentState" [section]="sections.section8" [question]="questions.question24" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
+<app-tfi-question *ngIf= "currentState === 24" [state]="currentState" [section]="sections.section8" [question]="questions.question25" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></app-tfi-question>
