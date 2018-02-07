@@ -1,3 +1,5 @@
+/*  Commenting out for now.
+
 import { browser } from 'protractor';
 import { ThsQuestionStrings, ThsAnswerStrings } from '../common/custom-resource-strings';
 import { ThsPage } from './ths.po';
@@ -44,3 +46,4 @@ describe('THS', function() {
   });
 
 });
+*/
