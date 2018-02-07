@@ -14,7 +14,9 @@ import { NgForm } from '@angular/forms';
  */
 export class AudiologistNavigationComponent {
     public active: boolean = true;
-    public recommendedTests: boolean = true;
+    public recommendedTests: boolean = false;
+    public suggestedTests: boolean = false;
+    public summary: boolean = true;
     public onToggle() {
       if (!this.active) {
           this.active = true;
@@ -25,13 +27,21 @@ export class AudiologistNavigationComponent {
       }
     }
 
-    public toggleRecommendedTests() {
-      if (!this.recommendedTests) {
-          this.recommendedTests = true;
-          console.log('recommendedTests');
-      } else {
-        this.recommendedTests = false;
-        console.log('no recommendedTests');
-      }
+    public showRecommendedTests() {
+      this.recommendedTests = true;
+      this.suggestedTests = false;
+      this.summary = false;
+    }
+
+    public showSuggestedTests() {
+      this.recommendedTests = false;
+      this.suggestedTests = true;
+      this.summary = false;
+    }
+
+    public showSummary() {
+      this.recommendedTests = false;
+      this.suggestedTests = false;
+      this.summary = true;
     }
 }
