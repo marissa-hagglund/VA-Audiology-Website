@@ -1,3 +1,4 @@
+import { TsScreenerAnswerStrings } from './../common/custom-resource-strings';
 import { Component, OnInit } from '@angular/core';
 import { SurveyTitle, SectionTitle, Question, Description} from './summaryItem';
 import { ThsDataService } from '../services/ths-data.service';
@@ -37,8 +38,12 @@ export class SummaryComponent implements OnInit {
       if(answers.length < questionNum) {
         break;
       }
+      if((questionNum - 1) % 4 == 0) {
+        console.log(questionNum);
+        this.summaryItems.push(new SectionTitle(this.grabTHSSectionTitle(questionNum), 16));
+      }
       let answer = answers[questionNum - 1].choice as String;
-      this.summaryItems.push(new Question(question, Number(answer.charAt(0)), answer.substring(4)));
+      this.summaryItems.push(new Question(question, Number(answer.charAt(0)), "-1"));
     }
   }
 
@@ -54,8 +59,18 @@ export class SummaryComponent implements OnInit {
         break;
       }
       let answer = answers[questionNum - 1].choice as String;
-      this.summaryItems.push(new Question(question, -1, answer));
-    }    
+      this.summaryItems.push(new Question(question, this.getTSScreenerChoiceNo(answer), "-1"));
+    }
+  }
+
+  private grabTHSSectionTitle(questionNumber: number) {
+    let part = parseInt("" + ((questionNumber-1) / 4.0));
+    switch(part) {
+      case 0: return "A. Tinnitus";
+      case 1: return "B. Hearing";
+      case 2: return "C. Sound Tolerance";
+      default: return "not assigned";
+    }
   }
 
   private grabTHSQuestions(number: Number) {
@@ -71,6 +86,7 @@ export class SummaryComponent implements OnInit {
       case 8: return thsQuestions.question8;
       case 9: return thsQuestions.question9;
       case 10: return thsQuestions.question10;
+      default: return "missing";
     }
   }
 
@@ -83,9 +99,26 @@ export class SummaryComponent implements OnInit {
       case 4: return tsScreenerQuestions.question4;
       case 5: return tsScreenerQuestions.question5;
       case 6: return tsScreenerQuestions.question6;
+      default: return "missing";
     }
   }
-  
+
+  private getTSScreenerChoiceNo(answer: String) {
+    let tsAnswers = new TsScreenerAnswerStrings();
+    switch(answer) {
+      case tsAnswers.YES: return 1;
+      case tsAnswers.NO: return 0;
+      case tsAnswers.ALWAYS: return 2;
+      case tsAnswers.USUALLY: return 1;
+      case tsAnswers.SOMETIMES_OCCASIONALLY: return 0;
+      case tsAnswers.YES_ALWAYS: return 3;
+      case tsAnswers.YES_SOMETIMES: return 0;
+      case tsAnswers.DAILY_OR_WEEKLY_BASIS: return 2;
+      case tsAnswers.MONTHLY_OR_YEARLY_BASIS: return 1;
+      default: return -1;
+    }
+  }
+
   public ngOnInit() {
   }
 
