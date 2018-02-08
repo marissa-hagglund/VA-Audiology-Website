@@ -4,12 +4,16 @@ import { Component, OnInit } from '@angular/core';
   selector: 'otoscopy',
   styleUrls: ['./otoscopy.component.css'],
   template: `
-  <h3 style="color: gray" align="center">Otoscopy</h3>
-  <h2 styple="color: black" align="left">Type</h2>
-  <mat-radio-group>
-  <mat-radio-button value="{{normal}}">{{normal}}</mat-radio-button> <br>
-  <mat-radio-button value="{{notNormal}}">{{notNormal}}</mat-radio-button> <br>
-  </mat-radio-group>
+  <div class="otoscopy">
+    <div class="head" align="center">OTOSCOPY</div>
+    <div class="subhead" align="left">TYPE</div>
+    <div class="radio">
+      <mat-radio-group>
+          <mat-radio-button value="{{normal}}">{{normal}}</mat-radio-button> <br>
+          <mat-radio-button value="{{notNormal}}">{{notNormal}}</mat-radio-button> <br>
+      </mat-radio-group>
+    </div>
+  </div>
   `
 })
 export class OtoscopyComponent implements OnInit {
@@ -17,12 +21,12 @@ export class OtoscopyComponent implements OnInit {
   /*
    * Data members for otoscopy radio buttons
    */
-  public normal: string = "Normal"
-  public notNormal: string = "Not Normal"
+  public normal: string = 'Normal';
+  public notNormal: string = 'Not Normal';
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
   }
 
 }
