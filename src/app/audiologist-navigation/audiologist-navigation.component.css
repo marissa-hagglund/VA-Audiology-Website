@@ -14,6 +14,7 @@
   background-color: white;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .audio .row {
@@ -42,7 +43,12 @@
   background-color: white;
   float: right;
   transition: all ease-in-out .2s;
+  overflow: scroll;
 }
+.audio .right-container::-webkit-scrollbar {
+  width: 0.5em;
+}
+
 
 .audio .right-container-full {
   height: 100%;
@@ -50,6 +56,7 @@
   background-color: white;
   float: right;
   transition: all ease-in-out .2s;
+  overflow: scroll;
 }
 
 
@@ -58,9 +65,9 @@
  * with the desired content.
  * The comma allows this to work for regular or full versions.
  */
-.audio .right-container .main-right-container,
-.audio .right-container-full .main-right-container {
-  height: 90%;
+.audio .right-container .main-right-container::-webkit-scrollbar,
+.audio .right-container-full .main-right-container::-webkit-scrollbar {
+  width: 0.5em;
 }
 
 /*
