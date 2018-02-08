@@ -20,17 +20,10 @@
       <div class="{{active ? 'right-container' : 'right-container-full'}}">
           <!-- <button type="button" class="toggle-btn" (click)= "onToggle()"></button> -->
           <button type="button"><i class="glyphicon glyphicon-th-list" (click)="onToggle()"></i></button>
-<<<<<<< HEAD
-          <div class="main-right-container">
-            <app-audiogram></app-audiogram>
-          </div>
-
-=======
           <app-summary class="{{summary ? 'main-right-container' : 'main-right-container-hidden'}}"></app-summary>
           <otoscopy class="{{recommendedTests ? 'main-right-container': 'main-right-container-hidden'}}"></otoscopy>
           <tympanometry class="{{recommendedTests ? 'main-right-container' : 'main-right-container-hidden'}}"></tympanometry>
           <div class="{{suggestedTests ? 'main-right-container' : 'main-right-container-hidden'}}">Suggested Tests</div>
->>>>>>> 7f544fef0a6a1e1dd636a0b98289e9b10293381e
       </div>
   </div>
 </div>
