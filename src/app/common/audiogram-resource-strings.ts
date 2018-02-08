@@ -1,11 +1,14 @@
-export class AudiogramType {
+/*
+String variables used in the Audiogram page.
+*/
+export class AudiogramTypeStrings {
   public conductive: string = 'Conductive';
   public sensorNeural: string = 'Sensorneural';
   public mixed: string = 'Mixed'
 
 }
 
-export class AudiogramSeverity {
+export class AudiogramSeverityStrings {
   public normal: string = 'Normal';
   public moderate: string  = 'Moderate';
   public moderateToSevere: string = 'Moderate/Severe';
@@ -13,7 +16,7 @@ export class AudiogramSeverity {
   public profound: string = 'Profound';
 }
 
-export class AudiogramConfiguration {
+export class AudiogramConfigurationStrings {
   public symmetric: string = 'Symmetric';
   public asymetric: string = 'Asymetric';
   public progressive: string = 'Progressive';
