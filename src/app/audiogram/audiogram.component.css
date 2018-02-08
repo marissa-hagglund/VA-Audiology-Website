@@ -1,0 +1,4 @@
+.test-types {
+  display: inline-flex;
+  flex-direction: column;
+}

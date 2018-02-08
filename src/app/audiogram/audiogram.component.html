@@ -1,10 +1,34 @@
 <div class="container">
     <div class="audiogram-container">
-      <div class="row">
-        <div class="col-md-2" style="text-align: text-left;">
-          <label class="page title">
-            Audiogram
-          </label>
+      <!-- Title -->
+      <div class="title">
+        <div class="col" style="text-align: text-center;">
+          <h1>Audiogram</h1>
+        </div>
+      </div>
+      <!-- Type -->
+      <div class="types">
+        <div class="col" style="text-align: text-center;">
+          <label>Type</label>
+          <div class="type" style="text-align; text-center;">
+            <mat-radio-group class = "test-types" >
+              <mat-radio-button value="{{testType1}}">{{testType1}}</mat-radio-button>
+              <mat-radio-button value="{{testType2}}">{{testType2}}</mat-radio-button>
+              <mat-radio-button value="{{testType3}}">{{testType3}}</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+      <!-- Left Ear -->
+      <div class="leftEar">
+        <div class="col" style="text-align: text-center;">
+          <h3>Left Ear</h3>
+        </div>
+      </div>
+      <!-- Right Ear -->
+      <div class="rightEar">
+        <div class="col" style="text-align: text-center;">
+          <h3>Right</h3>
         </div>
       </div>
     </div>

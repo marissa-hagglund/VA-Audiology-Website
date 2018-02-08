@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRouteSnapshot } from '@angular/core';
+// import { ActivatedRouteSnapshot } from '@angular/core';
 import { AudiogramTypeStrings,
   AudiogramSeverityStrings,
   AudiogramConfigurationStrings
-} from '../common/audiogram-resource-strings';
+} from '../common/audiologist-resource-strings';
 
 /*
 Audiogram Test Component for the audiologist view:
@@ -15,12 +15,14 @@ This component does not save information to any data services/databases
   templateUrl: './audiogram.component.html',
   styleUrls: ['./audiogram.component.css']
 })
-export class AudiogramComponent implements OnInt{
+export class AudiogramComponent implements OnInit{
   public typeStrings: AudiogramTypeStrings = new AudiogramTypeStrings();
   public severityStrings: AudiogramSeverityStrings = new AudiogramSeverityStrings();
   public configStrings: AudiogramConfigurationStrings = new AudiogramConfigurationStrings();
 
-  constructor() { }
+  public testType1: string = this.typeStrings.conductive;
+  public testType2: string = this.typeStrings.sensorNeural;
+  public testType3: string = this.typeStrings.mixed;
 
   public ngOnInit() { }
 

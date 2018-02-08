@@ -53,7 +53,12 @@ import { ThsDataService } from './services/ths-data.service';
 import { ThsQuestionComponent } from './ths/ths-question/ths-question.component';
 
 import { RouterGuards }     from './services/router-guards.service';
+<<<<<<< HEAD
 import { AudiogramComponent } from './audiogram/audiogram.component';
+=======
+import { OtoscopyComponent } from './otoscopy/otoscopy.component';
+import { TympanometryComponent } from './tympanometry/tympanometry.component';
+>>>>>>> 7f544fef0a6a1e1dd636a0b98289e9b10293381e
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -88,7 +93,12 @@ type StoreType = {
     TfiQuestionComponent,
     SummaryComponent,
     TsScreenerQuestionComponent,
+<<<<<<< HEAD
     AudiogramComponent
+=======
+    OtoscopyComponent,
+    TympanometryComponent
+>>>>>>> 7f544fef0a6a1e1dd636a0b98289e9b10293381e
   ],
   exports: [
     MatSliderModule,
