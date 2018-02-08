@@ -20,12 +20,12 @@ export class SummaryComponent implements OnInit {
    * It not connected to the real data yet.
    * to do.
    */
-  private patientID = 1234;
+  public readonly patientID = 1234;
 
   /**
    * all the summary items that will be displayed in the summary report
    */
-  private summaryItems = [];
+  public readonly summaryItems = [];
 
   /**
    *
