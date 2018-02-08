@@ -8,6 +8,8 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 // Information for a single TFI question
 export class TfiQuestionComponent implements OnInit {
   public selectedValue = '0';
+  @Input() public min = '';
+  @Input() public max = '';
   @Input() public question: string = '';
   @Input() public section: string = 'In the past year...';
   @Input() public percent: boolean = false;

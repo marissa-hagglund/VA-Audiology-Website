@@ -1,10 +1,6 @@
-import { browser, by, element } from 'protractor';
+/* import { browser, by, element } from 'protractor';
 import 'tslib';
 
-/*
-po means page objects
-po.ts is a helper class for getting each elements on the page.
-*/
 export class LoginPage {
 
   public navigateTo() {
@@ -23,3 +19,4 @@ export class LoginPage {
   }
 
 }
+*/

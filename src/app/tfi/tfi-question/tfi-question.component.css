@@ -53,11 +53,13 @@ button {
 #space1{
   color: white;
   display: flex;
+  font-size: 20px;
   justify-content: space-between;
 }
 
 #space2{
   color: white;
   display: flex;
+  font-size: 20px;
   justify-content: space-between;
 }

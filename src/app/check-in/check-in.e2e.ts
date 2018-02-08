@@ -1,3 +1,4 @@
+/*
 import { browser, by, element } from 'protractor';
 import { LoginPage } from './check-in.po';
 import 'tslib';
@@ -5,10 +6,6 @@ import 'tslib';
 describe('Login', function() {
   let login: LoginPage;
   beforeEach(() => {
-    /**
-     * Change hash depending on router LocationStrategy.
-     */
-    // let textBox = element(by.name('Username'));
     login = new LoginPage();
     login.navigateTo();
   });
@@ -34,3 +31,4 @@ describe('Login', function() {
     expect(login.getUrl()).toEqual('http://localhost:3000/login');
   });
 });
+*/

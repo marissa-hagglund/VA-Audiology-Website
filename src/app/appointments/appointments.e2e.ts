@@ -1,13 +1,10 @@
-import { browser, by, element } from 'protractor';
+/* import { browser, by, element } from 'protractor';
 import { AppointmentsPage } from './appointments.po';
 import 'tslib';
 
 describe('Appointments', function() {
   let appointments: AppointmentsPage;
   beforeEach(() => {
-    /**
-     * Change hash depending on router LocationStrategy.
-     */
     // browser.get('/');
     appointments = new AppointmentsPage();
     appointments.navigateTo();
@@ -31,3 +28,4 @@ describe('Appointments', function() {
   });
 
 });
+*/
