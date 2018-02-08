@@ -1,4 +1,21 @@
-.test-types {
+.audiogram .head {
+  background-color: lightgray;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font: bold 50px Veranda, sans-serif;
+  color: black;
+}
+
+.audiogram .subhead {
+  padding-top: 2%;
+  font: bold 22px Veranda, sans-serif;
+  padding-left: 5%;
+  color: black;
+}
+
+.audiogram .types .radio {
+  padding-left: 10%;
+  padding-bottom: 2%;
   display: inline-flex;
   flex-direction: column;
 }

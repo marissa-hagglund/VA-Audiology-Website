@@ -55,6 +55,7 @@ import { ThsQuestionComponent } from './ths/ths-question/ths-question.component'
 import { RouterGuards }     from './services/router-guards.service';
 import { OtoscopyComponent } from './otoscopy/otoscopy.component';
 import { TympanometryComponent } from './tympanometry/tympanometry.component';
+import { AudiogramComponent } from './audiogram/audiogram.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -90,7 +91,8 @@ type StoreType = {
     SummaryComponent,
     TsScreenerQuestionComponent,
     OtoscopyComponent,
-    TympanometryComponent
+    TympanometryComponent,
+    AudiogramComponent
   ],
   exports: [
     MatSliderModule,
