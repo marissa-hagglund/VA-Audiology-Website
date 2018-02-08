@@ -30,17 +30,18 @@ describe('TfiQuestionservice', () => {
     });
     it('should print on the console', () => {
       let spy = spyOn(console, 'log');
-      service.moveStateBackward();
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      service.moveStateBackward(4);
       expect(spy).toHaveBeenCalled();
     });
     it('should decrease dataRecord length', () => {
-      service.dataRecord = [{state: 2, choice: 3}, {state: 2, choice: 2}];
-      service.moveStateBackward();
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      service.moveStateBackward(3);
       expect(service.dataRecord.length).toEqual(1);
     });
     it('should pop dataRecord off top', () => {
-      service.dataRecord = [{state: 2, choice: 3}, {state: 2, choice: 2}];
-      service.moveStateBackward();
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      service.moveStateBackward(3);
       expect(service.dataRecord[service.dataRecord.length - 1]).toEqual({state: 2, choice: 3});
     });
   });

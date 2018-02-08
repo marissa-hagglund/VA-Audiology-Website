@@ -23,7 +23,7 @@ export class TfiComponent {
     if (this.currentState === 0) {
       return;
     }
-    this.dataService.moveStateBackward();
+    this.dataService.moveStateBackward(this.currentState);
     --this.currentState;
   }
   // Step forward by one question. If we've reached the end, route to thank-you page

@@ -34,7 +34,7 @@ describe('ThsQuestionservice', () => {
   describe('moveStateBackward', () => {
     it('should return integer', () => {
         let spy = spyOn(dataService, 'moveStateBackward').and.returnValue(5);
-        expect(service.moveStateBackward()).toEqual(5);
+        expect(service.moveStateBackward(7)).toEqual(5);
     });
   });
 

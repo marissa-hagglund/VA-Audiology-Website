@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { TfiDataService } from '../../services/tfi-data.service';
 
 @Component({
   selector: 'app-tfi-question',
@@ -13,11 +14,12 @@ export class TfiQuestionComponent implements OnInit {
   @Input() public question: string = '';
   @Input() public section: string = 'In the past year...';
   @Input() public percent: boolean = false;
+  @Input() public state: number = null;
   @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
-  constructor() { }
+  constructor(private dataService: TfiDataService) { }
 
   public ngOnInit() {
+    this.selectedValue = this.dataService.populateAnswers(this.state, this.percent);
   }
-
 }

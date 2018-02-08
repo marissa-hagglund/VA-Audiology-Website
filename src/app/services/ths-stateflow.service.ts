@@ -26,10 +26,9 @@ export class ThsStateflowService {
       return state;
     }
   }
-
   // The data service does most of the work here but it will return the numbered state
   // to go back to. In this questionnaire's case, it'll be jsut the previous question
-  public moveStateBackward(): number {
-    return this.dataService.moveStateBackward();
+  public moveStateBackward(currentState: number): number {
+    return this.dataService.moveStateBackward(currentState);
   }
 }
