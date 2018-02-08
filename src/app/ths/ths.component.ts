@@ -6,13 +6,14 @@ import { RouterGuards } from '../services/router-guards.service';
 
 @Component({
   selector: 'app-ths',
+  styleUrls: ['./ths.component.css'],
   template: `
   <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-4" style="text-align: left;">
         <logo logoRouteOption="2"></logo>
     </div>
   </div>
-  <h3 style="color: white" align="center">Tinnitus & Hearing Survey</h3>
+  <h3 class="titleFont">Tinnitus & Hearing Survey</h3>
   <ths-question *ngIf="currentState === 1" [state]="currentState" [question]="questionStrings.question1" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 2" [state]="currentState" [question]="questionStrings.question2" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
   <ths-question *ngIf="currentState === 3" [state]="currentState" [question]="questionStrings.question3" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
