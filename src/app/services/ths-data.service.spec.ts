@@ -50,6 +50,13 @@ describe('ThsQuestionservice', () => {
         service.history = [1, 2];
         expect(service.moveStateBackward(4)).toEqual(1);
     });
+
+    it('should splice history record', () => {
+      service.history = [1, 2, 3];
+      service.dataRecord = [{state: 1, choice: 'hi'}, {state: 2, choice: 'test'}, {state: 3, choice: 'hi'}];
+      service.moveStateBackward(3);
+      expect(service.dataRecord.length).toEqual(2);
+    });
   });
 
   describe('saveData', () => {
@@ -72,28 +79,19 @@ describe('ThsQuestionservice', () => {
         expect(service.history[1]).toEqual(2);
     });
 
-    it('should add 4 to Q1-4 point values', () => {
-        service.pointRecord = [0, 0, 0];
-        service.saveData(2, '4 - test');
-        expect(service.pointRecord[0]).toEqual(4);
-    });
-
-    it('should add 4 to Q5-8 point values', () => {
-        service.pointRecord = [0, 0, 0];
-        service.saveData(6, '4 - test');
-        expect(service.pointRecord[1]).toEqual(4);
-    });
-
-    it('should add 4 to Q9 point value', () => {
-        service.pointRecord = [0, 0, 0];
-        service.saveData(9, '4 - test');
-        expect(service.pointRecord[2]).toEqual(4);
-    });
-
-    it('should not add point values', () => {
-        service.pointRecord = [0, 0, 0];
-        service.saveData(10, '4 - test');
-        expect(service.pointRecord).toEqual([0, 0, 0]);
+    it('should splice to add history record', () => {
+        service.history = [1, 2, 3];
+        service.dataRecord = [{state: 1, choice: 'hi'}, {state: 2, choice: 'test'}, {state: 3, choice: 'hi'}];
+        service.saveData(3, 'test');
+        expect(service.dataRecord.length).toEqual(3);
     });
   });
+
+  describe('populateAnswers', () => {
+    it('should return current choice', () => {
+        service.dataRecord = [{state: 1, choice: 'one'}, {state: 2, choice: 'test'}, {state: 3, choice: 'hi'}];
+        expect(service.populateAnswers(3)).toEqual('hi');
+    });
+  });
+
 });
