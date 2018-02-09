@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TfiDataService } from '../services/tfi-data.service';
 import { Router } from '@angular/router';
 // import { MatSliderModule } from '@angular/material/slider';
-import { TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource-strings';
+import { TfiMinMax, TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource-strings';
 
 @Component({
   selector: 'tfi',
@@ -14,6 +14,7 @@ export class TfiComponent {
   public currentState: number = 0;
   private questions: TfiQuestionStrings = new TfiQuestionStrings();
   private sections: TfiSectionStrings =  new TfiSectionStrings();
+  private minmax: TfiMinMax = new TfiMinMax();
   constructor(public router: Router,
               private dataService: TfiDataService) { }
 
