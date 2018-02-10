@@ -2,20 +2,138 @@
       <!-- Title -->
       <div class="head" align="center">AUDIOGRAM</div>
       <!-- Type -->
-      <div class="types">
         <div class="subhead" align="left">TYPE</div>
-        <mat-radio-group class = "radio" >
-          <mat-radio-button value="{{testType1}}">{{testType1}}</mat-radio-button>
-          <mat-radio-button value="{{testType2}}">{{testType2}}</mat-radio-button>
-          <mat-radio-button value="{{testType3}}">{{testType3}}</mat-radio-button>
+        <mat-radio-group class = "radio">
+          <mat-radio-button *ngFor="let type of testTypes" [value]="type">
+            {{type}}
+          </mat-radio-button>
         </mat-radio-group>
-      </div>
       <!-- Left Ear -->
-      <div class="leftEar">
+        <div class="col">
         <div class="subhead" align="left">LEFT EAR</div>
+          <div class="col-sm">
+          <mat-card>
+            <mat-card-header>
+              <!-- <div mat-card-avatar class="leftear image"></div> -->
+              <mat-card-title>High Frequency</mat-card-title>
+              <mat-card-subtitle>SERVERITY</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="radioes">
+                <mat-radio-group class="radio">
+                  <mat-radio-button *ngFor="let severity of severities" [value]="severity">
+                    {{severity}}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="form-group">
+                <div class="wrap"><mat-checkbox *ngFor="let config of configurations" [value]="configurations">
+                  {{config}}
+                </mat-checkbox>
+              </div>
+            </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-sm">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Low Frequency</mat-card-title>
+              <mat-card-subtitle>SERVERITY</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="radioes">
+                <mat-radio-group class="radio">
+                  <mat-radio-button *ngFor="let severity of severities" [value]="severity">
+                    {{severity}}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="form-group">
+                <div class="wrap"><mat-checkbox *ngFor="let config of configurations" [value]="configurations">
+                  {{config}}
+                </mat-checkbox>
+              </div>
+            </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
       </div>
       <!-- Right Ear -->
-      <div class="rightEar">
+        <div class="col">
         <div class="subhead" align="left">RIGHT EAR</div>
+        <div class="col-sm">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>High Frequency</mat-card-title>
+            <mat-card-subtitle>SERVERITY</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="radioes">
+              <mat-radio-group class="radio">
+                <mat-radio-button *ngFor="let severity of severities" [value]="severity">
+                  {{severity}}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-group">
+              <div class="wrap"><mat-checkbox *ngFor="let config of configurations" [value]="configurations">
+                {{config}}
+              </mat-checkbox>
+            </div>
+          </div>
+          </mat-card-content>
+        </mat-card>
       </div>
-</div>
+      <div class="col-sm">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Low Frequency</mat-card-title>
+            <mat-card-subtitle>SERVERITY</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="radioes">
+              <mat-radio-group class="radio">
+                <mat-radio-button *ngFor="let severity of severities" [value]="severity">
+                  {{severity}}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <mat-card>
+          <mat-card-header>
+            <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="form-group">
+              <div class="wrap"><mat-checkbox *ngFor="let config of configurations" [value]="configurations">
+                {{config}}
+              </mat-checkbox>
+            </div>
+          </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>

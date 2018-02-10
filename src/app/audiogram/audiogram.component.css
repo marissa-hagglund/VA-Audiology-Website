@@ -13,9 +13,32 @@
   color: black;
 }
 
-.audiogram .types .radio {
+.audiogram .radio {
   padding-left: 10%;
   padding-bottom: 2%;
   display: inline-flex;
   flex-direction: column;
+}
+
+.audiogram .stuff .radio {
+  padding-left: 5%;
+  line-height: 1.8em;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-group .wrap {
+  min-width: 10em;
+}
+
+.leftear .no-gutter {
+  margin-left: 0;
+  margin-right: 0;
 }

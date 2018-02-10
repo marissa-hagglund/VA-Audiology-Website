@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { MaterialModule, MdCheckboxModule} from '@angular/material';
+// import { FormsModule } from '@angular/forms';
 import { AudiogramTypeStrings,
   AudiogramSeverityStrings,
   AudiogramConfigurationStrings
@@ -16,13 +18,32 @@ This component does not save information to any data services/databases
 })
 
 export class AudiogramComponent implements OnInit {
-  public typeStrings: AudiogramTypeStrings = new AudiogramTypeStrings();
-  public severityStrings: AudiogramSeverityStrings = new AudiogramSeverityStrings();
-  public configStrings: AudiogramConfigurationStrings = new AudiogramConfigurationStrings();
+  public testTypes = [
+    'Conductive',
+    'Sensorneural',
+    'Mixed'
+  ];
 
-  public testType1: string = this.typeStrings.conductive;
-  public testType2: string = this.typeStrings.sensorNeural;
-  public testType3: string = this.typeStrings.mixed;
+  public severities = [
+    'Normal',
+    'Moderate',
+    'Moderate/Severe',
+    'Severe',
+    'Profound'
+  ];
+
+  public configurations = [
+    'Symmetric',
+    'Asymetric',
+    'Progressive',
+    'Suddend',
+    'Flat',
+    'Rising',
+    'Cookie Bite',
+    'Precipitious',
+    'Noise-Notch',
+    'Corner'
+  ];
 
   public ngOnInit() { }
 

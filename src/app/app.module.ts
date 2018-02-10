@@ -20,6 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -97,7 +100,9 @@ type StoreType = {
   exports: [
     MatSliderModule,
     MatRadioModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule,
+    MatCardModule
   ],
   /**
    * Import Angular's modules.
@@ -110,6 +115,8 @@ type StoreType = {
     MatSliderModule,
     MatRadioModule,
     MatInputModule,
+    MatCheckboxModule,
+    MatCardModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
