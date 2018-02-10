@@ -45,6 +45,13 @@ export class AudiogramComponent implements OnInit {
     'Corner'
   ];
 
+  public ears: [
+     'LEFT EAR',
+    'RIGHT RIGHT'
+  ]
+
   public ngOnInit() { }
+
+
 
 }
