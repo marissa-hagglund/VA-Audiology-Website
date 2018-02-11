@@ -10,52 +10,55 @@
       </mat-radio-button>
     </mat-radio-group>
 
+    <!-- Template for showing all the serverity options -->
     <ng-template #severity>
       <mat-card>
         <mat-card-header>
           <mat-card-subtitle>SERVERITY</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <mat-radio-group class="radio">
-              <mat-radio-button *ngFor="let severity of severities" [value]="severity">
-                {{severity}}
-              </mat-radio-button>
-            </mat-radio-group>
+          <mat-radio-group class="radio">
+            <mat-radio-button *ngFor="let severity of severities" [value]="severity">
+              {{severity}}
+            </mat-radio-button>
+          </mat-radio-group>
         </mat-card-content>
       </mat-card>
     </ng-template>
 
+    <!-- Template for showing all the configurations checkboxes -->
     <ng-template #configs>
       <mat-card>
         <mat-card-header>
           <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-            <mat-checkbox class="checkboxes" *ngFor="let config of configurations" [value]="configurations">
-              {{config}}
-            </mat-checkbox>
-      </mat-card-content>
-    </mat-card>
-  </ng-template>
+          <mat-checkbox class="checkboxes" *ngFor="let config of configurations" [value]="configurations">
+            {{config}}
+          </mat-checkbox>
+        </mat-card-content>
+      </mat-card>
+    </ng-template>
 
-  <ng-template #audiogramTests let-ear="ear">
-    <div class="col">
-      <div class="subhead" align="left">{{ear}}</div>
-      <div class="col-sm">
-        <h3>High Frequencey</h3>
-        <ng-container *ngTemplateOutlet="severity"></ng-container>
-        <ng-container *ngTemplateOutlet="configs"></ng-container>
+    <!-- Template for displaying the left and right ear test -->
+    <ng-template #audiogramTests let-ear="ear">
+      <div class="col">
+        <div class="subhead" align="left">{{ear}}</div>
+        <div class="col-sm">
+          <h3>High Frequencey</h3>
+          <ng-container *ngTemplateOutlet="severity"></ng-container>
+          <ng-container *ngTemplateOutlet="configs"></ng-container>
+        </div>
+        <div class="col-sm">
+          <h3>Low Frequencey</h3>
+          <ng-container *ngTemplateOutlet="severity"></ng-container>
+          <ng-container *ngTemplateOutlet="configs"></ng-container>
+        </div>
       </div>
-      <div class="col-sm">
-        <h3>Low Frequencey</h3>
-        <ng-container *ngTemplateOutlet="severity"></ng-container>
-        <ng-container *ngTemplateOutlet="configs"></ng-container>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
 
-  <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'LEFT EAR'}"></ng-container>
-  <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'RIGHT EAR'}"></ng-container>
+    <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'LEFT EAR'}"></ng-container>
+    <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'RIGHT EAR'}"></ng-container>
 
-</div>
+  </div>
 </div>
