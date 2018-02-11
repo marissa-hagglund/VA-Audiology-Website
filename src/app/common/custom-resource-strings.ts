@@ -128,8 +128,6 @@ export class ThsQuestionStrings {
 
   // only appears is 1,2,3 or 4 is answered to question above
   public question10: string = 'Please list two examples of sounds that are too loud or uncomfortable for you, but seem normal to others:';
-
-  public note: string = '*If sounds are too loud for you when wearing hearing aids, please tell your audiologist.';
 }
 
 export class ThsAnswerStrings {
@@ -142,4 +140,8 @@ export class ThsAnswerStrings {
   public BIG_YES: string = '3 - Yes, a big problem';
 
   public VERY_BIG_YES: string = '4 - Yes, a very big problem';
+
+  public note: string = '*If sounds are too loud for you when wearing hearing aids, please tell your audiologist.';
+
+  public examples: string = 'Examples: beeps, whistles, radio, barking, door slam, dishes clattering, etc.';
 }
