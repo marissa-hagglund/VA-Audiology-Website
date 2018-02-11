@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { MaterialModule, MdCheckboxModule} from '@angular/material';
-// import { FormsModule } from '@angular/forms';
 import { AudiogramTypeStrings,
   AudiogramSeverityStrings,
   AudiogramConfigurationStrings
@@ -18,12 +16,15 @@ This component does not save information to any data services/databases
 })
 
 export class AudiogramComponent implements OnInit {
+
+  // Text for test type radio buttons in the template
   public testTypes = [
     'Conductive',
     'Sensorneural',
     'Mixed'
   ];
 
+  // Text for Serverity radio buttons in the template
   public severities = [
     'Normal',
     'Moderate',
@@ -32,6 +33,7 @@ export class AudiogramComponent implements OnInit {
     'Profound'
   ];
 
+  // Text for configurations checkboxes in the template
   public configurations = [
     'Symmetric',
     'Asymetric',
@@ -45,13 +47,12 @@ export class AudiogramComponent implements OnInit {
     'Corner'
   ];
 
+  // Text for left and right ear in the template
   public ears: [
-     'LEFT EAR',
+    'LEFT EAR',
     'RIGHT RIGHT'
   ]
 
   public ngOnInit() { }
-
-
 
 }
