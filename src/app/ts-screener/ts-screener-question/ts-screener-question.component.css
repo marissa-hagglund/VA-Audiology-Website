@@ -13,6 +13,16 @@ button {
   font-size: 1em;
 }
 
+.buttons2 {
+  width: 48%;
+  float: right;
+}
+
+.buttons1 {
+  width: 48%;
+  float: left;
+}
+
 .radio-1 {
   padding-left: 15%;
 }
@@ -172,5 +182,11 @@ button {
 
   .radio-2, .radio-3 {
     margin-left: 5%;
+  }
+}
+
+@media all and (max-width: 325px) {
+  .buttons1, .buttons2 {
+    font-size: .9em;
   }
 }

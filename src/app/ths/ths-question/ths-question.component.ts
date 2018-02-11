@@ -6,7 +6,7 @@ import { ThsDataService } from '../../services/ths-data.service';
   selector: 'ths-question',
   styleUrls: ['./ths-question.component.css'],
   template: `
-    <h2 style="color: white;" align="center">{{question}}</h2>
+    <h2 class="questionHeader">{{question}}</h2>
     <div *ngIf="question !== 'Please list two examples of sounds that are too loud or uncomfortable for you, but seem normal to others:'; else input_questions" class="row">
       <div class="col-sm-4 col-sm-offset-3 col-xs-offset-2 questionFont">
         <div class="form-check">
@@ -25,16 +25,23 @@ import { ThsDataService } from '../../services/ths-data.service';
     <div class="col-sm-6">
       <form class="inputForm">
         <mat-form-field class="fields">
-        <textarea matInput placeholder="Example 1 & 2:" value="{{selectedValue}}" [(ngModel)]="selectedValue" name="textBox"></textarea>
+        <textarea autofocus="true" matInput placeholder="Example 1 & 2:" value="{{selectedValue}}" [(ngModel)]="selectedValue" name="textBox"></textarea>
         </mat-form-field><br>
       </form>
       </div>
     <div class="col-sm-3"></div>
     </ng-template>
+    <div class="col-sm-6 col-sm-offset-3">
+    <p *ngIf="state === 9" class="extra">{{answerStrings.note}}</p>
+    <p *ngIf="state === 10" class="extra">{{answerStrings.examples}}</p>
+    </div>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 sectionWrap" style="padding-top: 2%;">
-        <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
-        <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
+        <button *ngIf="state !== 1; else disabled_btn" class="buttons1 btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <ng-template #disabled_btn>
+          <button class="buttons1 btn" (click)="onClickedBack.emit(selectedValue)" disabled>BACK</button>
+        </ng-template>
+        <button class="buttons2 btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>
     </div>
     `
