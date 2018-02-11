@@ -16,13 +16,11 @@
           <mat-card-subtitle>SERVERITY</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <div class="radioes">
             <mat-radio-group class="radio">
               <mat-radio-button *ngFor="let severity of severities" [value]="severity">
                 {{severity}}
               </mat-radio-button>
             </mat-radio-group>
-          </div>
         </mat-card-content>
       </mat-card>
     </ng-template>
@@ -33,12 +31,9 @@
           <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <div class="form-group">
-            <div class="wrap"><mat-checkbox *ngFor="let config of configurations" [value]="configurations">
+            <mat-checkbox class="checkboxes" *ngFor="let config of configurations" [value]="configurations">
               {{config}}
             </mat-checkbox>
-          </div>
-        </div>
       </mat-card-content>
     </mat-card>
   </ng-template>
