@@ -29,8 +29,36 @@
   color: black;
 }
 
-.audiogram .toolbar {
-  padding-left: 5%;
+.audiogram .leftear {
+  padding-left: 2%;
+}
+
+.audiogram .rightear {
+  padding-left: 2%;
+}
+
+.audiogram .leftear .subhead {
+  padding-left: 2%;
+}
+
+.audiogram .rightear .subhead {
+  padding-left: 2%;
+}
+
+
+.audiogram .row.no-pad > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.audiogram .leftear .toolbar {
+  background-color: #06517E;
+  color: white;
+}
+
+.audiogram .rightear .toolbar {
+  background-color: #9C2937;
+  color: white;
 }
 
 .audiogram .checkboxwrap {
@@ -41,9 +69,24 @@
 .audiogram .checkbox {
   display: block;
   line-height: .5em;
-  width: 150px;
+  width: 100px;
 }
 
-.audiogram .side {
-  background-color: lightblue;
+.hline {
+  padding-left: 3%;
+  padding-right: 3%;
+  height: 5px;
+  border: 0;
+  box-shadow: inset 0 1px 1px -3px;
+}
+
+mat-card {
+  border-radius: 0px;
+}
+
+md-checkbox .md-icon {
+    background: green!important;
+}
+md-checkbox.md-default-theme.md-checked .md-icon {
+    background: green!important;
 }
