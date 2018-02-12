@@ -1,5 +1,6 @@
 /*
-String variables used in the Audiogram page.
+Common strings used in the Audiogram page.
+Not used for now, but may still useful later on.
 */
 export class AudiogramTypeStrings {
   public conductive: string = 'Conductive';

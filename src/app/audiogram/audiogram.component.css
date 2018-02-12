@@ -45,7 +45,7 @@
   padding-left: 2%;
 }
 
-
+/* Removes the column gutter between High Frequency and Low Frequency */
 .audiogram .row.no-pad > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
@@ -80,13 +80,7 @@
   box-shadow: inset 0 1px 1px -3px;
 }
 
+/* Makes it so that the edges are sharp, by default the card edges are round */
 mat-card {
   border-radius: 0px;
-}
-
-md-checkbox .md-icon {
-    background: green!important;
-}
-md-checkbox.md-default-theme.md-checked .md-icon {
-    background: green!important;
 }

@@ -43,41 +43,41 @@
   <!-- Template for displaying the left and right ear test -->
   <div class="leftear">
     <div class="row no-pad">
-        <div class="subhead" align="left">LEFT EAR</div>
+      <div class="subhead" align="left">LEFT EAR</div>
       <div class="col-sm-6">
-            <div class="toolbar" align="center">High Frequency</div>
-            <ng-container *ngTemplateOutlet="severity;context:{side:'left'}"></ng-container>
-            <ng-container *ngTemplateOutlet="configs;context:{side:'left'}"></ng-container>
+        <div class="toolbar" align="center">High Frequency</div>
+        <ng-container *ngTemplateOutlet="severity;context:{side:'left'}"></ng-container>
+        <ng-container *ngTemplateOutlet="configs;context:{side:'left'}"></ng-container>
       </div>
       <div class="col-sm-6">
-          <div class="toolbar" align="center">Low Frequency</div>
-          <ng-container *ngTemplateOutlet="severity;context:{side:'left'}"></ng-container>
-          <ng-container *ngTemplateOutlet="configs;context:{side:'left'}"></ng-container>
+        <div class="toolbar" align="center">Low Frequency</div>
+        <ng-container *ngTemplateOutlet="severity;context:{side:'left'}"></ng-container>
+        <ng-container *ngTemplateOutlet="configs;context:{side:'left'}"></ng-container>
       </div>
-  </div>
-</div>
-
-<div class="rightear">
-  <div class="row no-pad">
-      <div class="subhead" align="left">RIGHT EAR</div>
-    <div class="col-sm-6">
-          <div class="toolbar" align="center">High Frequency</div>
-          <ng-container *ngTemplateOutlet="severity;context:{side:'right'}"></ng-container>
-          <ng-container *ngTemplateOutlet="configs;context:{side:'right'}"></ng-container>
     </div>
-    <div class="col-sm-6">
+  </div>
+
+  <div class="rightear">
+    <div class="row no-pad">
+      <div class="subhead" align="left">RIGHT EAR</div>
+      <div class="col-sm-6">
+        <div class="toolbar" align="center">High Frequency</div>
+        <ng-container *ngTemplateOutlet="severity;context:{side:'right'}"></ng-container>
+        <ng-container *ngTemplateOutlet="configs;context:{side:'right'}"></ng-container>
+      </div>
+      <div class="col-sm-6">
         <div class="toolbar" align="center">Low Frequency</div>
         <ng-container *ngTemplateOutlet="severity;context:{side:'right'}"></ng-container>
         <ng-container *ngTemplateOutlet="configs;context:{side:'right'}"></ng-container>
+      </div>
     </div>
-</div>
-<br>
+    <br>
 
-</div>
+  </div>
 
-
-  <!-- Shelving this for now to make the styling work. 
-   <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'LEFT EAR'}"></ng-container>
+  <!-- Shelving this for now to make the styling to easily to work with.
+       However, without this, there will be more repeated HTML codes.
+  <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'LEFT EAR'}"></ng-container>
   <br>
   <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'RIGHT EAR'}"></ng-container> -->
 
