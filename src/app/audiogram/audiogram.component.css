@@ -15,7 +15,35 @@
 
 .audiogram .radio {
   padding-left: 10%;
-  padding-bottom: 2%;
+  line-height: 1.8em;
   display: inline-flex;
   flex-direction: column;
+  color: black;
+}
+
+.audiogram .card-radio {
+  padding-left: 10%;
+  line-height: 1.5em;
+  display: inline-flex;
+  flex-direction: column;
+  color: black;
+}
+
+.audiogram .toolbar {
+  padding-left: 5%;
+}
+
+.audiogram .checkboxwrap {
+  display: inline;
+  width: 300px;
+}
+
+.audiogram .checkbox {
+  display: block;
+  line-height: .5em;
+  width: 150px;
+}
+
+.audiogram .side {
+  background-color: lightblue;
 }

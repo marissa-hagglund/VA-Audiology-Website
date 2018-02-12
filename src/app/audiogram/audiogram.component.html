@@ -1,64 +1,64 @@
-<div class="container">
-  <div class="audiogram">
-    <!-- Title -->
-    <div class="head" align="center">AUDIOGRAM</div>
-    <!-- Type -->
-    <div class="subhead" align="left">TYPE</div>
-    <mat-radio-group class = "radio">
-      <mat-radio-button *ngFor="let type of testTypes" [value]="type">
-        {{type}}
-      </mat-radio-button>
-    </mat-radio-group>
+<div class="audiogram">
+  <!-- Title -->
+  <div class="head" align="center">AUDIOGRAM</div>
+  <!-- Type -->
+  <div class="subhead" align="left">TYPE</div>
+  <mat-radio-group class = "radio">
+    <mat-radio-button *ngFor="let type of testTypes" [value]="type">
+      {{type}}
+    </mat-radio-button>
+  </mat-radio-group>
 
-    <!-- Template for showing all the serverity options -->
-    <ng-template #severity>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-subtitle>SERVERITY</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <mat-radio-group class="radio">
-            <mat-radio-button *ngFor="let severity of severities" [value]="severity">
-              {{severity}}
-            </mat-radio-button>
-          </mat-radio-group>
-        </mat-card-content>
-      </mat-card>
-    </ng-template>
+  <!-- Template for showing all the serverity options -->
+  <ng-template #severity>
+        <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{side}}</mat-card-title>
+        <mat-card-subtitle>SERVERITY</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-radio-group class="card-radio">
+          <mat-radio-button *ngFor="let severity of severities" [value]="severity">
+            {{severity}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
 
-    <!-- Template for showing all the configurations checkboxes -->
-    <ng-template #configs>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <mat-checkbox class="checkboxes" *ngFor="let config of configurations" [value]="configurations">
-            {{config}}
-          </mat-checkbox>
-        </mat-card-content>
-      </mat-card>
-    </ng-template>
+  <!-- Template for showing all the configurations checkboxes -->
+  <ng-template #configs>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-subtitle>CONFIGURATION</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-checkbox class="checkboxwrap" *ngFor="let config of configurations" [value]="configurations">
+          <div class="checkbox">{{config}}</div>
+        </mat-checkbox>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
 
-    <!-- Template for displaying the left and right ear test -->
-    <ng-template #audiogramTests let-ear="ear">
-      <div class="col">
+  <!-- Template for displaying the left and right ear test -->
+  <ng-template #audiogramTests let-ear="ear">
+    <div class="row no-gutters">
         <div class="subhead" align="left">{{ear}}</div>
-        <div class="col-sm">
-          <h3>High Frequencey</h3>
-          <ng-container *ngTemplateOutlet="severity"></ng-container>
-          <ng-container *ngTemplateOutlet="configs"></ng-container>
-        </div>
-        <div class="col-sm">
-          <h3>Low Frequencey</h3>
-          <ng-container *ngTemplateOutlet="severity"></ng-container>
-          <ng-container *ngTemplateOutlet="configs"></ng-container>
-        </div>
+        <div class="col-sm-6 no-gutters">
+            <div class="toolbar" align="center">High Frequency</div>
+            <ng-container *ngTemplateOutlet="severity"></ng-container>
+            <ng-container *ngTemplateOutlet="configs"></ng-container>
       </div>
-    </ng-template>
-
-    <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'LEFT EAR'}"></ng-container>
-    <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'RIGHT EAR'}"></ng-container>
-
+      <div class="col-sm-6 no-gutters">
+          <div class="toolbar" align="center">Low Frequency</div>
+          <ng-container *ngTemplateOutlet="severity"></ng-container>
+          <ng-container *ngTemplateOutlet="configs"></ng-container>
+      </div>
   </div>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'LEFT EAR'}"></ng-container>
+  <br>
+  <ng-container *ngTemplateOutlet="audiogramTests;context:{ear: 'RIGHT EAR'}"></ng-container>
+
 </div>

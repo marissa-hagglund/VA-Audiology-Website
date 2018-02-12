@@ -36,7 +36,7 @@ export class AudiogramComponent implements OnInit {
   // Text for configurations checkboxes in the template
   public configurations = [
     'Symmetric',
-    'Asymetric',
+    'Asymmetric',
     'Progressive',
     'Suddend',
     'Flat',
