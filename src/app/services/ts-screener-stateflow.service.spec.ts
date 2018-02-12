@@ -41,16 +41,34 @@ describe('TsScreenerStateflowService', () => {
   });
 
   describe('moveStateForward', () => {
-    it('should return 10', () => {
+    it('should return 7 from (1, NO)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(1, 'NO')).toEqual(7);
+    });
+    it('should return 2 from (1, YES)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(1, 'YES')).toEqual(2);
+    });
+    it('should return 7 from (3, 1-hello)', () => {
       let spy = spyOn(dataService, 'saveData').and.returnValue(5);
       expect(service.moveStateForward(3, '1 - hello')).toEqual(7);
     });
-
-    it('should return 11', () => {
+    it('should return 6 from (4, NO)', () => {
       let spy = spyOn(dataService, 'saveData').and.returnValue(5);
       expect(service.moveStateForward(4, 'NO')).toEqual(6);
     });
-
+    it('should return 7 from (4, TEST)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(4, 'TEST')).toEqual(7);
+    });
+    it('should return 6 from (5, YES)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(5, 'YES')).toEqual(6);
+    });
+    it('should return 7 from (5, TEST)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(5, 'TEST')).toEqual(7);
+    });
     it('should return incremented', () => {
       let spy = spyOn(dataService, 'saveData').and.returnValue(5);
       expect(service.moveStateForward(6, 'hello')).toEqual(7);

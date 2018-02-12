@@ -46,9 +46,22 @@ describe('TsScreenerDataService', () => {
       expect(spy).toHaveBeenCalled();
     });
 
+    it('should return 1 for dataRecord size', () => {
+      service.history = [1, 2];
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      service.moveStateBackward(2);
+      expect(service.dataRecord.length).toEqual(1);
+    });
+
+    it('should return 2 for dataRecord size', () => {
+      service.history = [1, 2];
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      service.moveStateBackward(4);
+      expect(service.dataRecord.length).toEqual(2);
+    });
     it('should return 1', () => {
       service.history = [1, 2];
-      expect(service.moveStateBackward(4)).toEqual(1);
+      expect(service.moveStateBackward(1)).toEqual(1);
     });
   });
 
@@ -71,5 +84,22 @@ describe('TsScreenerDataService', () => {
       service.saveData(2, 'test');
       expect(service.history[1]).toEqual(2);
     });
+
+    it('should return 2 for dataRecord size', () => {
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      service.saveData(4, 'Hello');
+      expect(service.dataRecord.length).toEqual(3);
+    });
   });
+
+  describe('populateAnswers', () => {
+    it('should return a string', () => {
+    service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+    expect(service.populateAnswers(2)).toEqual(3);
+  });
+    it('should return an empty string', () => {
+    service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+    expect(service.populateAnswers(5)).toEqual('');
+  });
+});
 });
