@@ -5,6 +5,15 @@ export class ThsDataService {
   public history: number[] = [1];
   public dataRecord: Array<{state, choice}> = [];
 
+  public onInit() {
+    console.log('INIT', sessionStorage);
+    if (JSON.parse(sessionStorage.getItem('ths-dataRecord'))) {
+      this.dataRecord = JSON.parse(sessionStorage.getItem('ths-dataRecord'));
+    }
+    if (JSON.parse(sessionStorage.getItem('ths-history'))) {
+      this.history = JSON.parse(sessionStorage.getItem('ths-history'));
+    }
+  }
   // This function will save the current state and choice the patient made for it in an Array
   // It will also keep a list of the states it has been to previously for going back and tracking progress.
   // Another array will be kept for the subtotals of points for each section
@@ -18,6 +27,9 @@ export class ThsDataService {
 
     this.dataRecord.push({state: initialState, choice: selection});
     this.history.push(state);
+
+    this.updateSessionStorage();
+    console.log(sessionStorage);
 
     console.log(this.history);
     console.log(this.dataRecord);
@@ -37,6 +49,8 @@ export class ThsDataService {
 
     this.history.pop();
 
+    this.updateSessionStorage();
+
     console.log(this.history);
     console.log(this.dataRecord);
 
@@ -51,5 +65,10 @@ export class ThsDataService {
     } else {
       return '';
     }
+  }
+
+  public updateSessionStorage(): void {
+    sessionStorage.setItem('ths-dataRecord', JSON.stringify(this.dataRecord));
+    sessionStorage.setItem('ths-history', JSON.stringify(this.history));
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TsScreenerAnswerStrings, TsScreenerQuestionStrings } from '../common/custom-resource-strings';
 import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
 import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
@@ -27,7 +27,7 @@ import { Router } from '@angular/router';
 })
 
 // Parent shell class of the TinnitusScreener Questionaire.
-export class TsScreenerComponent {
+export class TsScreenerComponent implements OnInit {
   public currentState: number = 1;
 
   public questionStrings: TsScreenerQuestionStrings = new TsScreenerQuestionStrings();
@@ -36,6 +36,13 @@ export class TsScreenerComponent {
   constructor(private stateMachine: TsScreenerStateflowService,
               public router: Router) {};
 
+  public ngOnInit() {
+    if (sessionStorage.getItem('ts-currentState')) {
+      this.currentState = parseInt(sessionStorage.getItem('ts-currentState'), 10);
+      console.log('state', this.currentState);
+    }
+  }
+
   // receives new current state after moving backwards from services
   public moveStateBackward(): void {
     let prevState: number = this.stateMachine.moveStateBackward(this.currentState);
@@ -43,6 +50,8 @@ export class TsScreenerComponent {
     if (prevState) {
       this.currentState = prevState;
     }
+
+    this.updateSessionStorage();
   }
 
   // receives new current state after moving forwards from services
@@ -56,8 +65,14 @@ export class TsScreenerComponent {
 
     this.currentState = nextState;
 
+    this.updateSessionStorage();
+
     if (this.currentState === 7) {
       this.router.navigateByUrl('/ths');
     }
+  }
+
+  public updateSessionStorage(): void {
+    sessionStorage.setItem('ts-currentState', this.currentState.toString());
   }
 }

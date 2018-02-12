@@ -64,7 +64,9 @@ export class ThsQuestionComponent implements OnInit {
 
   public selectedValue: string;
 
-  constructor(private dataService: ThsDataService) {};
+  constructor(private dataService: ThsDataService) {
+    this.dataService.onInit();
+  };
 
   public ngOnInit() {
     this.selectedValue = this.dataService.populateAnswers(this.state);

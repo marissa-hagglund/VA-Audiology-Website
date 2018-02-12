@@ -7,6 +7,13 @@ export class TfiDataService {
   constructor() { }
   // Push the question number and answer onto the stack
 
+  public onInit() {
+    console.log('INIT', sessionStorage);
+    if (JSON.parse(sessionStorage.getItem('tfi-dataRecord'))) {
+      this.dataRecord = JSON.parse(sessionStorage.getItem('tfi-dataRecord'));
+    }
+  }
+
   public saveData(state: number, choice: number): void {
     if (this.dataRecord.length > 0) {
       let index: number = this.dataRecord.findIndex((x) => x.state === state);
@@ -16,6 +23,7 @@ export class TfiDataService {
     }
     this.dataRecord.push({state, choice});
 
+    this.updateSessionStorage();
     console.log(this.dataRecord);
   }
 
@@ -30,6 +38,8 @@ export class TfiDataService {
       this.dataRecord.splice(index, 1);
     }
 
+    this.updateSessionStorage();
+
     console.log(this.dataRecord);
   }
 
@@ -41,5 +51,9 @@ export class TfiDataService {
     } else {
       return '0';
     }
+  }
+
+  public updateSessionStorage(): void {
+    sessionStorage.setItem('tfi-dataRecord', JSON.stringify(this.dataRecord));
   }
 }

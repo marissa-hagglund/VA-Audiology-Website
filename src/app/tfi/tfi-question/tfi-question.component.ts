@@ -17,7 +17,9 @@ export class TfiQuestionComponent implements OnInit {
   @Input() public state: number = null;
   @Output() public onClickedBack: EventEmitter<string> = new EventEmitter<string>();
   @Output() public onClickedNext: EventEmitter<string> = new EventEmitter<string>();
-  constructor(private dataService: TfiDataService) { }
+  constructor(private dataService: TfiDataService) {
+    this.dataService.onInit();
+  }
 
   public ngOnInit() {
     this.selectedValue = this.dataService.populateAnswers(this.state, this.percent);
