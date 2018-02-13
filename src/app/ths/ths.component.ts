@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThsQuestionStrings } from '../common/custom-resource-strings';
 import { ThsStateflowService } from '../services/ths-stateflow.service';
 import { Router } from '@angular/router';
@@ -26,13 +26,20 @@ import { RouterGuards } from '../services/router-guards.service';
   <ths-question *ngIf="currentState === 10" [state]="currentState" [question]="questionStrings.question10" (onClickedBack)="moveStateBackward()" (onClickedNext)="moveStateForward($event)"></ths-question>
 `
 })
-export class ThsComponent {
+export class ThsComponent implements OnInit {
   public currentState: number = 1;
 
   public questionStrings: ThsQuestionStrings = new ThsQuestionStrings();
 
   constructor(private stateMachine: ThsStateflowService,
               public router: Router) { };
+
+  public ngOnInit(): void {
+    if (sessionStorage.getItem('ths-currentState')) {
+      this.currentState = parseInt(sessionStorage.getItem('ths-currentState'), 10);
+      console.log('state', this.currentState);
+    }
+  }
 
   // This function uses the stateflow service to determine what the previous state
   // should be (right now, it'll jsut be sequential) and then sets that as the current state
@@ -43,6 +50,8 @@ export class ThsComponent {
     if (prevState) {
       this.currentState = prevState;
     }
+
+    this.updateSessionStorage();
   }
 
   // This function takes in the answer the user chose from the radio buttons and
@@ -59,10 +68,12 @@ export class ThsComponent {
 
     this.currentState = nextState;
 
+    this.updateSessionStorage();
     // if the no was not selected for Q1 on TS, routes to tfi like normal
     // If it was, then tfi is skipped
     if (this.currentState === 11) {
         let nextComponent = sessionStorage.getItem('nextComponent'); // will be null if this doesn't exist (meaning it wasn't even set)
+
         if (nextComponent === 'true') { // if it is finished
             sessionStorage.removeItem('nextComponent'); // clears it right after use
             this.router.navigateByUrl('/thank-you');
@@ -72,4 +83,7 @@ export class ThsComponent {
     }
   }
 
+  public updateSessionStorage(): void {
+    sessionStorage.setItem('ths-currentState', this.currentState.toString());
+  }
 }
