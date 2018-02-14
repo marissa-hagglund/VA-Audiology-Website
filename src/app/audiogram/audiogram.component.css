@@ -52,39 +52,47 @@
 }
 
 .audiogram .leftear .toolbar {
+  border-style: solid;
+  border-color: rgba(134,134,134,.9);
+  border-width: 1.4px;
   background-color: #06517E;
   color: white;
 }
 
 .audiogram .rightear .toolbar {
+  border-style: solid;
+  border-color: rgba(134,134,134,.9) !important;
+  border-width: 1.4px;
   background-color: #9C2937;
   color: white;
 }
 
+/* Changes the width of the line that wraps the checkbox */
 .audiogram .checkboxwrap {
   display: inline;
   width: 300px;
 }
 
+/* This is the actual checkbox which includes the text and the checkbox icon */
 .audiogram .checkbox {
   display: block;
   line-height: .5em;
   width: 100px;
 }
 
-.hline {
+.audiogram .hline {
   padding-left: 3%;
   padding-right: 3%;
-  height: 5px;
-  border: 0;
-  box-shadow: inset 0 1px 1px -3px;
 }
 
 /* Makes it so that the edges are sharp, by default the card edges are round */
 mat-card {
   border-radius: 0px;
+  margin: 0.7px
 }
 
+/* Makes so that the background color does not override the radio & checkbox color
+*/
 /deep/ .mat-checkbox-inner-container {
   background-color: white !important;
 }
