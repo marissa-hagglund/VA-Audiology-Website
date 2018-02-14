@@ -27,6 +27,7 @@ export class CheckInComponent {
           this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
         this.router.navigateByUrl('/appointments');
+        sessionStorage.setItem('patient-id', this.patientId);
         console.log('log in with ' + this.patientId);
       } else {
         this.authenticationFlag = false;

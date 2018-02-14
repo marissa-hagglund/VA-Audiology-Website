@@ -20,7 +20,7 @@ export class SummaryComponent implements OnInit {
    * It not connected to the real data yet.
    * to do.
    */
-  public readonly patientID = 1234;
+  public readonly patientID;
 
   /**
    * all the summary items that will be displayed in the summary report
@@ -35,6 +35,7 @@ export class SummaryComponent implements OnInit {
   constructor(private thsDataService: ThsDataService, private dataService: TsScreenerDataService) {
     this.constructTSScreenerReport();
     this.constructTHSReport();
+    this.patientID = sessionStorage.getItem('patient-id');
   };
 
   public ngOnInit() {
