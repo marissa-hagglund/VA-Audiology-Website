@@ -84,3 +84,11 @@
 mat-card {
   border-radius: 0px;
 }
+
+/deep/ .mat-checkbox-inner-container {
+  background-color: white !important;
+}
+
+/deep/ .mat-radio-outer-circle {
+  background-color: white !important;
+}
