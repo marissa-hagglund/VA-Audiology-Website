@@ -18,8 +18,11 @@ import { TsScreenerDataService } from '../../services/ts-screener-data.service';
     </div>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3" style="padding-top: 2%;">
-        <button style="width: 48%; float: left;" class="btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
-        <button style="width: 48%; float: right;" class="btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
+        <button *ngIf="state !== 1; else disabled_btn" class="buttons1 btn btn-primary" (click)="onClickedBack.emit(selectedValue)">BACK</button>
+        <ng-template #disabled_btn>
+          <button class="buttons1 btn" (click)="onClickedBack.emit(selectedValue)" disabled>BACK</button>
+        </ng-template>
+        <button class="buttons2 btn btn-primary" (click)="onClickedNext.emit(selectedValue)">NEXT</button>
       </div>
     </div>
   `
@@ -40,7 +43,9 @@ export class TsScreenerQuestionComponent implements OnInit {
 
   public selectedValue: string;
 
-  constructor(private dataService: TsScreenerDataService) {};
+  constructor(private dataService: TsScreenerDataService) {
+    this.dataService.onInit();
+  };
 
   public ngOnInit() {
     this.selectedValue = this.dataService.populateAnswers(this.state);

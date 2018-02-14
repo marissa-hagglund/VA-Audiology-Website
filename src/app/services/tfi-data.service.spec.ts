@@ -44,6 +44,10 @@ describe('TfiQuestionservice', () => {
       service.moveStateBackward(3);
       expect(service.dataRecord[service.dataRecord.length - 1]).toEqual({state: 2, choice: 3});
     });
+    it('should return null', () => {
+      service.dataRecord = [];
+      expect(service.moveStateBackward(3)).toEqual(null);
+    });
   });
   describe('saveData', () => {
     it('should print on the console', () => {
@@ -60,6 +64,21 @@ describe('TfiQuestionservice', () => {
       service.dataRecord = [{state: 2, choice: 2}];
       service.saveData(1, 2);
       expect(service.dataRecord[service.dataRecord.length - 1]).toEqual({state: 1, choice: 2});
+    });
+    it('should return 2 for dataRecord size', () => {
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      service.saveData(2, 3);
+      expect(service.dataRecord.length).toEqual(2);
+    });
+  });
+  describe('populateAnswers', () => {
+    it('should return a string', () => {
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      expect(service.populateAnswers(2, false)).toEqual('3');
+    });
+    it('should return an empty string', () => {
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      expect(service.populateAnswers(5, false)).toEqual('0');
     });
   });
 });

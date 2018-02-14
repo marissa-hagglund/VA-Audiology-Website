@@ -156,12 +156,18 @@
   cursor: pointer;
 }
 
+@media all and (max-width:690px) {
+  :host /deep/ img.logo {
+       width: 90% !important;
+  }
+}
+
 @media all and (max-width:425px) {
   .audio .left-container {
       width: 70%;
   }
   .audio .right-container {
-    width: 30%;
+      width: 30%;
   }
 }
 

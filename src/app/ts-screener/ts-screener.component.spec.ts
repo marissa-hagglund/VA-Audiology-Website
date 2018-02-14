@@ -51,6 +51,7 @@ describe('TsScreenerComponent', () => {
 
   describe('moveStateForward', () => {
     it('should not set currentState', () => {
+      component.currentState = 1;
       component.moveStateForward(null);
       expect(component.currentState).toEqual(1);
     });

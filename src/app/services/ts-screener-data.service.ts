@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 // Stores data recorded from tinnitus screener questionaire.
 @Injectable()
@@ -6,7 +6,17 @@ export class TsScreenerDataService {
   public history: number[] = [1];
   public dataRecord: Array<{state, choice}> = [];
 
-  constructor() { }
+  constructor() {}
+
+  public onInit() {
+    console.log('INIT', sessionStorage);
+    if (JSON.parse(sessionStorage.getItem('ts-dataRecord'))) {
+      this.dataRecord = JSON.parse(sessionStorage.getItem('ts-dataRecord'));
+    }
+    if (JSON.parse(sessionStorage.getItem('ts-history'))) {
+      this.history = JSON.parse(sessionStorage.getItem('ts-history'));
+    }
+  }
 
   // saves the state movement history as well as state/choice pairs.
   public saveData(state: number, selection: string): void {
@@ -21,6 +31,8 @@ export class TsScreenerDataService {
     this.dataRecord.push({state: initialState, choice: selection});
     this.history.push(state);
 
+    this.updateSessionStorage();
+    console.log(sessionStorage);
     console.log(this.history);
     console.log(this.dataRecord);
   }
@@ -37,6 +49,7 @@ export class TsScreenerDataService {
 
     this.history.pop();
 
+    this.updateSessionStorage();
     console.log(this.history);
     console.log(this.dataRecord);
 
@@ -45,6 +58,9 @@ export class TsScreenerDataService {
   }
 
   public populateAnswers(state: number): string {
+    if (!this.dataRecord) {
+      return '';
+    }
     let choice = this.dataRecord.find((x) => x.state === state);
 
     if (choice) {
@@ -52,5 +68,10 @@ export class TsScreenerDataService {
     } else {
       return '';
     }
+  }
+
+  public updateSessionStorage(): void {
+    sessionStorage.setItem('ts-dataRecord', JSON.stringify(this.dataRecord));
+    sessionStorage.setItem('ts-history', JSON.stringify(this.history));
   }
 }

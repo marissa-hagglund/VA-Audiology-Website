@@ -48,6 +48,7 @@ describe('TfiComponent', () => {
 
   describe('moveStateBackward', () => {
     it('should not decrement state', () => {
+      component.currentState = 0;
       let spy = spyOn(service, 'moveStateBackward');
       component.moveStateBackward();
       expect(component.currentState).toEqual(0);

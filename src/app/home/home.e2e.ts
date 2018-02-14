@@ -4,7 +4,6 @@ import { HomePage } from './home.po';
 import 'tslib';
 
 describe('Home', function() {
-
   let home: HomePage;
 
   beforeEach(() => {

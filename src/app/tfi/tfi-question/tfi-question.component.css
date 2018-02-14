@@ -13,6 +13,16 @@ h1{
   margin: 0 auto;
 }
 
+.buttons2 {
+  width: 48%;
+  float: right;
+}
+
+.buttons1 {
+  width: 48%;
+  float: left;
+}
+
 .questionFont {
   color: white;
 }
@@ -53,11 +63,19 @@ button {
 #space1{
   color: white;
   display: flex;
+  font-size: 20px;
   justify-content: space-between;
 }
 
 #space2{
   color: white;
   display: flex;
+  font-size: 20px;
   justify-content: space-between;
+}
+
+@media all and (max-width: 325px) {
+  .buttons1, .buttons2 {
+    font-size: .9em;
+  }
 }

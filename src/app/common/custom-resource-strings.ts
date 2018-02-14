@@ -71,6 +71,39 @@ export class TfiSectionStrings {
   public section8: string = 'E. Over the PAST WEEK';
 }
 
+export class TfiMinMax {
+  public min1: string = 'Never aware';
+  public max1: string = 'Always aware';
+  public min2: string = 'Not at all strong or loud';
+  public max2: string = 'Extremely strong or loud';
+  public min3: string = 'None of the time';
+  public max3: string = 'All of the time';
+  public min4: string = 'Very much in control';
+  public max4: string = 'Never in control';
+  public min5: string = 'Very easy to cope';
+  public max5: string = 'Impossible to cope';
+  public min6: string = 'Very easy to ignore';
+  public max6: string = 'Impossible to ignore';
+  public minC: string = 'Did not interfere';
+  public maxC: string = 'Completely interfered';
+  public minSL: string = 'Never had difficulty';
+  public maxSL: string = 'Always had difficulty';
+  public minA: string = 'Did not interfere';
+  public maxA: string = 'Completely interfered';
+  public minR: string = 'Did not interfere';
+  public maxR: string = 'Completely interfered';
+  public minQ: string = 'Did not interfere';
+  public maxQ: string = 'Completely interfered';
+  public min22: string = 'Never had difficulty';
+  public max22: string = 'Always had difficulty';
+  public min23: string = 'Not at all anxious or worried';
+  public max23: string = 'Extremely anxious or worried';
+  public min24: string = 'Not at all bothered or upset';
+  public max24: string = 'Extremely bothered or upset';
+  public min25: string = 'Not at all depressed';
+  public max25: string = 'Extremely depressed';
+}
+
 export class ThsQuestionStrings {
   // Tinnitus
   public question1: string = 'Over the last week, tinnitus kept me from sleeping:';
@@ -95,8 +128,6 @@ export class ThsQuestionStrings {
 
   // only appears is 1,2,3 or 4 is answered to question above
   public question10: string = 'Please list two examples of sounds that are too loud or uncomfortable for you, but seem normal to others:';
-
-  public note: string = '*If sounds are too loud for you when wearing hearing aids, please tell your audiologist.';
 }
 
 export class ThsAnswerStrings {
@@ -109,4 +140,8 @@ export class ThsAnswerStrings {
   public BIG_YES: string = '3 - Yes, a big problem';
 
   public VERY_BIG_YES: string = '4 - Yes, a very big problem';
+
+  public note: string = '*If sounds are too loud for you when wearing hearing aids, please tell your audiologist.';
+
+  public examples: string = 'Examples: beeps, whistles, radio, barking, door slam, dishes clattering, etc.';
 }

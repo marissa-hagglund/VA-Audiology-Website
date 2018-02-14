@@ -8,8 +8,7 @@ po.ts is a helper class for getting each elements on the page.
 export class HomePage {
 
   public navigateTo() {
-    browser.get('/');
-    return element(by.linkText('home'));
+    return browser.get('/');
   }
 
   public getPageTitleText() {
