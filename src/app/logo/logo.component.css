@@ -19,3 +19,9 @@ img.logo:hover
       max-width: 175px;
   }
 }
+
+@media all and (max-width:700px) {
+  img.logo.audio-view {
+    max-width: 80%;
+  }
+}

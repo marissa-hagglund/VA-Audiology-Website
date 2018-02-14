@@ -174,11 +174,7 @@
   cursor: pointer;
 }
 
-@media all and (max-width:690px) {
-  :host /deep/ img.logo {
-       width: 90% !important;
-  }
-}
+
 
 @media all and (max-width:425px) {
   .audio .left-container {
