@@ -5,7 +5,7 @@ Not used for now, but may still useful later on.
 export class AudiogramTypeStrings {
   public conductive: string = 'Conductive';
   public sensorNeural: string = 'Sensorneural';
-  public mixed: string = 'Mixed'
+  public mixed: string = 'Mixed';
 
 }
 

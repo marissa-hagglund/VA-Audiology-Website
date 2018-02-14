@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AudiogramTypeStrings,
-  AudiogramSeverityStrings,
-  AudiogramConfigurationStrings
-} from '../common/audiologist-resource-strings';
 
 /*
 Audiogram Test Component for the audiologist view:
@@ -46,12 +42,6 @@ export class AudiogramComponent implements OnInit {
     'Noise-Notch',
     'Corner'
   ];
-
-  // Text for left and right ear in the template
-  public ears: [
-    'LEFT EAR',
-    'RIGHT RIGHT'
-  ]
 
   public ngOnInit() { }
 
