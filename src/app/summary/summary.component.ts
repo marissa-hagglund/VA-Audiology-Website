@@ -4,10 +4,11 @@ import { SurveyTitle, SectionTitle, Question, Description } from './summaryItem'
 import { ThsDataService } from '../services/ths-data.service';
 import { TsScreenerDataService } from '../services/ts-screener-data.service';
 import { constructDependencies } from '@angular/core/src/di/reflective_provider';
-import { ThsQuestionStrings, TsScreenerQuestionStrings, ThsAnswerStrings } from '../common/custom-resource-strings';
+import { ThsQuestionStrings, TsScreenerQuestionStrings, ThsAnswerStrings, TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource-strings';
 import { ThsQuestionComponent } from 'src/app/ths/ths-question/ths-question.component';
 import { SummaryResolver } from '@angular/compiler';
 import { HighlightDelayBarrier } from 'blocking-proxy/built/lib/highlight_delay_barrier';
+import { TfiDataService } from '../services/tfi-data.service';
 
 @Component({
   selector: 'app-summary',
@@ -17,8 +18,7 @@ import { HighlightDelayBarrier } from 'blocking-proxy/built/lib/highlight_delay_
 export class SummaryComponent implements OnInit {
   /**
    * the patiend id that will be displayed in the summary report.
-   * It not connected to the real data yet.
-   * to do.
+   * Connected through the session storage
    */
   public readonly patientID;
 
@@ -30,11 +30,13 @@ export class SummaryComponent implements OnInit {
   /**
    *
    * @param thsDataService the data service for ths questionare
-   * @param dataService the data service for ts screener.
+   * @param tsDataService the data service for ts questionare
+   * @param tfiDataService the date service for tfi questionare
    */
-  constructor(private thsDataService: ThsDataService, private dataService: TsScreenerDataService) {
-    this.constructTSScreenerReport();
+  constructor(private thsDataService: ThsDataService, private tsDataService: TsScreenerDataService, private tfiDataService: TfiDataService) {
+    this.constructTSReport();
     this.constructTHSReport();
+    this.constructTFIReport();
     this.patientID = sessionStorage.getItem('patient-id');
   };
 
@@ -50,15 +52,15 @@ export class SummaryComponent implements OnInit {
     if ( history.length <= 1 ) {
       return;
     }
-    this.summaryItems.push(new SurveyTitle('Tinnius & Hearing Survey'));
+    this.summaryItems.push(new SurveyTitle('Tinnitus & Hearing Survey'));
     for ( let questionNum of history ){
-      let question = this.grabTHSQuestions(questionNum);
+      let question = this.getTHSQuestion(questionNum);
       if ( answers.length < questionNum) {
         break;
       }
       if ( (questionNum - 1) % 4 === 0) {
         console.log(questionNum);
-        this.summaryItems.push(new SectionTitle(this.grabTHSSectionTitle(questionNum), 16));
+        this.summaryItems.push(new SectionTitle(this.getTHSSectionTitle(questionNum), 16));
       }
       let answer = answers[questionNum - 1].choice as String;
 
@@ -69,20 +71,64 @@ export class SummaryComponent implements OnInit {
   /**
    * the function that used to construct a TS Screener report for summary
    */
-  private constructTSScreenerReport() {
-    let history = this.dataService.history;
-    let answers = this.dataService.dataRecord;
+  private constructTSReport() {
+    let history = this.tsDataService.history;
+    let answers = this.tsDataService.dataRecord;
     if (history.length <= 1) {
       return;
     }
-    this.summaryItems.push(new SurveyTitle('TS Screener'));
+    this.summaryItems.push(new SurveyTitle('Tinnitus Screener'));
     for (let questionNum of history) {
-      let question = this.getTSScreenerQuestions(questionNum);
+      let question = this.getTSQuestion(questionNum);
       if ( answers.length < questionNum) {
         break;
       }
       let answer = answers[questionNum - 1].choice as String;
-      this.summaryItems.push(new Question(question, this.getTSScreenerChoiceNo(answer), '-1'));
+      this.summaryItems.push(new Question(question, this.getTSChoiceNo(answer), '-1'));
+    }
+  }
+
+  /*
+   * This function is used to construct a TFI report in the summary component
+   */
+  private constructTFIReport() {
+    let data = this.tfiDataService.dataRecord;
+    let tfiSections = new TfiSectionStrings();
+    if  (data.length < 1) {
+      return;
+    }
+
+    this.summaryItems.push(new SurveyTitle('Tinnitus Functional Index'))
+    for (let questionNum of data) {
+
+      // Check the state for a new section
+      if (questionNum.state === 0) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section1, 0));
+      }
+      else if (questionNum.state === 3) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section2, 0));
+      }
+      else if (questionNum.state === 6) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section3, 0));
+      }
+      else if (questionNum.state === 9) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section4, 0));
+      }
+      else if (questionNum.state === 12) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section5, 0));
+      }
+      else if (questionNum.state === 15) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section6, 0));
+      }
+      else if (questionNum.state === 18) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section7, 0));
+      }
+      else if (questionNum.state === 22) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section8, 0));
+      }
+      let question = this.getTFIQuestion(questionNum.state);
+      let answer = questionNum.choice;
+      this.summaryItems.push(new Question(question, answer, '-1'));
     }
   }
 
@@ -90,7 +136,7 @@ export class SummaryComponent implements OnInit {
    * grab the section titles for ths survey.
    * @param questionNumber the question id that will be displayed.
    */
-  private grabTHSSectionTitle(questionNumber: number) {
+  private getTHSSectionTitle(questionNumber: number) {
     let part = parseInt( '' + ( ( questionNumber - 1) / 4.0 ), null );
     switch ( part ) {
       case 0: return 'A. Tinnitus';
@@ -100,13 +146,15 @@ export class SummaryComponent implements OnInit {
     }
   }
 
+
+
   /**
    * grab the question string for ths survey.
-   * @param Qnumber the question id that will be displayed
+   * @param qNumber the question id that will be displayed
    */
-  private grabTHSQuestions(Qnumber: Number) {
+  private getTHSQuestion(qNumber: number) {
     let thsQuestions = new ThsQuestionStrings();
-    switch (Qnumber) {
+    switch (qNumber) {
       case 1: return thsQuestions.question1;
       case 2: return thsQuestions.question2;
       case 3: return thsQuestions.question3;
@@ -123,11 +171,11 @@ export class SummaryComponent implements OnInit {
 
   /**
    * grab the question string for ts screener.
-   * @param Qnumber the question id that will be displayed
+   * @param qNumber the question id that will be displayed
    */
-  private getTSScreenerQuestions(Qnumber: Number) {
+  private getTSQuestion(qNumber: number) {
     let tsScreenerQuestions = new TsScreenerQuestionStrings();
-    switch ( Qnumber ) {
+    switch ( qNumber ) {
       case 1: return tsScreenerQuestions.question1;
       case 2: return tsScreenerQuestions.question2;
       case 3: return tsScreenerQuestions.question3;
@@ -142,7 +190,7 @@ export class SummaryComponent implements OnInit {
    * grab the choice number by the answer string.
    * @param answer the answer strings that used to grab scores.
    */
-  private getTSScreenerChoiceNo(answer: String) {
+  private getTSChoiceNo(answer: String) {
     let tsAnswers = new TsScreenerAnswerStrings();
     switch ( answer ) {
       case tsAnswers.YES: return 1;
@@ -158,4 +206,66 @@ export class SummaryComponent implements OnInit {
     }
   }
 
+   /*
+    * get the TFI question strings
+    * @param qNumber
+    */
+   private getTFIQuestion(qNumber: number) {
+     let tfiQuestions = new TfiQuestionStrings();
+     switch ( qNumber ) {
+       case 0: return tfiQuestions.question1;
+       case 1: return tfiQuestions.question2;
+       case 2: return tfiQuestions.question3;
+       case 3: return tfiQuestions.question4;
+       case 4: return tfiQuestions.question5;
+       case 5: return tfiQuestions.question6;
+       case 6: return tfiQuestions.question7;
+       case 7: return tfiQuestions.question8;
+       case 8: return tfiQuestions.question9;
+       case 9: return tfiQuestions.question10;
+       case 10: return tfiQuestions.question11;
+       case 11: return tfiQuestions.question12;
+       case 12: return tfiQuestions.question13;
+       case 13: return tfiQuestions.question14;
+       case 14: return tfiQuestions.question15;
+       case 15: return tfiQuestions.question16;
+       case 16: return tfiQuestions.question17;
+       case 17: return tfiQuestions.question18;
+       case 18: return tfiQuestions.question19;
+       case 19: return tfiQuestions.question20;
+       case 20: return tfiQuestions.question21;
+       case 21: return tfiQuestions.question22;
+       case 22: return tfiQuestions.question23;
+       case 23: return tfiQuestions.question24;
+       case 24: return tfiQuestions.question25;
+       default: return 'missing';
+     }
+   }
+
+   // case 1: return tfiQuestions.question1;
+   // case 2: return tfiQuestions.question2;
+   // case 3: return tfiQuestions.question3;
+   // case 4: return tfiQuestions.question4;
+   // case 5: return tfiQuestions.question5;
+   // case 6: return tfiQuestions.question6;
+   // case 7: return tfiQuestions.question7;
+   // case 8: return tfiQuestions.question8;
+   // case 9: return tfiQuestions.question9;
+   // case 10: return tfiQuestions.question10;
+   // case 11: return tfiQuestions.question11;
+   // case 12: return tfiQuestions.question12;
+   // case 13: return tfiQuestions.question13;
+   // case 14: return tfiQuestions.question14;
+   // case 15: return tfiQuestions.question15;
+   // case 16: return tfiQuestions.question16;
+   // case 17: return tfiQuestions.question17;
+   // case 18: return tfiQuestions.question18;
+   // case 19: return tfiQuestions.question19;
+   // case 20: return tfiQuestions.question20;
+   // case 21: return tfiQuestions.question21;
+   // case 22: return tfiQuestions.question22;
+   // case 23: return tfiQuestions.question23;
+   // case 24: return tfiQuestions.question24;
+   // case 25: return tfiQuestions.question25;
+   // default: return 'missing';
 }
