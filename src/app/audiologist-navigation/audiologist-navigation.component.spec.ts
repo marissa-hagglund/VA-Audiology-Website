@@ -41,6 +41,15 @@ describe('Audiologist Navigation', () => {
   /*
   Basic unit tests for each of the methods
   */
+  it('should test for audiologist nav bar toggle button to be true', () => {
+    // let spy = spyOn(console, 'log');
+    component.active = false;
+    component.onToggle();
+    fixture.detectChanges();
+    expect(component.active).toBe(true);
+    // expect(console.log).toHaveBeenCalled();
+  });
+
   it('should test for audiologist nav bar toggle button to be false', () => {
     component.onToggle();
     fixture.detectChanges();
