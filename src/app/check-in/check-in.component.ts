@@ -23,6 +23,7 @@ export class CheckInComponent {
     */
    public onClick() {
       if (this.patientId === '123456') {
+          sessionStorage.setItem('audiologist-pin', this.patientId);
           console.log('Audiologist log in ' + this.patientId);
           this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
