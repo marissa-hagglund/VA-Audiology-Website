@@ -20,6 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -55,6 +58,7 @@ import { ThsQuestionComponent } from './ths/ths-question/ths-question.component'
 import { RouterGuards }     from './services/router-guards.service';
 import { OtoscopyComponent } from './otoscopy/otoscopy.component';
 import { TympanometryComponent } from './tympanometry/tympanometry.component';
+import { AudiogramComponent } from './audiogram/audiogram.component';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -90,12 +94,15 @@ type StoreType = {
     SummaryComponent,
     TsScreenerQuestionComponent,
     OtoscopyComponent,
-    TympanometryComponent
+    TympanometryComponent,
+    AudiogramComponent
   ],
   exports: [
     MatSliderModule,
     MatRadioModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule,
+    MatCardModule
   ],
   /**
    * Import Angular's modules.
@@ -108,6 +115,8 @@ type StoreType = {
     MatSliderModule,
     MatRadioModule,
     MatInputModule,
+    MatCheckboxModule,
+    MatCardModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
