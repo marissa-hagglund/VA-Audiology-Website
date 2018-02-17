@@ -42,12 +42,10 @@ describe('Audiologist Navigation', () => {
   Basic unit tests for each of the methods
   */
   it('should test for audiologist nav bar toggle button to be true', () => {
-    // let spy = spyOn(console, 'log');
     component.active = false;
-    component.onToggle();
     fixture.detectChanges();
+    component.onToggle();
     expect(component.active).toBe(true);
-    // expect(console.log).toHaveBeenCalled();
   });
 
   it('should test for audiologist nav bar toggle button to be false', () => {
@@ -72,7 +70,7 @@ describe('Audiologist Navigation', () => {
   });
 
   /*
-    The following 3 checks to make sure that clicking on the button will triggers the method
+    The following tests checks to make sure that clicking on the button will triggers the method
   */
   it('should test for audiologist recommendedTests button click event', () => {
     let recommended = spyOn(component, 'showRecommendedTests');
