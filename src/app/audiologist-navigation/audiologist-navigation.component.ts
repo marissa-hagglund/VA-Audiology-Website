@@ -16,7 +16,7 @@ import { NgForm } from '@angular/forms';
  */
 export class AudiologistNavigationComponent {
     public active: boolean = true;
-    public scale: number = 0.6;
+    public scale: number = 0.55;
     public recommendedTests: boolean = false;
     public suggestedTests: boolean = false;
     public summary: boolean = true;
