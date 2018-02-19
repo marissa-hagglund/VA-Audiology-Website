@@ -31,19 +31,19 @@ export class RouterGuards implements CanActivate {
 
     // restrict access to audiologist pages
     if (url === 'audiologist') {
-    let pin = sessionStorage.getItem('audiologist-pin');
-        //if there isn't a pin, then they obviously have not logged in yet
-      	if (!pin) {
-      	   this.router.navigateByUrl('check-in');
-      	} else {
-      	   // verify against static - navigate to check in if it's incorrect
-           //This can be replaced in the future with a request to verify against DB
-           if(pin !== '123456') {
-              this.router.navigateByUrl('check-in');
-           } else {
-             return true;
-           }
-      	}
+      let pin = sessionStorage.getItem('audiologist-pin');
+      // if there isn't a pin, then they obviously have not logged in yet
+    	if (!pin) {
+    	   this.router.navigateByUrl('check-in');
+    	} else {
+    	   // verify against static - navigate to check in if it's incorrect
+         // This can be replaced in the future with a request to verify against DB
+         if (pin !== '123456') {
+           this.router.navigateByUrl('check-in');
+         } else {
+           return true;
+         }
+    	}
     }
     return true;
   }
