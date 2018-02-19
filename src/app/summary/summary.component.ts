@@ -43,7 +43,7 @@ export class SummaryComponent implements OnInit {
   /**
    * the function used to construct a ths report from the ths data services.
    */
-  private constructTHSReport() {
+  public constructTHSReport() {
     let history = this.thsDataService.history;
     let answers = this.thsDataService.dataRecord;
     if ( history.length <= 1 ) {
@@ -68,7 +68,7 @@ export class SummaryComponent implements OnInit {
   /**
    * the function that used to construct a TS Screener report for summary
    */
-  private constructTSScreenerReport() {
+  public constructTSScreenerReport() {
     let history = this.dataService.history;
     let answers = this.dataService.dataRecord;
     if (history.length <= 1) {
@@ -89,7 +89,7 @@ export class SummaryComponent implements OnInit {
    * grab the section titles for ths survey.
    * @param questionNumber the question id that will be displayed.
    */
-  private grabTHSSectionTitle(questionNumber: number) {
+  public grabTHSSectionTitle(questionNumber: number) {
     let part = parseInt( '' + ( ( questionNumber - 1) / 4.0 ), null );
     switch ( part ) {
       case 0: return 'A. Tinnitus';
@@ -103,7 +103,7 @@ export class SummaryComponent implements OnInit {
    * grab the question string for ths survey.
    * @param Qnumber the question id that will be displayed
    */
-  private grabTHSQuestions(Qnumber: Number) {
+  public grabTHSQuestions(Qnumber: Number) {
     let thsQuestions = new ThsQuestionStrings();
     switch (Qnumber) {
       case 1: return thsQuestions.question1;
@@ -124,7 +124,7 @@ export class SummaryComponent implements OnInit {
    * grab the question string for ts screener.
    * @param Qnumber the question id that will be displayed
    */
-  private getTSScreenerQuestions(Qnumber: Number) {
+  public getTSScreenerQuestions(Qnumber: Number) {
     let tsScreenerQuestions = new TsScreenerQuestionStrings();
     switch ( Qnumber ) {
       case 1: return tsScreenerQuestions.question1;
@@ -141,7 +141,7 @@ export class SummaryComponent implements OnInit {
    * grab the choice number by the answer string.
    * @param answer the answer strings that used to grab scores.
    */
-  private getTSScreenerChoiceNo(answer: String) {
+  public getTSScreenerChoiceNo(answer: String) {
     let tsAnswers = new TsScreenerAnswerStrings();
     switch ( answer ) {
       case tsAnswers.YES: return 1;
