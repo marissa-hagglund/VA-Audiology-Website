@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class LogoComponent {
     @Input() public logoRouteOption: string;
 
-    @Input()public imgLink = 'assets/images/logo.png';
+    @Input() public imgLink = 'assets/images/logo.png';
     /*
       #1 - route to "home page"
       #2 - display logo image with "HOME" text
@@ -29,6 +29,7 @@ export class LogoComponent {
      */
     public onClick() {
       if (this.logoRouteOption === '1') {
+        sessionStorage.removeItem('audiologist-pin'); //this is for navigating away from audiologist page
         this.router.navigateByUrl('/home');
         console.log('back to home page.');
       }
