@@ -23,6 +23,11 @@ export class TfiComponent implements OnInit {
       this.currentState = parseInt(sessionStorage.getItem('tfi-currentState'), 10);
       console.log('state', this.currentState);
     }
+
+    //reset state to 1 if we are revisiting questionaire
+    if (this.currentState === 25) {
+      this.currentState = 1;
+    }
   }
 
   // Step back by one question

@@ -25,14 +25,16 @@ export class CheckInComponent {
       if (this.patientId === '123456') {
           sessionStorage.setItem('audiologist-pin', this.patientId);
           console.log('Audiologist log in ' + this.patientId);
+          sessionStorage.setItem('patientId', this.patientId.toString());
           this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
-        this.router.navigateByUrl('/appointments');
-        console.log('log in with ' + this.patientId);
+          sessionStorage.setItem('patientId', this.patientId.toString());
+          this.router.navigateByUrl('/appointments');
+          console.log('log in with ' + this.patientId);
       } else {
-        this.authenticationFlag = false;
-        this.patientId = '';
-        console.log('failed log in ' + this.patientId);
+          this.authenticationFlag = false;
+          this.patientId = '';
+          console.log('failed log in ' + this.patientId);
       }
    }
 

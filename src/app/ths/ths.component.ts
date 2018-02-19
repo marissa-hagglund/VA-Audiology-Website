@@ -39,6 +39,11 @@ export class ThsComponent implements OnInit {
       this.currentState = parseInt(sessionStorage.getItem('ths-currentState'), 10);
       console.log('state', this.currentState);
     }
+
+    //reset state to 1 if we are revisiting questionaire
+    if (this.currentState === 11) {
+      this.currentState = 1;
+    }
   }
 
   // This function uses the stateflow service to determine what the previous state

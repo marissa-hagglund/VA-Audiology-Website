@@ -40,6 +40,11 @@ export class TsScreenerComponent implements OnInit {
     if (sessionStorage.getItem('ts-currentState')) {
       this.currentState = parseInt(sessionStorage.getItem('ts-currentState'), 10);
       console.log('state', this.currentState);
+
+      //reset state to 1 if we are revisiting questionaire
+      if (this.currentState === 7) {
+        this.currentState = 1;
+      }
     }
   }
 
