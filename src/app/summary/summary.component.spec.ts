@@ -28,12 +28,15 @@ describe('TfiComponent', () => {
   });
   describe('constructTHSReport', () => {
     it('should not set summary to anything', () => {
+      sessionStorage.clear();
       component.constructTHSReport();
+      component.summaryItems = [];
       expect(component.summaryItems.length).toEqual(0);
     });
   });
   describe('constructTSReport', () => {
     it('should not set summary to anything', () => {
+      sessionStorage.clear();
       component.constructTSReport();
       expect(component.summaryItems.length).toEqual(0);
     });

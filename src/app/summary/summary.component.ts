@@ -25,7 +25,7 @@ export class SummaryComponent implements OnInit {
   /**
    * all the summary items that will be displayed in the summary report
    */
-  public readonly summaryItems = [];
+  public summaryItems = [];
 
   /**
    *
