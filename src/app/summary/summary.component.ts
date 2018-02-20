@@ -1,6 +1,6 @@
 import { TsScreenerAnswerStrings } from './../common/custom-resource-strings';
 import { Component, OnInit } from '@angular/core';
-import { SurveyTitle, SectionTitle, Question, Description } from './summaryItem';
+import { SurveyTitle, SectionTitle, SectionFooter, Question, Description } from './summaryItem';
 import { ThsDataService } from '../services/ths-data.service';
 import { TsScreenerDataService } from '../services/ts-screener-data.service';
 import { constructDependencies } from '@angular/core/src/di/reflective_provider';
@@ -47,25 +47,31 @@ export class SummaryComponent implements OnInit {
    * the function used to construct a ths report from the ths data services.
    */
   private constructTHSReport() {
+    let totalScore: number = 0;
     let history = this.thsDataService.history;
-    let answers = this.thsDataService.dataRecord;
+    let data = this.thsDataService.dataRecord;
     if ( history.length <= 1 ) {
       return;
     }
     this.summaryItems.push(new SurveyTitle('Tinnitus & Hearing Survey'));
     for ( let questionNum of history ){
       let question = this.getTHSQuestion(questionNum);
-      if ( answers.length < questionNum) {
+      if ( data.length < questionNum) {
         break;
       }
       if ( (questionNum - 1) % 4 === 0) {
         console.log(questionNum);
-        this.summaryItems.push(new SectionTitle(this.getTHSSectionTitle(questionNum), 16));
+        this.summaryItems.push(new SectionTitle(this.getTHSSectionTitle(questionNum)));
       }
-      let answer = answers[questionNum - 1].choice as String;
-
-      this.summaryItems.push(new Question(question, Number(answer.charAt(0)), '-1'));
+      let answer = data[questionNum - 1].choice as String;
+      if (this.getTHSChoiceNumber(answer) !== -1) {
+        totalScore = totalScore + this.getTHSChoiceNumber(answer);
+        this.summaryItems.push(new Question(question, Number(answer.charAt(0)), '-1'));
+      } else {
+        this.summaryItems.push(new Question(question, -1, answer));
+      }
     }
+    this.summaryItems.push(new SectionFooter('Tinnitus & Hearing Survey', totalScore));
   }
 
   /**
@@ -84,7 +90,7 @@ export class SummaryComponent implements OnInit {
         break;
       }
       let answer = answers[questionNum - 1].choice as String;
-      this.summaryItems.push(new Question(question, this.getTSChoiceNo(answer), '-1'));
+      this.summaryItems.push(new Question(question, -1, answer));
     }
   }
 
@@ -98,33 +104,26 @@ export class SummaryComponent implements OnInit {
       return;
     }
 
-    this.summaryItems.push(new SurveyTitle('Tinnitus Functional Index'))
+    this.summaryItems.push(new SurveyTitle('Tinnitus Functional Index'));
     for (let questionNum of data) {
 
       // Check the state for a new section
       if (questionNum.state === 0) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section1, 0));
-      }
-      else if (questionNum.state === 3) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section2, 0));
-      }
-      else if (questionNum.state === 6) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section3, 0));
-      }
-      else if (questionNum.state === 9) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section4, 0));
-      }
-      else if (questionNum.state === 12) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section5, 0));
-      }
-      else if (questionNum.state === 15) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section6, 0));
-      }
-      else if (questionNum.state === 18) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section7, 0));
-      }
-      else if (questionNum.state === 22) {
-          this.summaryItems.push(new SectionTitle(tfiSections.section8, 0));
+          this.summaryItems.push(new SectionTitle(tfiSections.section1));
+      } else if (questionNum.state === 3) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section2));
+      } else if (questionNum.state === 6) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section3));
+      } else if (questionNum.state === 9) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section4));
+      } else if (questionNum.state === 12) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section5));
+      } else if (questionNum.state === 15) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section6));
+      } else if (questionNum.state === 18) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section7));
+      } else if (questionNum.state === 22) {
+          this.summaryItems.push(new SectionTitle(tfiSections.section8));
       }
       let question = this.getTFIQuestion(questionNum.state);
       let answer = questionNum.choice;
@@ -145,8 +144,6 @@ export class SummaryComponent implements OnInit {
       default: return 'not assigned';
     }
   }
-
-
 
   /**
    * grab the question string for ths survey.
@@ -190,7 +187,7 @@ export class SummaryComponent implements OnInit {
    * grab the choice number by the answer string.
    * @param answer the answer strings that used to grab scores.
    */
-  private getTSChoiceNo(answer: String) {
+  private getTSChoiceNumber(answer: String) {
     let tsAnswers = new TsScreenerAnswerStrings();
     switch ( answer ) {
       case tsAnswers.YES: return 1;
@@ -206,6 +203,17 @@ export class SummaryComponent implements OnInit {
     }
   }
 
+  private getTHSChoiceNumber(answer: String) {
+    let thsAnswers = new ThsAnswerStrings();
+    switch (answer) {
+      case thsAnswers.NO: return 0;
+      case thsAnswers.SMALL_YES: return 1;
+      case thsAnswers.MODERATE_YES: return 2;
+      case thsAnswers.BIG_YES: return 3;
+      case thsAnswers.VERY_BIG_YES: return 4;
+      default: return -1;
+    }
+  }
    /*
     * get the TFI question strings
     * @param qNumber
@@ -241,31 +249,4 @@ export class SummaryComponent implements OnInit {
        default: return 'missing';
      }
    }
-
-   // case 1: return tfiQuestions.question1;
-   // case 2: return tfiQuestions.question2;
-   // case 3: return tfiQuestions.question3;
-   // case 4: return tfiQuestions.question4;
-   // case 5: return tfiQuestions.question5;
-   // case 6: return tfiQuestions.question6;
-   // case 7: return tfiQuestions.question7;
-   // case 8: return tfiQuestions.question8;
-   // case 9: return tfiQuestions.question9;
-   // case 10: return tfiQuestions.question10;
-   // case 11: return tfiQuestions.question11;
-   // case 12: return tfiQuestions.question12;
-   // case 13: return tfiQuestions.question13;
-   // case 14: return tfiQuestions.question14;
-   // case 15: return tfiQuestions.question15;
-   // case 16: return tfiQuestions.question16;
-   // case 17: return tfiQuestions.question17;
-   // case 18: return tfiQuestions.question18;
-   // case 19: return tfiQuestions.question19;
-   // case 20: return tfiQuestions.question20;
-   // case 21: return tfiQuestions.question21;
-   // case 22: return tfiQuestions.question22;
-   // case 23: return tfiQuestions.question23;
-   // case 24: return tfiQuestions.question24;
-   // case 25: return tfiQuestions.question25;
-   // default: return 'missing';
 }
