@@ -22,7 +22,8 @@ export class CheckInComponent {
     * If the value has different length, then it will be informed as incorrect check in.
     */
    public onClick() {
-      if (this.patientId.length === 6) {
+      if (this.patientId === '123456') {
+          sessionStorage.setItem('audiologist-pin', this.patientId);
           console.log('Audiologist log in ' + this.patientId);
           this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {

@@ -43,7 +43,7 @@ describe('Initial Assessment', () => {
 
   it('click should navigate to audio-nav', fakeAsync(() => {
     let spy = spyOn(router, 'navigateByUrl');
-    component.patientId = '888888';
+    component.patientId = '123456';
     component.onClick();
     expect(router.navigateByUrl).toHaveBeenCalledWith('/audiologist');
   }));

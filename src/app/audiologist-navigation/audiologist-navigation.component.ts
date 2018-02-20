@@ -1,9 +1,11 @@
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { aggregateBy } from '@progress/kendo-data-query';
 import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'audio-navigation',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./audiologist-navigation.component.css'],
   templateUrl: './audiologist-navigation.component.html',
 })
@@ -14,6 +16,7 @@ import { NgForm } from '@angular/forms';
  */
 export class AudiologistNavigationComponent {
     public active: boolean = true;
+    public scale: number = 0.55;
     public recommendedTests: boolean = false;
     public suggestedTests: boolean = false;
     public summary: boolean = true;

@@ -46,7 +46,7 @@ export class SummaryComponent implements OnInit {
   /**
    * the function used to construct a ths report from the ths data services.
    */
-  private constructTHSReport() {
+  public constructTHSReport() {
     let totalScore: number = 0;
     let history = this.thsDataService.history;
     let data = this.thsDataService.dataRecord;
@@ -77,7 +77,7 @@ export class SummaryComponent implements OnInit {
   /**
    * the function that used to construct a TS Screener report for summary
    */
-  private constructTSReport() {
+  public constructTSReport() {
     let history = this.tsDataService.history;
     let answers = this.tsDataService.dataRecord;
     if (history.length <= 1) {
@@ -97,7 +97,7 @@ export class SummaryComponent implements OnInit {
   /*
    * This function is used to construct a TFI report in the summary component
    */
-  private constructTFIReport() {
+  public constructTFIReport() {
     let data = this.tfiDataService.dataRecord;
     let tfiSections = new TfiSectionStrings();
     if  (data.length < 1) {
@@ -135,7 +135,7 @@ export class SummaryComponent implements OnInit {
    * grab the section titles for ths survey.
    * @param questionNumber the question id that will be displayed.
    */
-  private getTHSSectionTitle(questionNumber: number) {
+  public getTHSSectionTitle(questionNumber: number) {
     let part = parseInt( '' + ( ( questionNumber - 1) / 4.0 ), null );
     switch ( part ) {
       case 0: return 'A. Tinnitus';
@@ -149,7 +149,7 @@ export class SummaryComponent implements OnInit {
    * grab the question string for ths survey.
    * @param qNumber the question id that will be displayed
    */
-  private getTHSQuestion(qNumber: number) {
+  public getTHSQuestion(qNumber: number) {
     let thsQuestions = new ThsQuestionStrings();
     switch (qNumber) {
       case 1: return thsQuestions.question1;
@@ -170,7 +170,7 @@ export class SummaryComponent implements OnInit {
    * grab the question string for ts screener.
    * @param qNumber the question id that will be displayed
    */
-  private getTSQuestion(qNumber: number) {
+  public getTSQuestion(qNumber: number) {
     let tsScreenerQuestions = new TsScreenerQuestionStrings();
     switch ( qNumber ) {
       case 1: return tsScreenerQuestions.question1;
@@ -187,7 +187,7 @@ export class SummaryComponent implements OnInit {
    * grab the choice number by the answer string.
    * @param answer the answer strings that used to grab scores.
    */
-  private getTSChoiceNumber(answer: String) {
+  public getTSChoiceNumber(answer: String) {
     let tsAnswers = new TsScreenerAnswerStrings();
     switch ( answer ) {
       case tsAnswers.YES: return 1;
@@ -203,7 +203,7 @@ export class SummaryComponent implements OnInit {
     }
   }
 
-  private getTHSChoiceNumber(answer: String) {
+  public getTHSChoiceNumber(answer: String) {
     let thsAnswers = new ThsAnswerStrings();
     switch (answer) {
       case thsAnswers.NO: return 0;
@@ -218,7 +218,7 @@ export class SummaryComponent implements OnInit {
     * get the TFI question strings
     * @param qNumber
     */
-   private getTFIQuestion(qNumber: number) {
+   public getTFIQuestion(qNumber: number) {
      let tfiQuestions = new TfiQuestionStrings();
      switch ( qNumber ) {
        case 0: return tfiQuestions.question1;
