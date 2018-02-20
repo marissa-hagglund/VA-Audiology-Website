@@ -34,8 +34,11 @@ export class SummaryComponent implements OnInit {
    * @param tfiDataService the date service for tfi questionare
    */
   constructor(private thsDataService: ThsDataService, private tsDataService: TsScreenerDataService, private tfiDataService: TfiDataService) {
+    this.tsDataService.onInit();
     this.constructTSReport();
+    this.thsDataService.onInit();
     this.constructTHSReport();
+    this.tfiDataService.onInit();
     this.constructTFIReport();
     this.patientID = sessionStorage.getItem('patient-id');
   };
