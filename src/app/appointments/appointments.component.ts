@@ -19,6 +19,7 @@ export class AppointmentsComponent {
    */
   public onInitialAssessment() {
     console.log('Initial Assessment');
+    sessionStorage.setItem('appt', 'Initial Assessment');
     this.router.navigateByUrl('/ts');
   }
   /**
@@ -28,6 +29,7 @@ export class AppointmentsComponent {
    */
   public onHearingAidsFitting() {
     console.log('Hearing Aids Fitting');
+    sessionStorage.setItem('appt', 'Hearing Aids Fitting');
     this.router.navigateByUrl('/ts');
   }
   /**
@@ -37,6 +39,7 @@ export class AppointmentsComponent {
    */
   public onHearingAidsEvaluation() {
     console.log('Hearing Aids Evaluation');
+    sessionStorage.setItem('appt', 'Hearing Aids Evaluation');
     this.router.navigateByUrl('/ts');
   }
 }
