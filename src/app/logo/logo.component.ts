@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   selector: 'logo',
   template: `
       <div>
-        <img  (click)="onClick()" class="logo" [src]="imgLink" alt="Logo"/>
+        <img  (click)="onClick()" class="logo {{this.view || ''}}" [src]="imgLink" alt="Logo"/>
       </div>
   `,
   styleUrls: ['./logo.component.css']
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 
 export class LogoComponent {
     @Input() public logoRouteOption: string;
-
+    @Input() public view: string;
     @Input() public imgLink = 'assets/images/logo.png';
     /*
       #1 - route to "home page"
