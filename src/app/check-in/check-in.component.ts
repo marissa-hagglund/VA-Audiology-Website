@@ -28,9 +28,10 @@ export class CheckInComponent {
           sessionStorage.setItem('patientId', this.patientId.toString());
           this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
-          sessionStorage.setItem('patientId', this.patientId.toString());
-          this.router.navigateByUrl('/appointments');
-          console.log('log in with ' + this.patientId);
+        sessionStorage.clear();
+        sessionStorage.setItem('patient-id', this.patientId);
+        this.router.navigateByUrl('/appointments');
+        console.log('log in with ' + this.patientId);
       } else {
           this.authenticationFlag = false;
           this.patientId = '';

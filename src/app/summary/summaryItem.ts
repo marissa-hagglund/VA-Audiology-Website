@@ -25,11 +25,19 @@ class SummaryItem {
    */
   export class SectionTitle extends SummaryItem {
     public readonly title;
-    public readonly totalScore;
-    constructor(title: String, totalScore) {
+    constructor(title: String) {
         super('SectionTitle');
         this.title = title;
-        this.totalScore = totalScore;
+    }
+  }
+
+  export class SectionFooter extends SummaryItem {
+    public readonly section;
+    public readonly totalScore;
+    constructor(section: String, totalScore: Number) {
+      super('SectionFooter');
+      this.section = section;
+      this.totalScore = totalScore;
     }
   }
 
