@@ -49,10 +49,23 @@ describe('TsScreenerStateflowService', () => {
       let spy = spyOn(dataService, 'saveData').and.returnValue(5);
       expect(service.moveStateForward(1, 'YES')).toEqual(2);
     });
+    it('should return 3 from (2, TEST)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(2, 'TEST')).toEqual(3);
+    });
+    it('should return 4 from (3, SOMETIMES_OCCASIONALLY)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(3, 'Sometimes/Occasionally')).toEqual(4);
+    });
     it('should return 7 from (3, 1-hello)', () => {
       let spy = spyOn(dataService, 'saveData').and.returnValue(5);
       expect(service.moveStateForward(3, '1 - hello')).toEqual(7);
     });
+    it('should return 5 from (4, YES, Sometimes)', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(4, 'YES, Sometimes')).toEqual(5);
+    });
+
     it('should return 6 from (4, NO)', () => {
       let spy = spyOn(dataService, 'saveData').and.returnValue(5);
       expect(service.moveStateForward(4, 'NO')).toEqual(6);
@@ -72,6 +85,10 @@ describe('TsScreenerStateflowService', () => {
     it('should return incremented', () => {
       let spy = spyOn(dataService, 'saveData').and.returnValue(5);
       expect(service.moveStateForward(6, 'hello')).toEqual(7);
+    });
+    it('should return 7 with default', () => {
+      let spy = spyOn(dataService, 'saveData').and.returnValue(5);
+      expect(service.moveStateForward(7, 'default')).toEqual(7);
     });
   });
 });
