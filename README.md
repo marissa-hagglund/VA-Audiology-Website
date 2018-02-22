@@ -100,13 +100,16 @@ ng generate component [your_compment_name]
 ```
 This should generate all the necessary files in the `src\app\` folder.   
 Be sure to add your component to `app.module.ts` file.   
-Depending on the what you are working on, you will also need to add your component to the `declarations: [ ]` array in `@NgModule`;
+Depending on the what you are working on, you will also need to add your component to the `declarations: [ ]` in `@NgModule`;
 
 ### Adding new module
 New modules can be installed using Npm with the following command:   
 ```bash
 npm install [package name]
 ```
+Depending on the module, you may also need to add the module to `import: [ ]` and `export: [ ]` in `@NgModule`.   
+You may still need to import in the module in the component that uses it.
+
 
 ## Deployment
 TBD
