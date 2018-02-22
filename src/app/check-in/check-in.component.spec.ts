@@ -5,6 +5,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule, Router, Routes } from '@angular/router';
 import { AppointmentsComponent } from '../appointments/appointments.component';
+import { TsScreenerDataService } from '../services/ts-screener-data.service';
+import { TfiDataService } from '../services/tfi-data.service';
+import { ThsDataService } from '../services/ths-data.service';
 
 describe('Initial Assessment', () => {
   let component: CheckInComponent;
@@ -18,12 +21,15 @@ describe('Initial Assessment', () => {
           RouterTestingModule
         ],
         providers: [
+          TsScreenerDataService,
+          TfiDataService,
+          ThsDataService
         ],
         schemas: [NO_ERRORS_SCHEMA],
         declarations: [
           CheckInComponent,
           AppointmentsComponent,
-          AudiologistNavigationComponent,
+          AudiologistNavigationComponent
         ]
     }).compileComponents();
 

@@ -5,6 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ThsComponent } from './ths.component';
 import { ThsStateflowService } from '../services/ths-stateflow.service';
 import { ThsDataService } from '../services/ths-data.service';
+import { Utilities } from '../common/utlilities';
 
 describe('ThsComponent', () => {
   let component: ThsComponent;
@@ -64,7 +65,7 @@ describe('ThsComponent', () => {
     it('should route to tfi', () => {
         let spy = spyOn(service, 'moveStateForward').and.returnValue(11);
         let navSpy = spyOn(component.router, 'navigateByUrl');
-        sessionStorage.setItem('nextComponent', 'false');
+        Utilities.setSessionStorage('nextComponent', 'false');
         component.moveStateForward('hello');
         expect(navSpy).toHaveBeenCalledWith('/tfi');
     });
@@ -72,7 +73,7 @@ describe('ThsComponent', () => {
     it('should route to thank you', () => {
         let spy = spyOn(service, 'moveStateForward').and.returnValue(11);
         let navSpy = spyOn(component.router, 'navigateByUrl');
-        sessionStorage.setItem('nextComponent', 'true');
+        Utilities.setSessionStorage('nextComponent', 'true');
         component.moveStateForward('hello');
         expect(navSpy).toHaveBeenCalledWith('/thank-you');
     });

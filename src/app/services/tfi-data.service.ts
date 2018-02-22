@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Utilities } from '../common/utlilities';
 
 // Holds the completed question numbers and their respective answers
 @Injectable()
@@ -9,8 +10,8 @@ export class TfiDataService {
 
   public onInit() {
     console.log('INIT', sessionStorage);
-    if (JSON.parse(sessionStorage.getItem('tfi-dataRecord'))) {
-      this.dataRecord = JSON.parse(sessionStorage.getItem('tfi-dataRecord'));
+    if (JSON.parse(Utilities.getSessionStorage('tfi-dataRecord'))) {
+      this.dataRecord = JSON.parse(Utilities.getSessionStorage('tfi-dataRecord'));
     }
   }
 
@@ -54,6 +55,10 @@ export class TfiDataService {
   }
 
   public updateSessionStorage(): void {
-    sessionStorage.setItem('tfi-dataRecord', JSON.stringify(this.dataRecord));
+    Utilities.setSessionStorage('tfi-dataRecord', JSON.stringify(this.dataRecord));
+  }
+
+  public clearHistory(): void {
+    this.dataRecord = [];
   }
 }

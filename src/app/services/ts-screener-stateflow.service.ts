@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TsScreenerDataService } from './ts-screener-data.service';
 import { TsScreenerAnswerStrings } from '../common/custom-resource-strings';
+import { Utilities } from '../common/utlilities';
 
 // Service that applies stateflow logic as according to the specs given by our sponsor.
 @Injectable()
@@ -15,7 +16,7 @@ export class TsScreenerStateflowService {
           this.dataService.saveData(2, choice);
           return 2;
         } else {
-          sessionStorage.setItem('nextComponent', 'true');
+          Utilities.setSessionStorage('nextComponent', 'true');
           this.dataService.saveData(7, choice);
           return 7;
         }
