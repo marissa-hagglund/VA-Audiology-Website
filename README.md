@@ -1,5 +1,7 @@
-# Angular4 Audiology Project #
+# NCRAR Tinnitus Research System
+A web application built for the staffs of NCRAR to aid them in research and to better serve patients who are suffering from tinnitus.
 
+Featuring the following frameworks:
 > An Angular starter kit featuring
 [Angular 4](https://angular.io),
 [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [Router](https://angular.io/docs/ts/latest/guide/router.html), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
@@ -16,6 +18,129 @@
 [Codelyzer](https://github.com/mgechev/codelyzer),
 [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), and
 [Webpack 2](http://webpack.github.io/) by [AngularClass](https://angularclass.com).
+
+
+## Getting Started
+
+The following instruction will show you how to get the project running in your local environment for development and testing.
+
+### Prerequisites
+* [NodeJs LTS and Npm](https://nodejs.org/en/download/)
+* [Git Bash](https://git-scm.com/downloads) for MacOS or  [TortoiseGit](https://tortoisegit.org/download/) for Windows
+
+#### Optional TypeScript-aware editor
+
+* [Webstorm 10](https://www.jetbrains.com/webstorm/download/)
+* [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
+
+### Setting up Angular 4
+After installing the Node.js and Npm you should be ready to clone our repository.
+Open up Git Bash or Console and enter the following commands with administrator privilege
+1. Clone the repo
+```bash
+# Make note of the directory location
+git clone https://github.com/marissa-hagglund/VA-Audiology-Website.git
+```
+2. Go into the git repo directory
+```bash
+cd YOUR_REPO_LOCATION/VA-Audiology-Website
+```
+3. Install all the necessary packages with Npm
+```bash
+npm install -g node-pre-gyp
+```
+```bash
+# This step may take longer
+npm install
+```
+If you run into issues with node-sass when running "npm install" on MacOS,
+try running this command first:
+```bash
+npm install node-sass
+```
+
+#### Starting the application locally
+All the packages required for the project are now installed, you are now ready to run the application locally with the following commands:
+```bash
+# Be sure that you in the project directory first
+npm start
+```
+Your default browser should open up the application. If not enter the following link into your browser.
+```bash
+http://localhost:3000/
+```
+#### Running Unit Tests
+To run the unit tests, first change into your repo's directory and enter the following commands:
+```bash
+npm test
+```
+This will trigger lint to run first then all of the unit tests.
+#### End-to-End Tests
+Run protractor with the following commands
+```bash
+npm run protractor
+```
+
+## Configuration
+Configuration files live in `config/` directory. We are currently using webpack, karma, and protractor for different stages of your application.  
+
+### Adding external styling stylesheet
+Any stylesheets (Sass or CSS) placed in the `src/styles` directory and imported into the project will automatically be compiled into an external `.css` and embedded in the production builds.
+
+For example using Bootstrap as an external stylesheet:
+1. Create a `styles.scss` file (name doesn't matter) in the `src/styles` directory.
+2. Use `npm install` to install desired Bootstrap version
+3. In `styles.scss` add `@import 'bootstrap/scss/bootstrap.scss';`
+4. In `src/app/app.module.ts` add the import statements: `import '../styles/styles.scss';`
+
+### Adding new components
+New components can be added by using the following command:
+```bash
+ng generate component [your_compment_name]
+```
+This should generate all the necessary files in the `src\app\` folder.   
+Be sure to add your component to `app.module.ts` file.   
+Depending on the what you are working on, you will also need to add your component to the `declarations: [ ]` array in `@NgModule`;
+
+### Adding new module
+New modules can be installed using Npm with the following command:   
+```bash
+npm install [package name]
+```
+
+## Deployment
+TBD
+
+## Contributing
+Before creating Pull Request; all unit tests should be passing and coverage should be 100% and there should not be any lint errors.   
+After three the Pull Request has been approved by three people the it will be merged into master.
+
+## Project Sponsor
+
+National Center for Rehabilitative Auditory Research (NCRAR) at the OHSU VA   
+Candice Manning    
+
+Portland State University Computers Science Department   
+Bart Massey
+
+## Authors
+Team Lead:
+* Marissa Hagglund
+
+Team Members:
+* Jason Yu
+* Joseph Remington
+* Kaleb Striplin
+* Sean Paterson
+* Tutu Wei
+* Zeyong Shan
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+<!--
+
+Commenting these out for now until we know more about deployment
 
 ```bash
 # WINDOWS only. In terminal as administrator
@@ -96,25 +221,6 @@ npm run e2e:live
 ```bash
 npm run build:docker
 ```
-
-# Configuration
-Configuration files live in `config/` we are currently using webpack, karma, and protractor for different stages of your application
-
-# External Stylesheets
-Any stylesheets (Sass or CSS) placed in the `src/styles` directory and imported into your project will automatically be compiled into an external `.css` and embedded in your production builds.
-
-For example to use Bootstrap as an external stylesheet:
-1) Create a `styles.scss` file (name doesn't matter) in the `src/styles` directory.
-2) `npm install` the version of Boostrap you want.
-3) In `styles.scss` add `@import 'bootstrap/scss/bootstrap.scss';`
-4) In `src/app/app.module.ts` add underneath the other import statements: `import '../styles/styles.scss';`
-
-## Use a TypeScript-aware editor
-
-* [Webstorm 10](https://www.jetbrains.com/webstorm/download/)
-* [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
-
-# Deployment
 
 ## Docker
 
@@ -209,3 +315,4 @@ docker run -e VIRTUAL_HOST=angular-starter.your-domain.com --name angular-starte
 
 You can quickly create a free site to get started using this
 starter kit in production on [Netlify](https://www.netlify.com/):
+-->
