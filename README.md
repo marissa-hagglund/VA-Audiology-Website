@@ -115,15 +115,14 @@ You may still need to import in the module in the component that uses it.
 TBD
 
 ## Contributing
-Before creating Pull Request; all unit tests should be passing and coverage should be 100% and there should not be any lint errors.   
-After three the Pull Request has been approved by three people the it will be merged into master.
+Before creating Pull Request; all unit tests should be passing and coverage should be 100% and there should not be any lint errors.  After three the Pull Request has been approved by three people the it will be merged into master.
 
 ## Project Sponsor
 
-National Center for Rehabilitative Auditory Research (NCRAR) at the OHSU VA   
+<b>National Center for Rehabilitative Auditory Research (NCRAR) at the OHSU VA</b>   
 Candice Manning    
 
-Portland State University Computers Science Department   
+<b>Portland State University Computers Science Department</b>   
 Bart Massey
 
 ## Authors
