@@ -5,6 +5,7 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot
 } from '@angular/router';
+import { Utilities } from '../common/utlilities';
 // import { SecurityService } from './security.service';
 
 @Injectable()
@@ -20,7 +21,7 @@ export class RouterGuards implements CanActivate {
 
     // must always start at the home page or pick up where left off if the url is one of these
     if (url === '/appointments' || url === '/ts' || url === '/ths' || url === '/tfi' || url === '/thank-you') {
-      let id = sessionStorage.getItem('patient-id');
+      let id = Utilities.getSessionStorage('patient-id');
 
       // if there is not an ID saved, a patient hasn't started so it routes back to home
       if (!id) {
@@ -30,7 +31,7 @@ export class RouterGuards implements CanActivate {
 
     // if there is an id, checks if there's an appt type set
     if (url === '/ts' || url === '/ths' || url === '/tfi' || url === '/thank-you') {
-      let appt = sessionStorage.getItem('appt');
+      let appt = Utilities.getSessionStorage('appt');
       if (!appt) {
         this.router.navigateByUrl('appointments');
       }
@@ -38,7 +39,7 @@ export class RouterGuards implements CanActivate {
 
     // restrict access to audiologist pages
     if (url === '/audiologist') {
-      let pin = sessionStorage.getItem('audiologist-pin');
+      let pin = Utilities.getSessionStorage('audiologist-pin');
       // if there isn't a pin, then they obviously have not logged in yet
       if (!pin) {
         this.router.navigateByUrl('login');
