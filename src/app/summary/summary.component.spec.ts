@@ -41,16 +41,24 @@ describe('SummaryComponent', () => {
       component.thsDataService.dataRecord = [{state: 1, choice: 1}];
       component.thsDataService.history = [7, 5, 6, 7, 8, 2];
       component.constructTHSReport();
-      expect(component.summaryItems.length).toEqual(2);
+      expect(component.summaryItems.length).toEqual(3);
+    });
+    it('should check if Sub Score can be printed', () => {
+      sessionStorage.clear();
+      let ths = new ThsAnswerStrings();
+      component.thsDataService.dataRecord = [{state: 1, choice: ths.NO}, {state: 2, choice: ths.NO},
+        {state: 3, choice: ths.NO}, {state: 4, choice: ths.NO}, {state: 4, choice: ths.NO}, {state: 4, choice: ths.NO}];
+      component.thsDataService.history = [5, 5, 5, 9];
+      component.constructTHSReport();
     });
     it('should check for wrong answers', () => {
       sessionStorage.clear();
       let ths = new ThsAnswerStrings();
       component.thsDataService.dataRecord = [{state: 1, choice: ths.NO}, {state: 2, choice: ths.NO},
                                              {state: 3, choice: ths.NO}, {state: 4, choice: ths.NO}];
-      component.thsDataService.history = [1, 2, 3, 4, 5];
+      component.thsDataService.history = [1, 2, 3, 4, 5, 7, 5, 5, 5, 9];
       component.constructTHSReport();
-      expect(component.summaryItems.length).toEqual(7);
+      expect(component.summaryItems.length).toEqual(8);
     });
   });
   describe('constructTSReport', () => {
