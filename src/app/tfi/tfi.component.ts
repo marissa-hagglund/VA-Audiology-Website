@@ -3,6 +3,7 @@ import { TfiDataService } from '../services/tfi-data.service';
 import { Router } from '@angular/router';
 // import { MatSliderModule } from '@angular/material/slider';
 import { TfiMinMax, TfiQuestionStrings, TfiSectionStrings } from '../common/custom-resource-strings';
+import { Utilities } from '../common/utlilities';
 
 @Component({
   selector: 'tfi',
@@ -19,9 +20,14 @@ export class TfiComponent implements OnInit {
               private dataService: TfiDataService) { }
 
   public ngOnInit() {
-    if (sessionStorage.getItem('tfi-currentState')) {
-      this.currentState = parseInt(sessionStorage.getItem('tfi-currentState'), 10);
+    if (Utilities.getSessionStorage('tfi-currentState')) {
+      this.currentState = parseInt(Utilities.getSessionStorage('tfi-currentState'), 10);
       console.log('state', this.currentState);
+    }
+
+    // reset state to 1 if we are revisiting questionaire
+    if (this.currentState === 25) {
+      this.currentState = 1;
     }
   }
 
@@ -43,6 +49,7 @@ export class TfiComponent implements OnInit {
     this.dataService.saveData(this.currentState, +choice);
     if (this.currentState === 24) {
       this.router.navigateByUrl('/thank-you');
+      return;
     }
     ++this.currentState;
 
@@ -50,6 +57,6 @@ export class TfiComponent implements OnInit {
   }
 
   public updateSessionStorage(): void {
-    sessionStorage.setItem('tfi-currentState', this.currentState.toString());
+    Utilities.setSessionStorage('tfi-currentState', this.currentState.toString());
   }
 }

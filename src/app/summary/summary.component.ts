@@ -9,6 +9,7 @@ import { ThsQuestionComponent } from 'src/app/ths/ths-question/ths-question.comp
 import { SummaryResolver } from '@angular/compiler';
 import { HighlightDelayBarrier } from 'blocking-proxy/built/lib/highlight_delay_barrier';
 import { TfiDataService } from '../services/tfi-data.service';
+import { Utilities } from '../common/utlilities';
 
 @Component({
   selector: 'app-summary',
@@ -40,7 +41,7 @@ export class SummaryComponent implements OnInit {
     this.constructTHSReport();
     this.tfiDataService.onInit();
     this.constructTFIReport();
-    this.patientID = sessionStorage.getItem('patient-id');
+    this.patientID = Utilities.getSessionStorage('patient-id');
   };
 
   public ngOnInit() {

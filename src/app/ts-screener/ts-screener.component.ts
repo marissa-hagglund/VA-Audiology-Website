@@ -3,6 +3,7 @@ import { TsScreenerAnswerStrings, TsScreenerQuestionStrings } from '../common/cu
 import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
 import { TsScreenerQuestionComponent } from './ts-screener/ts-screener-question/ts-screener-question.component';
 import { Router } from '@angular/router';
+import { Utilities } from '../common/utlilities';
 
 @Component({
   selector: 'screener',
@@ -37,8 +38,8 @@ export class TsScreenerComponent implements OnInit {
               public router: Router) {};
 
   public ngOnInit() {
-    if (sessionStorage.getItem('ts-currentState')) {
-      this.currentState = parseInt(sessionStorage.getItem('ts-currentState'), 10);
+    if (Utilities.getSessionStorage('ts-currentState')) {
+      this.currentState = parseInt(Utilities.getSessionStorage('ts-currentState'), 10);
       console.log('state', this.currentState);
     }
   }
@@ -73,6 +74,6 @@ export class TsScreenerComponent implements OnInit {
   }
 
   public updateSessionStorage(): void {
-    sessionStorage.setItem('ts-currentState', this.currentState.toString());
+    Utilities.setSessionStorage('ts-currentState', this.currentState.toString());
   }
 }
