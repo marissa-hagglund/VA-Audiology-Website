@@ -52,6 +52,8 @@ export class SummaryComponent implements OnInit {
    */
   public constructTHSReport() {
     let totalScore: number = 0;
+    let subScore: number = 0;
+    let sectionActive: boolean = false;
     let history = this.thsDataService.history;
     let data = this.thsDataService.dataRecord;
     if ( history.length <= 1 ) {
@@ -63,19 +65,26 @@ export class SummaryComponent implements OnInit {
       if ( data.length < questionNum) {
         break;
       }
+      if ( (questionNum - 1) % 4 === 0 && sectionActive === true) {
+        this.summaryItems.push(new SectionFooter('Sub Score', subScore));
+        subScore = 0;
+      }
       if ( (questionNum - 1) % 4 === 0) {
         console.log(questionNum);
         this.summaryItems.push(new SectionTitle(this.getTHSSectionTitle(questionNum)));
+        sectionActive = true;
       }
       let answer = data[questionNum - 1].choice as String;
       if (this.getTHSChoiceNumber(answer) !== -1) {
+        subScore = subScore + this.getTHSChoiceNumber(answer);
         totalScore = totalScore + this.getTHSChoiceNumber(answer);
         this.summaryItems.push(new Question(question, Number(answer.charAt(0)), '-1'));
       } else {
         this.summaryItems.push(new Question(question, -1, answer));
       }
     }
-    this.summaryItems.push(new SectionFooter('Tinnitus & Hearing Survey', totalScore));
+    this.summaryItems.push(new SectionFooter('Sub Score', subScore));
+    this.summaryItems.push(new SectionFooter('Total Score', totalScore));
   }
 
   /**
