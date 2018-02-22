@@ -3,6 +3,7 @@ import { ThsQuestionStrings } from '../common/custom-resource-strings';
 import { ThsStateflowService } from '../services/ths-stateflow.service';
 import { Router } from '@angular/router';
 import { RouterGuards } from '../services/router-guards.service';
+import { Utilities } from '../common/utlilities';
 
 @Component({
   selector: 'app-ths',
@@ -35,12 +36,12 @@ export class ThsComponent implements OnInit {
               public router: Router) { };
 
   public ngOnInit(): void {
-    if (sessionStorage.getItem('ths-currentState')) {
-      this.currentState = parseInt(sessionStorage.getItem('ths-currentState'), 10);
+    if (Utilities.getSessionStorage('ths-currentState')) {
+      this.currentState = parseInt(Utilities.getSessionStorage('ths-currentState'), 10);
       console.log('state', this.currentState);
     }
 
-    //reset state to 1 if we are revisiting questionaire
+    // reset state to 1 if we are revisiting questionaire
     if (this.currentState === 11) {
       this.currentState = 1;
     }
@@ -77,10 +78,10 @@ export class ThsComponent implements OnInit {
     // if the no was not selected for Q1 on TS, routes to tfi like normal
     // If it was, then tfi is skipped
     if (this.currentState === 11) {
-        let nextComponent = sessionStorage.getItem('nextComponent'); // will be null if this doesn't exist (meaning it wasn't even set)
+        let nextComponent = Utilities.getSessionStorage('nextComponent'); // will be null if this doesn't exist (meaning it wasn't even set)
 
         if (nextComponent === 'true') { // if it is finished
-            sessionStorage.removeItem('nextComponent'); // clears it right after use
+            Utilities.removeItemFromSessionStorage('nextComponent'); // clears it right after use
             this.router.navigateByUrl('/thank-you');
         } else { // If it is not finished
             this.router.navigateByUrl('/tfi');
@@ -89,6 +90,6 @@ export class ThsComponent implements OnInit {
   }
 
   public updateSessionStorage(): void {
-    sessionStorage.setItem('ths-currentState', this.currentState.toString());
+    Utilities.setSessionStorage('ths-currentState', this.currentState.toString());
   }
 }
