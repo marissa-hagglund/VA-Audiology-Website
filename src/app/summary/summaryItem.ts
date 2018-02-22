@@ -55,14 +55,3 @@ class SummaryItem {
         this.answer  = answer;
     }
   }
-
-  /**
-   * the description type
-   */
-  export class Description extends SummaryItem {
-    public readonly content;
-    constructor(content: String) {
-        super('Description');
-        this.content = content;
-    }
-}
