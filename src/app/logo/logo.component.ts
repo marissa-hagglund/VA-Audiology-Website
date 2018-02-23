@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Utilities } from '../common/utlilities';
 
 @Component({
   selector: 'logo',
@@ -29,7 +30,7 @@ export class LogoComponent {
      */
     public onClick() {
       if (this.logoRouteOption === '1') {
-        sessionStorage.removeItem('audiologist-pin'); // this is for navigating away from audiologist page
+        Utilities.removeItemFromSessionStorage('audiologist-pin'); // this is for navigating away from audiologist page
         this.router.navigateByUrl('/home');
         console.log('back to home page.');
       }

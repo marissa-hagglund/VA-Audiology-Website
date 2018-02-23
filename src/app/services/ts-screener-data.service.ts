@@ -1,4 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
+import { Utilities } from '../common/utlilities';
 
 // Stores data recorded from tinnitus screener questionaire.
 @Injectable()
@@ -10,11 +11,11 @@ export class TsScreenerDataService {
 
   public onInit() {
     console.log('INIT', sessionStorage);
-    if (JSON.parse(sessionStorage.getItem('ts-dataRecord'))) {
-      this.dataRecord = JSON.parse(sessionStorage.getItem('ts-dataRecord'));
+    if (JSON.parse(Utilities.getSessionStorage('ts-dataRecord'))) {
+      this.dataRecord = JSON.parse(Utilities.getSessionStorage('ts-dataRecord'));
     }
-    if (JSON.parse(sessionStorage.getItem('ts-history'))) {
-      this.history = JSON.parse(sessionStorage.getItem('ts-history'));
+    if (JSON.parse(Utilities.getSessionStorage('ts-history'))) {
+      this.history = JSON.parse(Utilities.getSessionStorage('ts-history'));
     }
   }
 
@@ -71,7 +72,12 @@ export class TsScreenerDataService {
   }
 
   public updateSessionStorage(): void {
-    sessionStorage.setItem('ts-dataRecord', JSON.stringify(this.dataRecord));
-    sessionStorage.setItem('ts-history', JSON.stringify(this.history));
+    Utilities.setSessionStorage('ts-dataRecord', JSON.stringify(this.dataRecord));
+    Utilities.setSessionStorage('ts-history', JSON.stringify(this.history));
+  }
+
+  public clearHistory(): void {
+    this.history = [];
+    this.dataRecord = [];
   }
 }

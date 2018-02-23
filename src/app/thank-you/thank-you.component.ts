@@ -18,12 +18,4 @@ export class ThankYouComponent implements OnInit {
     console.log('thank you page component');
   }
 
-  public OnClickVideoLink() {
-    this.router.navigateByUrl('/home');
-  }
-
-  public OnClickInfoLink() {
-    this.router.navigateByUrl('/home');
-  }
-
 }

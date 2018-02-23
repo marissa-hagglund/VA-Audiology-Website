@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Utilities } from '../common/utlilities';
 
 @Component ({
   selector: 'appointments',
@@ -19,7 +20,7 @@ export class AppointmentsComponent {
    */
   public onInitialAssessment() {
     console.log('Initial Assessment');
-    sessionStorage.setItem('appt', 'Initial Assessment');
+    Utilities.setSessionStorage('appt', 'Initial Assessment');
     this.router.navigateByUrl('/ts');
   }
   /**
@@ -29,7 +30,7 @@ export class AppointmentsComponent {
    */
   public onHearingAidsFitting() {
     console.log('Hearing Aids Fitting');
-    sessionStorage.setItem('appt', 'Hearing Aids Fitting');
+    Utilities.setSessionStorage('appt', 'Hearing Aids Fitting');
     this.router.navigateByUrl('/ts');
   }
   /**
@@ -39,7 +40,7 @@ export class AppointmentsComponent {
    */
   public onHearingAidsEvaluation() {
     console.log('Hearing Aids Evaluation');
-    sessionStorage.setItem('appt', 'Hearing Aids Evaluation');
+    Utilities.setSessionStorage('appt', 'Hearing Aids Evaluation');
     this.router.navigateByUrl('/ts');
   }
 }

@@ -6,6 +6,7 @@ import { ThsComponent } from './ths.component';
 import { TsScreenerComponent } from './ts-screener.component';
 import { TsScreenerStateflowService } from '../services/ts-screener-stateflow.service';
 import { TsScreenerDataService } from '../services/ts-screener-data.service';
+import { Utilities } from '../common/utlilities';
 
 describe('TsScreenerComponent', () => {
   let component: TsScreenerComponent;
@@ -65,7 +66,7 @@ describe('TsScreenerComponent', () => {
     it('should route to ths', () => {
       let spy = spyOn(service, 'moveStateForward').and.returnValue(7);
       let navSpy = spyOn(component.router, 'navigateByUrl');
-      sessionStorage.setItem('nextComponent', 'false');
+      Utilities.setSessionStorage('nextComponent', 'false');
       component.moveStateForward('hello');
       expect(navSpy).toHaveBeenCalledWith('/ths');
     });

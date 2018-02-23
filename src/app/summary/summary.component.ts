@@ -1,6 +1,6 @@
 import { TsScreenerAnswerStrings } from './../common/custom-resource-strings';
 import { Component, OnInit } from '@angular/core';
-import { SurveyTitle, SectionTitle, SectionFooter, Question, Description } from './summaryItem';
+import { SurveyTitle, SectionTitle, SectionFooter, Question } from './summaryItem';
 import { ThsDataService } from '../services/ths-data.service';
 import { TsScreenerDataService } from '../services/ts-screener-data.service';
 import { constructDependencies } from '@angular/core/src/di/reflective_provider';
@@ -9,6 +9,7 @@ import { ThsQuestionComponent } from 'src/app/ths/ths-question/ths-question.comp
 import { SummaryResolver } from '@angular/compiler';
 import { HighlightDelayBarrier } from 'blocking-proxy/built/lib/highlight_delay_barrier';
 import { TfiDataService } from '../services/tfi-data.service';
+import { Utilities } from '../common/utlilities';
 
 @Component({
   selector: 'app-summary',
@@ -26,21 +27,20 @@ export class SummaryComponent implements OnInit {
    * all the summary items that will be displayed in the summary report
    */
   public summaryItems = [];
-
   /**
    *
    * @param thsDataService the data service for ths questionare
    * @param tsDataService the data service for ts questionare
    * @param tfiDataService the date service for tfi questionare
    */
-  constructor(private thsDataService: ThsDataService, private tsDataService: TsScreenerDataService, private tfiDataService: TfiDataService) {
+  constructor(public thsDataService: ThsDataService, public tsDataService: TsScreenerDataService, public tfiDataService: TfiDataService) {
     this.tsDataService.onInit();
     this.constructTSReport();
     this.thsDataService.onInit();
     this.constructTHSReport();
     this.tfiDataService.onInit();
     this.constructTFIReport();
-    this.patientID = sessionStorage.getItem('patient-id');
+    this.patientID = Utilities.getSessionStorage('patient-id');
   };
 
   public ngOnInit() {
@@ -152,8 +152,8 @@ export class SummaryComponent implements OnInit {
     switch ( part ) {
       case 0: return 'A. Tinnitus';
       case 1: return 'B. Hearing';
-      case 2: return 'C. Sound Tolerance';
-      default: return 'not assigned';
+      default: return 'C. Sound Tolerance';
+      // default: return 'not assigned';
     }
   }
 

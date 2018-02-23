@@ -1,6 +1,10 @@
 import { Component, transition } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Utilities } from '../common/utlilities';
+import { TsScreenerDataService } from '../services/ts-screener-data.service';
+import { TfiDataService } from '../services/tfi-data.service';
+import { ThsDataService } from '../services/ths-data.service';
 
 @Component({
   selector: 'check-in',
@@ -12,7 +16,7 @@ export class CheckInComponent {
    public patientId: string = '';
    public authenticationFlag: boolean = true;
 
-   constructor(private router: Router) {};
+   constructor(private router: Router, private tsDataService: TsScreenerDataService, private tfiDataService: TfiDataService, private thsDataService: ThsDataService) {};
 
    /**
     * This function will be call when the "check in" button is pressed.
@@ -23,18 +27,22 @@ export class CheckInComponent {
     */
    public onClick() {
       if (this.patientId === '123456') {
-          sessionStorage.setItem('audiologist-pin', this.patientId);
+          Utilities.setSessionStorage('audiologist-pin', this.patientId);
           console.log('Audiologist log in ' + this.patientId);
+          Utilities.setSessionStorage('patientId', this.patientId.toString());
           this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
         sessionStorage.clear();
-        sessionStorage.setItem('patient-id', this.patientId);
+        this.tsDataService.clearHistory();
+        this.tfiDataService.clearHistory();
+        this.thsDataService.clearHistory();
+        Utilities.setSessionStorage('patient-id', this.patientId);
         this.router.navigateByUrl('/appointments');
         console.log('log in with ' + this.patientId);
       } else {
-        this.authenticationFlag = false;
-        this.patientId = '';
-        console.log('failed log in ' + this.patientId);
+          this.authenticationFlag = false;
+          this.patientId = '';
+          console.log('failed log in ' + this.patientId);
       }
    }
 

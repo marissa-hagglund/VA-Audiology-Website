@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Utilities } from '../common/utlilities';
 
 @Injectable()
 export class ThsDataService {
@@ -7,11 +8,11 @@ export class ThsDataService {
 
   public onInit() {
     console.log('INIT', sessionStorage);
-    if (JSON.parse(sessionStorage.getItem('ths-dataRecord'))) {
-      this.dataRecord = JSON.parse(sessionStorage.getItem('ths-dataRecord'));
+    if (JSON.parse(Utilities.getSessionStorage('ths-dataRecord'))) {
+      this.dataRecord = JSON.parse(Utilities.getSessionStorage('ths-dataRecord'));
     }
-    if (JSON.parse(sessionStorage.getItem('ths-history'))) {
-      this.history = JSON.parse(sessionStorage.getItem('ths-history'));
+    if (JSON.parse(Utilities.getSessionStorage('ths-history'))) {
+      this.history = JSON.parse(Utilities.getSessionStorage('ths-history'));
     }
   }
   // This function will save the current state and choice the patient made for it in an Array
@@ -68,7 +69,12 @@ export class ThsDataService {
   }
 
   public updateSessionStorage(): void {
-    sessionStorage.setItem('ths-dataRecord', JSON.stringify(this.dataRecord));
-    sessionStorage.setItem('ths-history', JSON.stringify(this.history));
+    Utilities.setSessionStorage('ths-dataRecord', JSON.stringify(this.dataRecord));
+    Utilities.setSessionStorage('ths-history', JSON.stringify(this.history));
+  }
+
+  public clearHistory(): void {
+    this.history = [];
+    this.dataRecord = [];
   }
 }
