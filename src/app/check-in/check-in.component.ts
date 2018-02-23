@@ -29,7 +29,6 @@ export class CheckInComponent {
       if (this.patientId === '123456') {
           Utilities.setSessionStorage('audiologist-pin', this.patientId);
           console.log('Audiologist log in ' + this.patientId);
-          Utilities.setSessionStorage('patientId', this.patientId.toString());
           this.router.navigateByUrl('/audiologist');
       } else if (this.patientId.length === 4) {
         sessionStorage.clear();

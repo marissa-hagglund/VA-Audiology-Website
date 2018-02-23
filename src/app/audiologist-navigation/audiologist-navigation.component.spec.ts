@@ -80,20 +80,20 @@ describe('Audiologist Navigation', () => {
     expect(recommended).toHaveBeenCalled();
   });
 
-  it('should test for audiologist suggestedTests button click event', () => {
-    let suggested = spyOn(component, 'showSuggestedTests');
-    let suggestedBtn = de.nativeElement.querySelectorAll('.left-container .main-btn');
-    suggestedBtn.item(1).click();
-    fixture.detectChanges();
-    expect(suggested).toHaveBeenCalled();
-  });
+  // it('should test for audiologist suggestedTests button click event', () => {
+  //   let suggested = spyOn(component, 'showSuggestedTests');
+  //   let suggestedBtn = de.nativeElement.querySelectorAll('.left-container .main-btn');
+  //   suggestedBtn.item(1).click();
+  //   fixture.detectChanges();
+  //   expect(suggested).toHaveBeenCalled();
+  // });
 
-  it('should test for audiologist summary button click event', () => {
-    let summary = spyOn(component, 'showSummary');
-    let summaryBtn = de.nativeElement.querySelectorAll('.left-container .main-btn');
-    summaryBtn.item(2).click();
-    fixture.detectChanges();
-    expect(summary).toHaveBeenCalled();
-  });
+  // it('should test for audiologist summary button click event', () => {
+  //   let summary = spyOn(component, 'showSummary');
+  //   let summaryBtn = de.nativeElement.querySelectorAll('.left-container .main-btn');
+  //   summaryBtn.item(2).click();
+  //   fixture.detectChanges();
+  //   expect(summary).toHaveBeenCalled();
+  // });
 
 });
