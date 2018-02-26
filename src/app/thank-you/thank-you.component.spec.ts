@@ -43,16 +43,4 @@ describe('ThankYouComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('click on video link should navigate to home oage', fakeAsync(() => {
-    let spy = spyOn(router, 'navigateByUrl');
-    component.OnClickVideoLink();
-    expect(router.navigateByUrl).toHaveBeenCalledWith('/home');
-  }));
-
-  it('click on info link should navigate to home oage', fakeAsync(() => {
-    let spy = spyOn(router, 'navigateByUrl');
-    component.OnClickInfoLink();
-    expect(router.navigateByUrl).toHaveBeenCalledWith('/home');
-  }));
 });
