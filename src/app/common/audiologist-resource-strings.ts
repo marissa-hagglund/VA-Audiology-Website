@@ -4,7 +4,7 @@ Not used for now, but may still useful later on.
 */
 export class AudiogramTypeStrings {
   public conductive: string = 'Conductive';
-  public sensorNeural: string = 'Sensorneural';
+  public sensorNeural: string = 'Sensorineural';
   public mixed: string = 'Mixed';
 
 }
@@ -25,7 +25,7 @@ export class AudiogramConfigurationStrings {
   public flat: string = 'Flat';
   public sloping: string = 'Rising';
   public cookieBite: string = 'Cookie Bite';
-  public precipitious: string = 'Precipitious';
+  public precipitious: string = 'Precipitous';
   public noiseNotch: string = 'Noise-Notch';
   public corner: string = 'Corner';
 }
