@@ -74,7 +74,7 @@ export class ThsDataService {
   }
 
   public clearHistory(): void {
-    this.history = [];
+    this.history = [1];
     this.dataRecord = [];
   }
 }
