@@ -110,10 +110,6 @@ npm install [package name]
 Depending on the module, you may also need to add the module to `import: [ ]` and `export: [ ]` in `@NgModule`.   
 You may still need to import in the module in the component that uses it.
 
-
-## Deployment
-TBD
-
 ## Contributing
 Before creating Pull Request; all unit tests should be passing and coverage should be 100% and there should not be any lint errors.  After three the Pull Request has been approved by three people the it will be merged into master.
 
