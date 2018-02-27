@@ -4,6 +4,16 @@
   font-weight: bold;
 }
 
+.icon-button {
+  margin-top: 5%;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
 .audio {
   height: 100%;
 }

@@ -20,9 +20,7 @@ export class Utilities {
   }
 
   public static removeItemFromSessionStorage(storageKey: string): void {
-    let encryptedValue: string = crypto.AES.encrypt(storageKey, this.key);
-
-    sessionStorage.removeItem(encryptedValue);
+    sessionStorage.removeItem(storageKey);
   }
   private static key: string = 'alwi243mnb2xxre228892kklskd';
 }

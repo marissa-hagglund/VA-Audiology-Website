@@ -14,16 +14,16 @@ export class ThsStateflowService {
   // with some info so it wil change the state based on that
   public moveStateForward(state: number, choice: string): number {
     if (state === 9) {
-      if (choice[0] === '1' || choice[0] === '2' || choice[0] === '3' || choice[0] === '4') {
-        this.dataService.saveData(10, choice);
+      if (choice[0] !== '0') {
+        this.dataService.saveData(9, choice);
         return 10;
       } else {
-        this.dataService.saveData(11, choice);
+        this.dataService.saveData(9, choice);
         return 11;
       }
     } else {
-      this.dataService.saveData(++state, choice);
-      return state;
+      this.dataService.saveData(state, choice);
+      return state + 1;
     }
   }
   // The data service does most of the work here but it will return the numbered state
