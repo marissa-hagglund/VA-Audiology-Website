@@ -19,7 +19,7 @@ export class AudiogramComponent implements OnInit {
   // Text for test type radio buttons in the template
   public testTypes = [
     'Conductive',
-    'Sensorneural',
+    'Sensorineural',
     'Mixed'
   ];
 
@@ -37,11 +37,11 @@ export class AudiogramComponent implements OnInit {
     'Symmetric',
     'Asymmetric',
     'Progressive',
-    'Suddend',
+    'Sudden',
     'Flat',
     'Rising',
     'Cookie Bite',
-    'Precipitious',
+    'Precipitous',
     'Noise-Notch',
     'Corner'
   ];
