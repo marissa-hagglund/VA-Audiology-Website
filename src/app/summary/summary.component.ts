@@ -22,6 +22,7 @@ export class SummaryComponent implements OnInit {
    * Connected through the session storage
    */
   public readonly patientID;
+  public readonly appointmentType;
 
   /**
    * all the summary items that will be displayed in the summary report
@@ -41,6 +42,7 @@ export class SummaryComponent implements OnInit {
     this.tfiDataService.onInit();
     this.constructTFIReport();
     this.patientID = Utilities.getSessionStorage('patient-id');
+    this.appointmentType = Utilities.getSessionStorage('appt');
   };
 
   public ngOnInit() {

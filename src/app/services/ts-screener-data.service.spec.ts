@@ -90,16 +90,29 @@ describe('TsScreenerDataService', () => {
       service.saveData(4, 'Hello');
       expect(service.dataRecord.length).toEqual(3);
     });
+
+    it('should saving an existing data record', () => {
+      service.dataRecord = [{state: 1, choice: 2}];
+      service.saveData(2, 'test');
+      service.saveData(2, 'overwriten');
+      expect(service.dataRecord.length).toEqual(2);
+    });
   });
 
   describe('populateAnswers', () => {
     it('should return a string', () => {
-    service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
-    expect(service.populateAnswers(2)).toEqual(3);
-  });
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      expect(service.populateAnswers(2)).toEqual(3);
+    });
+
     it('should return an empty string', () => {
-    service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
-    expect(service.populateAnswers(5)).toEqual('');
+      service.dataRecord = [{state: 2, choice: 3}, {state: 3, choice: 2}];
+      expect(service.populateAnswers(5)).toEqual('');
+    });
+
+    it('should return empty dataRecord', () => {
+      service.dataRecord = null;
+      expect(service.populateAnswers(1)).toEqual('');
+    });
   });
-});
 });

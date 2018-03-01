@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Utilities } from '../common/utlilities';
 
 /*
 Audiogram Test Component for the audiologist view:
@@ -13,10 +14,12 @@ This component does not save information to any data services/databases
 
 export class AudiogramComponent implements OnInit {
 
+  public patientID: string = Utilities.getSessionStorage('patient-id');
+
   // Text for test type radio buttons in the template
   public testTypes = [
     'Conductive',
-    'Sensorneural',
+    'Sensorineural',
     'Mixed'
   ];
 
@@ -34,11 +37,11 @@ export class AudiogramComponent implements OnInit {
     'Symmetric',
     'Asymmetric',
     'Progressive',
-    'Suddend',
+    'Sudden',
     'Flat',
     'Rising',
     'Cookie Bite',
-    'Precipitious',
+    'Precipitous',
     'Noise-Notch',
     'Corner'
   ];
