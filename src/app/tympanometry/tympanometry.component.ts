@@ -22,9 +22,9 @@ export class TympanometryComponent implements OnInit {
   /*
    * Data members for tympanometry radio buttons
    */
-  public choiceOne: string = 'Choice 1';
-  public choiceTwo: string = 'Choice 2';
-  public choiceThree: string = 'Choice 3';
+  public choiceOne: string = 'Conductive Hearing Loss, Bilateral';
+  public choiceTwo: string = 'Conductive Hearing Loss, Unilateral Right';
+  public choiceThree: string = 'Conductive Hearing Loss, Unilateral Left';
   constructor() { }
 
   public ngOnInit() {
