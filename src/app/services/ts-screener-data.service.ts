@@ -7,12 +7,9 @@ export class TsScreenerDataService {
   public history: number[] = [1];
   public dataRecord: Array<{state, choice}> = [];
 
-  constructor() {
-    console.log('constructor', this.history);
-  }
+  constructor() {}
 
   public onInit() {
-    console.log('history', this.history);
     if (JSON.parse(Utilities.getSessionStorage('ts-dataRecord'))) {
       this.dataRecord = JSON.parse(Utilities.getSessionStorage('ts-dataRecord'));
     }
@@ -37,7 +34,6 @@ export class TsScreenerDataService {
     this.history.push(state);
 
     this.updateSessionStorage();
-    console.log(sessionStorage);
     console.log(this.history);
     console.log(this.dataRecord);
   }
