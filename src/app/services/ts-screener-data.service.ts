@@ -10,10 +10,11 @@ export class TsScreenerDataService {
   constructor() {}
 
   public onInit() {
-    console.log('INIT', sessionStorage);
     if (JSON.parse(Utilities.getSessionStorage('ts-dataRecord'))) {
       this.dataRecord = JSON.parse(Utilities.getSessionStorage('ts-dataRecord'));
     }
+
+    console.log('parse: ', JSON.parse(Utilities.getSessionStorage('ts-history')));
     if (JSON.parse(Utilities.getSessionStorage('ts-history'))) {
       this.history = JSON.parse(Utilities.getSessionStorage('ts-history'));
     }
@@ -33,7 +34,6 @@ export class TsScreenerDataService {
     this.history.push(state);
 
     this.updateSessionStorage();
-    console.log(sessionStorage);
     console.log(this.history);
     console.log(this.dataRecord);
   }
@@ -77,7 +77,7 @@ export class TsScreenerDataService {
   }
 
   public clearHistory(): void {
-    this.history = [];
+    this.history = [1];
     this.dataRecord = [];
   }
 }
